@@ -4,10 +4,10 @@
 </h1>
   
 <p align="center">
-本外掛是一個可執行在 OpenWrt 上的<a href="https://github.com/MetaCubeX/mihomo" target="_blank"> Mihomo(Clash) </a>客戶端
+本外掛是一個可執行在 OpenWrt 上的<a href="https://github.com/MetaCubeX/mihomo" target="_blank"> Mihomo(Clash) </a>用戶端
 </p>
 <p align="center">
-相容 Shadowsocks、ShadowsocksR、Vmess、Trojan、Snell 等協議，根據靈活的規則配置實現策略代理
+相容 Shadowsocks、ShadowsocksR、Vmess、Trojan、Snell 等通訊協定，依據彈性的規則設定實作策略代理
 </p>
 
 本專案是 OpenClash 的正體中文化版本，使用 OpenWrt LuCI 的 `zh_Hant` 語系，固定稱呼為「正體中文」，適用於臺灣、香港與澳門等使用正體中文介面的環境。
@@ -21,7 +21,7 @@
 * [功能指南](https://github.com/alzpqm/openclash-zh-hant/blob/main/.github/skills/openclash-user-guide/SKILL.md)
 
 
-下載地址
+下載連結
 ---
 
 
@@ -32,7 +32,9 @@
 正體中文語言包
 ---
 
-請先安裝 OpenClash 主程式，再依照路由器的套件管理器，整段複製貼上以下其中一組命令。命令會自動從本儲存庫的最新 Release 下載正確語言包，避免手動輸入版本號或檔名造成安裝失敗。
+請先安裝 OpenClash 主程式，再依照路由器的套件格式，整段複製並貼上以下其中一組指令。指令會自動從本儲存庫的最新 Release 下載正確語言套件，避免手動輸入版本號或檔名造成安裝失敗。
+
+Release 頁也提供同樣的完整安裝指令，方便直接從發布頁複製使用。
 
 ```sh
 # [OpenClash 正體中文語言包 for ipk]
@@ -54,10 +56,10 @@ curl -L --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases
 
 安裝後，將 LuCI 語言切換為「正體中文」。OpenWrt 標準語系識別為 `zh_tw`（翻譯檔為 `zh-tw`）；套件同時保留 `zh-hant` 與 `zh_Hant` 相容別名，臺灣、香港及澳門均可使用。
 
-APK 為未簽名的本地安裝包；若使用 OpenWrt 25.12 及更新版本，請保留 `--allow-untrusted`。也可以直接下載以下安裝檔：
+APK 為未簽署的本機安裝套件；若使用 OpenWrt 25.12 及更新版本，請保留 `--allow-untrusted`。也可以直接下載以下安裝檔：
 
-* [下載 `luci-i18n-openclash-zh-hant_0.47.156-2_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r2/luci-i18n-openclash-zh-hant_0.47.156-2_all.ipk)
-* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r2.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r2/luci-i18n-openclash-zh-hant-0.47.156-r2.apk)
+* [下載 `luci-i18n-openclash-zh-hant_0.47.156-3_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r3/luci-i18n-openclash-zh-hant_0.47.156-3_all.ipk)
+* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r3.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r3/luci-i18n-openclash-zh-hant-0.47.156-r3.apk)
 
 重新產生封裝時，可使用 OpenWrt SDK 提供的 apk-tools v3：
 
@@ -66,7 +68,7 @@ APK_BIN=/path/to/openwrt/staging_dir/host/bin/apk tools/build-luci-i18n-openclas
 ```
 
 
-依賴
+相依套件
 ---
 
 * luci
