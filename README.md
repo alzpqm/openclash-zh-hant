@@ -49,15 +49,15 @@ apk update
 apk add luci luci-base luci-compat
 curl -L --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
 [ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.apk$') && curl -L --retry 2 "$download_url" -o /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 latest version get failed"
-[ -f "/tmp/openclash_zh_hant.apk" ] && apk add -q --force-overwrite --clean-protected --allow-untrusted /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 download failed"
+[ -f "/tmp/openclash_zh_hant.apk" ] && apk add --force-overwrite --clean-protected --allow-untrusted --no-chown /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 download failed"
 ```
 
-安裝後，將 LuCI 語言切換為「正體中文」；語系識別為 `zh_Hant`。
+安裝後，將 LuCI 語言切換為「正體中文」。OpenWrt 標準語系識別為 `zh_tw`（翻譯檔為 `zh-tw`）；套件同時保留 `zh-hant` 與 `zh_Hant` 相容別名，臺灣、香港及澳門均可使用。
 
 APK 為未簽名的本地安裝包；若使用 OpenWrt 25.12 及更新版本，請保留 `--allow-untrusted`。也可以直接下載以下安裝檔：
 
-* [下載 `luci-i18n-openclash-zh-hant_0.47.156-1_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant/luci-i18n-openclash-zh-hant_0.47.156-1_all.ipk)
-* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r1.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant/luci-i18n-openclash-zh-hant-0.47.156-r1.apk)
+* [下載 `luci-i18n-openclash-zh-hant_0.47.156-2_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r2/luci-i18n-openclash-zh-hant_0.47.156-2_all.ipk)
+* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r2.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r2/luci-i18n-openclash-zh-hant-0.47.156-r2.apk)
 
 重新產生封裝時，可使用 OpenWrt SDK 提供的 apk-tools v3：
 

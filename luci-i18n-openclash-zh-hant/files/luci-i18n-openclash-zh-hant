@@ -1,0 +1,1 @@
+uci set luci.languages.zh_tw='正體中文'; uci commit luci
