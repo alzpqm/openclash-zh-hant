@@ -1,0 +1,4361 @@
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_Hant\n"
+
+msgid "OpenClash"
+msgstr "OpenClash"
+
+msgid "A Mihomo(Clash) Client For OpenWrt"
+msgstr "一個執行在 OpenWrt 上的 Mihomo(Clash) 客戶端，相容 Shadowsocks(R)、Vmess、Trojan、Snell 等協議，根據靈活的規則配置實現策略代理"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "Tip"
+msgstr "提示"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Watchdog"
+msgstr "守護程式"
+
+msgid "Info"
+msgstr "資訊"
+
+msgid "Debug"
+msgstr "除錯"
+
+msgid "Silent"
+msgstr "靜默"
+
+msgid "Fatal"
+msgstr "嚴重錯誤"
+
+msgid "Plugin Settings"
+msgstr "外掛設定"
+
+msgid "Credits"
+msgstr "技術支援"
+
+msgid "Overviews"
+msgstr "執行狀態"
+
+msgid "Overwrite Settings"
+msgstr "覆寫設定"
+
+msgid "General Settings"
+msgstr "常規設定"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Config Subscribe"
+msgstr "配置訂閱"
+
+msgid "Add Config File"
+msgstr "新增配置檔案"
+
+msgid "Config Subscribe Edit"
+msgstr "編輯配置檔案訂閱資訊"
+
+msgid "Rules Update"
+msgstr "第三方規則訂閱"
+
+msgid "Dashboard Settings"
+msgstr "外部控制"
+
+msgid "Enabled"
+msgstr "啟用"
+
+msgid "Disabled"
+msgstr "停用"
+
+msgid "Running"
+msgstr "執行中"
+
+msgid "Not Running"
+msgstr "未執行"
+
+msgid "(Enable or Disable)"
+msgstr "(僅新增選中的設定)"
+
+msgid "Config Normal"
+msgstr "檢查透過"
+
+msgid "Config Abnormal"
+msgstr "檢查失敗"
+
+msgid "File Not Exist"
+msgstr "檔案不存在"
+
+msgid "Flush DNS Cache"
+msgstr "清理 DNS 快取"
+
+msgid "Not Set"
+msgstr "未設定"
+
+msgid "Server Logs"
+msgstr "執行日誌"
+
+msgid "Core Tests"
+msgstr "核心測試"
+
+msgid "Debug Logs"
+msgstr "除錯日誌"
+
+msgid "Generate Logs"
+msgstr "生成日誌"
+
+msgid "Generated Logs"
+msgstr "日誌生成結果"
+
+msgid "Enable OpenClash"
+msgstr "啟動 OpenClash"
+
+msgid "Disable OpenClash"
+msgstr "關閉 OpenClash"
+
+msgid "Commit Settings"
+msgstr "儲存配置"
+
+msgid "Apply Settings"
+msgstr "應用配置"
+
+msgid "Download Config"
+msgstr "下載配置"
+
+msgid "Click to Download"
+msgstr "點選下載"
+
+msgid "Failed to get download link"
+msgstr "獲取下載連結失敗"
+
+msgid "Copy Config"
+msgstr "複製配置"
+
+msgid "Update Config"
+msgstr "更新配置"
+
+msgid "Download Running Config"
+msgstr "下載執行配置"
+
+msgid "Select Mode"
+msgstr "*執行模式"
+
+msgid "redir-host"
+msgstr "Redir-Host（相容）模式"
+
+msgid "fake-ip"
+msgstr "Fake-IP（增強）模式"
+
+msgid "redir-host(tun mode)"
+msgstr "Redir-Host（TUN）模式"
+
+msgid "fake-ip(tun mode)"
+msgstr "Fake-IP（TUN）模式"
+
+msgid "redir-host-mix(tun mix mode)"
+msgstr "Redir-Host（TUN-混合）模式【UDP-TUN，TCP-轉發】"
+
+msgid "fake-ip-mix(tun mix mode)"
+msgstr "Fake-IP（TUN-混合）模式【UDP-TUN，TCP-轉發】"
+
+msgid "Select Mode For OpenClash Work, Try Flush DNS Cache If Network Error"
+msgstr "選擇執行模式，如客戶端的網路異常請嘗試清除 DNS 快取"
+
+msgid "Proxy"
+msgstr "代理"
+
+msgid "Proxy Mode"
+msgstr "代理模式"
+
+msgid "Select Proxy Mode"
+msgstr "選擇預設代理模式"
+
+msgid "Rule Proxy Mode"
+msgstr "Rule【策略代理】"
+
+msgid "Global Proxy Mode"
+msgstr "Global【全域性代理（需前往控制面板手動指定節點）】"
+
+msgid "Direct Proxy Mode"
+msgstr "Direct【全域性直連】"
+
+msgid "Select Stack Type"
+msgstr "網路棧型別"
+
+msgid "Select Stack Type For TUN Mode, According To The Running Speed on Your Machine"
+msgstr "請自行根據執行速度為 TUN 模式選擇合適的網路棧"
+
+msgid "China IP Route"
+msgstr "實驗性：繞過指定區域 IP"
+
+msgid "China IPv6 Route"
+msgstr "實驗性：繞過指定區域 IPv6"
+
+msgid "Bypass Mainland China"
+msgstr "繞過中國大陸"
+
+msgid "Bypass Overseas"
+msgstr "海外使用者回國模式"
+
+msgid "Bypass Specified Regions Network Flows, Improve Performance, If Inaccessibility on Bypass Gateway, Try to Enable Bypass Gateway Compatible Option"
+msgstr "啟用後指定區域流量將不再經過核心，提升系統效能，如旁路由遇到無法訪問，請嘗試啟用旁路由相容模式"
+
+msgid "Log Level"
+msgstr "日誌等級"
+
+msgid "Info Mode"
+msgstr "Info【資訊】"
+
+msgid "Warning Mode"
+msgstr "Warning【警告】"
+
+msgid "Error Mode"
+msgstr "Error【錯誤】"
+
+msgid "Debug Mode"
+msgstr "Debug【除錯】"
+
+msgid "Silent Mode"
+msgstr "Silent【靜默】"
+
+msgid "Select Core's Log Level"
+msgstr "選擇核心日誌的預設輸出模式"
+
+msgid "Only intranet allowed"
+msgstr "僅允許內網"
+
+msgid "When Enabled, The Control Panel And The Connection Broker Port Will Not Be Accessible From The Public Network"
+msgstr "啟用後將禁止從公網訪問控制面板和連線代理埠"
+
+msgid "Redirect Local DNS Setting"
+msgstr "*本地 DNS 劫持"
+
+msgid "Set Local DNS Redirect"
+msgstr "推薦使用 Dnsmasq 轉發，相容性更好，如和其他 DNS 外掛衝突可停用，但須保證客戶端獲取的查詢結果與 Clash 給出的一致"
+
+msgid "Dnsmasq Redirect"
+msgstr "使用 Dnsmasq 轉發"
+
+msgid "Firewall Redirect"
+msgstr "使用防火牆轉發"
+
+msgid "Custom DNS Setting"
+msgstr "*自定義上游 DNS 伺服器"
+
+msgid "Use Custom Rules"
+msgstr "啟用後將把自定義規則增加到配置檔案，規則請到下方文字框編輯"
+
+msgid "Add Custom DNS Servers"
+msgstr "設定自定義上游 DNS 伺服器"
+
+msgid "(Take Effect After Choose Above)"
+msgstr "（在上方設定中啟用本功能後生效）"
+
+msgid "Advanced Setting"
+msgstr "高階設定"
+
+msgid "Enable Specify DNS Server"
+msgstr "啟用第二 DNS 伺服器"
+
+msgid "Specify DNS Server"
+msgstr "指定伺服器"
+
+msgid "Specify DNS Server For List, Only One IP Server Address Support"
+msgstr "指定下方列表中域名的 DNS 伺服器，只支援填寫一個 IP 地址"
+
+msgid "Domain Names In The List Do Not Return Fake-IP, One rule per line, Depend on Dnsmasq"
+msgstr "每行請只填寫一個域名，列表中的域名將使用上方指定的 DNS 進行查詢並返回真實 IP 地址，此功能依賴於 Dnsmasq"
+
+msgid "Domain Names In The List Do Not Return Fake-IP, One rule per line"
+msgstr "每行請只填寫一個域名，列表中的域名在 Fake-IP 模式下將返回真實 IP 地址"
+
+msgid "Domain Names In The List Use The Custom DNS Server, But Still Return Fake-IP Results, One rule per line"
+msgstr "每行請只填寫一個規則，列表中的域名將使用指定的 DNS 進行查詢，但 Fake-IP 模式下仍將返回保留地址"
+
+msgid "Set OpenClash Upstream DNS Resolve Server"
+msgstr "啟用將覆蓋配置檔案內的設定，請先在下方配置好伺服器"
+
+msgid "DNS Server Group"
+msgstr "伺服器分組"
+
+msgid "NameServer Group Must Be Set"
+msgstr "NameServer 組必須設定至少一個"
+
+msgid "DNS Server Address"
+msgstr "伺服器地址"
+
+msgid "Do Not Add Type Ahead"
+msgstr "請勿新增型別字首"
+
+msgid "DNS Server Port"
+msgstr "伺服器埠"
+
+msgid "Require When Use Non-Standard Port"
+msgstr "使用非標準埠時必須填寫"
+
+msgid "DNS Server Type"
+msgstr "伺服器型別"
+
+msgid "Communication protocol"
+msgstr "通訊協議"
+
+msgid "Proxy IPv6 Traffic"
+msgstr "IPv6 流量代理"
+
+msgid "The Gateway and DNS of The Connected Device Must be The Router IP, Disable IPv6 DHCP To Avoid Abnormal Connection If You Do Not Use"
+msgstr "連線裝置的閘道器和 DNS 須為路由器 IP，如果您不使用，請禁用 IPv6 的 DHCP 以避免連線異常"
+
+msgid "IPv6 DNS Resolve"
+msgstr "允許 IPv6 型別 DNS 解析"
+
+msgid "Enable to Resolve IPv6 DNS Requests"
+msgstr "允許解析 IPv6 型別的 DNS 請求"
+
+msgid "Common Setting"
+msgstr "通用設定"
+
+msgid "Config Manage"
+msgstr "配置管理"
+
+msgid "Add Config File"
+msgstr "新增配置檔案"
+
+msgid "Upload File Type"
+msgstr "上傳檔案型別"
+
+msgid "(Click to select)"
+msgstr "(點選選擇)"
+
+msgid "Proxy Provider File"
+msgstr "代理集檔案"
+
+msgid "Rule Provider File"
+msgstr "規則集檔案"
+
+msgid "Core File"
+msgstr "核心檔案"
+
+msgid "Upload"
+msgstr "上傳"
+
+msgid "Age Encryption"
+msgstr "Age 加密"
+
+msgid "Age Encryption File"
+msgstr "Age 加密檔案"
+
+msgid "Generate Age Key"
+msgstr "生成 Age 金鑰"
+
+msgid "Generating..."
+msgstr "生成中..."
+
+msgid "Public Key"
+msgstr "公鑰"
+
+msgid "Secret Key"
+msgstr "私鑰"
+
+msgid "Age Key Type"
+msgstr "Age 金鑰型別"
+
+msgid "x25519"
+msgstr "x25519"
+
+msgid "PQ (mlkem768-x25519)"
+msgstr "PQ (mlkem768-x25519)"
+
+msgid "Failed to generate age key"
+msgstr "生成 Age 金鑰失敗"
+
+msgid "No public key"
+msgstr "沒有公鑰"
+
+msgid "No secret key"
+msgstr "沒有私鑰"
+
+msgid "Age Encryption For Config, Click For More:"
+msgstr "使用 Age 加密配置，點選獲取更多資訊："
+
+msgid "Age Encryption Introduce"
+msgstr "Age 加密介紹"
+
+msgid "Calculate Public Key"
+msgstr "計算公鑰"
+
+msgid "Please enter the Age Secret Key to calculate the public key!"
+msgstr "請先輸入私鑰來計算公鑰！"
+
+msgid "Failed to calculate public key"
+msgstr "公鑰計算失敗"
+
+msgid "Add"
+msgstr "新增"
+
+msgid "File saved to"
+msgstr "檔案已成功上傳到"
+
+msgid "upload file error."
+msgstr "檔案上傳失敗"
+
+msgid "No specify upload file."
+msgstr "未指定上傳檔案"
+
+msgid "Note: Please Upload File According To File Type, File Will Be Saved To The Prompt Path"
+msgstr "注意：請根據檔案型別上傳檔案，檔案將會被儲存到提示路徑"
+
+msgid "Proxy Provider File List"
+msgstr "代理集檔案列表"
+
+msgid "Rule Providers File List"
+msgstr "規則集檔案列表"
+
+msgid "Please Make Sure Ports Available"
+msgstr "請確保埠可用"
+
+msgid "Update Subcription"
+msgstr "更新訂閱配置"
+
+msgid "Update time (every day)"
+msgstr "更新時間(每天)"
+
+msgid "Update Interval(min)"
+msgstr "更新間隔(分鐘)"
+
+msgid "Update Interval(hour)"
+msgstr "更新間隔(小時)"
+
+msgid "Update Mode"
+msgstr "更新模式"
+
+msgid "Appointment Mode"
+msgstr "預約"
+
+msgid "Loop Mode"
+msgstr "迴圈"
+
+msgid "Auto Update"
+msgstr "自動更新"
+
+msgid "Check And Update"
+msgstr "檢查並更新"
+
+msgid "After clash start running, wait a moment for servers to resolve,enjoy"
+msgstr "執行後，請等待伺服器上線"
+
+msgid "Redir Port"
+msgstr "流量轉發埠"
+
+msgid "TProxy Port"
+msgstr "TProxy 埠"
+
+msgid "SOCKS5 Port"
+msgstr "SOCKS5 代理埠"
+
+msgid "HTTP(S) Port"
+msgstr "HTTP(S) 代理埠"
+
+msgid "Mixed Port"
+msgstr "HTTP(S)&SOCKS5 混合代理埠"
+
+msgid "Set Authentication of SOCKS5/HTTP(S)"
+msgstr "設定 SOCKS5/HTTP(S) 認證資訊"
+
+msgid "Not Null"
+msgstr "空值無效"
+
+msgid "Server Subscription Address"
+msgstr "配置檔案訂閱地址"
+
+msgid "Auto Update Server subscription"
+msgstr "自動更新配置檔案"
+
+msgid "Modify Your Config file:"
+msgstr "您可以在下方直接修改配置檔案:"
+
+msgid "Here, Except The Settings That Were Taken Over"
+msgstr "，僅支援未被接管的設定"
+
+msgid "Default Config File With Correct Template"
+msgstr "參考配置檔案，方便您查詢各項引數註釋和正確的設定、順序"
+
+msgid "Config File Edited By OpenClash For Running"
+msgstr "OpenClash 修改後用於啟動的配置檔案"
+
+msgid "Dashboard Secret"
+msgstr "管理頁面登入金鑰"
+
+msgid "Set Dashboard Secret"
+msgstr "設定您的管理頁面登入金鑰"
+
+msgid "Dashboard Address Example:"
+msgstr "管理頁面地址示例:"
+
+msgid "Dashboard Port"
+msgstr "管理頁面埠"
+
+msgid "Public Dashboard Address"
+msgstr "管理頁面公網域名"
+
+msgid "Domain Name For Dashboard Login From Public Network"
+msgstr "設定公網域名，便於從公網訪問時自動登入"
+
+msgid "Public Dashboard Port"
+msgstr "管理頁面對映埠"
+
+msgid "Port For Dashboard Login From Public Network"
+msgstr "設定對映埠，便於從公網訪問時自動登入"
+
+msgid "Public Dashboard SSL enabled"
+msgstr "管理頁面公網 SSL 訪問"
+
+msgid "Is SSL enabled For Dashboard Login From Public Network"
+msgstr "設定公網協議是否開啟了 SSL，便於從公網訪問時自動登入"
+
+msgid "GEO Update"
+msgstr "GEO 資料庫訂閱"
+
+msgid "Auto Update GeoIP MMDB"
+msgstr "自動更新 GeoIP MMDB 資料庫"
+
+msgid "Update GeoIP MMDB"
+msgstr "更新 GeoIP MMDB 資料庫"
+
+msgid "Auto Update GeoSite"
+msgstr "自動更新 GeoSite 資料庫"
+
+msgid "Update GeoSite Database"
+msgstr "更新 GeoSite 資料庫"
+
+msgid "Auto Update Geo ASN"
+msgstr "自動更新 Geo ASN 資料庫"
+
+msgid "Update Geo ASN Database"
+msgstr "更新 Geo ASN 資料庫"
+
+msgid "Auto Update Chnroute Lists"
+msgstr "自動更新大陸白名單"
+
+msgid "Update Chnroute Lists"
+msgstr "更新大陸白名單"
+
+msgid "Chnroute Update"
+msgstr "大陸白名單訂閱"
+
+msgid "Update Time (Every Week)"
+msgstr "更新時間(每週)"
+
+msgid "Every Day"
+msgstr "每天"
+
+msgid "Every Monday"
+msgstr "每週一"
+
+msgid "Every Tuesday"
+msgstr "每週二"
+
+msgid "Every Wednesday"
+msgstr "每週三"
+
+msgid "Every Thursday"
+msgstr "每週四"
+
+msgid "Every Friday"
+msgstr "每週五"
+
+msgid "Every Saturday"
+msgstr "每週六"
+
+msgid "Every Sunday"
+msgstr "每週日"
+
+msgid "Netflix"
+msgstr "奈飛（Netflix）"
+
+msgid "Disney Plus"
+msgstr "迪士尼+（Disney Plus）"
+
+msgid "Bilibili"
+msgstr "嗶哩嗶哩（Bilibili）"
+
+msgid "Bahamut"
+msgstr "巴哈姆特（Bahamut）"
+
+msgid "Custom Clash Rules"
+msgstr "*自定義規則"
+
+msgid "Custom Rules Here, For More Go:"
+msgstr "在上方設定自定義規則，詳細資訊請參閱:"
+
+msgid "(Priority)"
+msgstr "（優先匹配）"
+
+msgid "(Extended)"
+msgstr "（候補匹配）"
+
+msgid "IP To CIDR:"
+msgstr "線上 IP 段轉 CIDR 地址:"
+
+msgid "Custom Hosts Here, You May Need to Turn off The Rebinding Protection Option of Dnsmasq When Hosts Has Set a Reserved Address, For More Go:"
+msgstr "設定自定義 Hosts，設定了保留地址時需要關閉 Dnsmasq 的重繫結保護選項才能生效，詳細資訊請參閱:"
+
+msgid "Set Custom Rules"
+msgstr "設定自定義規則（在上方規則設定中啟用本功能後生效）"
+
+msgid "Version Update"
+msgstr "版本更新"
+
+msgid "Current Core Version"
+msgstr "當前核心版本"
+
+msgid "Last Core Version"
+msgstr "最新核心版本"
+
+msgid "Check Failed"
+msgstr "查詢更新失敗"
+
+msgid "<New>"
+msgstr "<可更新>"
+
+msgid "Update Core File"
+msgstr "更新核心"
+
+msgid "Download Form https://github.com/vernesong/OpenClash/releases/tag/Clash If Fail"
+msgstr ""
+"如下載失敗可前往 https://github.com/vernesong/OpenClash/releases/tag/Clash 手動下載並上傳"
+
+msgid "Last OpenClash Version"
+msgstr "最新客戶端版本"
+
+msgid "Current OpenClash Version"
+msgstr "當前客戶端版本"
+
+msgid "Update OpenClash"
+msgstr "更新客戶端"
+
+msgid "Only For IPK Install Type Or Not Release Memory"
+msgstr "只支援透過 IPK 安裝的版本進行更新，因為隨系統編譯的版本更新後不會釋放舊版本的快閃記憶體空間"
+
+msgid "Servers Manage"
+msgstr "節點管理"
+
+msgid "Read Config"
+msgstr "讀取配置"
+
+msgid "Delete Unused Servers"
+msgstr "刪除未啟用節點"
+
+msgid "Delete Servers"
+msgstr "清空伺服器配置"
+
+msgid "Delete Proxy Providers"
+msgstr "清空代理集配置"
+
+msgid "Delete Groups"
+msgstr "清空策略組配置"
+
+msgid "Back Settings"
+msgstr "返回概覽"
+
+msgid "Refresh Page"
+msgstr "重新整理頁面"
+
+msgid "Servers & Groups manage"
+msgstr "節點 & 策略組管理"
+
+msgid "Type"
+msgstr "型別"
+
+msgid "Server Alias"
+msgstr "別名（請勿重名）"
+
+msgid "Server Address"
+msgstr "伺服器地址"
+
+msgid "Server Port"
+msgstr "伺服器埠"
+
+msgid "UDP Support"
+msgstr "UDP 支援"
+
+msgid "Edit Server"
+msgstr "編輯伺服器配置"
+
+msgid "Server Node Type"
+msgstr "伺服器節點型別"
+
+msgid "Using incorrect encryption mothod may causes service fail to start"
+msgstr "輸入不正確的引數組合可能會導致服務無法啟動"
+
+msgid "Password"
+msgstr "密碼"
+
+msgid "Encrypt Method"
+msgstr "加密方式"
+
+msgid "Protocol"
+msgstr "協議"
+
+msgid "Protocol param(optional)"
+msgstr "傳輸協議引數（可選）"
+
+msgid "obfs"
+msgstr "混淆外掛"
+
+msgid "Obfs param(optional)"
+msgstr "混淆引數（可選）"
+
+msgid "UDP Enable"
+msgstr "UDP 支援"
+
+msgid "XUDP Enable"
+msgstr "XUDP 支援"
+
+msgid "obfs-mode"
+msgstr "傳輸協議"
+
+msgid "obfs-hosts"
+msgstr "混淆引數（HOST）"
+
+msgid "Auth Username"
+msgstr "登入使用者名稱"
+
+msgid "Auth Password"
+msgstr "登入密碼"
+
+msgid "None"
+msgstr "未配置"
+
+msgid "Proxy Groups"
+msgstr "策略組配置"
+
+msgid "Proxies"
+msgstr "伺服器節點配置"
+
+msgid "Enable Port Hopping"
+msgstr "啟用埠躍遷"
+
+msgid "Port Range"
+msgstr "埠範圍值"
+
+msgid "Uplink Capacity(Default:Mbps)"
+msgstr "上行鏈路容量（預設：Mbps）"
+
+msgid "Downlink Capacity(Default:Mbps)"
+msgstr "下行鏈路容量（預設：Mbps）"
+
+msgid "Hop Interval (Unit:second)"
+msgstr "跳躍間隔（單位：秒）"
+
+msgid "Obfs"
+msgstr "混淆外掛"
+
+msgid "Obfs param (optional)"
+msgstr "混淆引數（可選）"
+
+msgid "obfs-password"
+msgstr "混淆密碼"
+
+msgid "Enable Transport Protocol Settings"
+msgstr "啟用傳輸協議設定"
+
+msgid "Hysterir QUIC parameters"
+msgstr "QUIC 引數"
+
+msgid "QUIC init stream receive window"
+msgstr "QUIC 初始流接收視窗大小"
+
+msgid "QUIC max stream receive window"
+msgstr "QUIC 最大的流接收視窗大小"
+
+msgid "QUIC init connection receive window"
+msgstr "QUIC 初始的連線接收視窗大小"
+
+msgid "QUIC max connection receive window"
+msgstr "QUIC 最大的連線接收視窗大小"
+
+msgid "Edit Group"
+msgstr "編輯策略組配置"
+
+msgid "Group Type"
+msgstr "策略組型別"
+
+msgid "Choose The Operation Mode"
+msgstr "設定策略組挑選伺服器節點的工作方式"
+
+msgid "Group Name"
+msgstr "別名（請勿重名）"
+
+msgid "Disable UDP"
+msgstr "禁用 UDP 連線"
+
+msgid "Test URL"
+msgstr "檢測地址（URL）"
+
+msgid "Test Interval(s)"
+msgstr "檢測頻率（秒）"
+
+msgid "Tolerance(ms)"
+msgstr "節點切換容忍值（毫秒）"
+
+msgid "Manual-Select"
+msgstr "Select【手動選擇】"
+
+msgid "Smart-Select"
+msgstr "Smart【智慧選擇】"
+
+msgid "URL-Test"
+msgstr "URL-Test【最低延遲】"
+
+msgid "Fallback"
+msgstr "Fallback【故障切換】"
+
+msgid "Load-Balance"
+msgstr "Load-Balance【負載均衡】"
+
+msgid "Other Group (Support Regex)"
+msgstr "包含其他策略組（請勿重複新增，支援正則匹配）"
+
+msgid "The Added Proxy Groups Must Exist Except 'DIRECT' & 'REJECT' & 'REJECT-DROP' & 'PASS' & 'GLOBAL'"
+msgstr "注意：除'DIRECT'、'REJECT'、'REJECT-DROP'、'PASS'、'GLOBAL'外，修改配置檔案前新增的其他策略組必須已建立"
+
+msgid "The Added Proxy Provider Must Exist"
+msgstr "修改配置檔案前新增的代理集必須已建立"
+
+msgid "Proxy Group (Support Regex)"
+msgstr "新增到策略組（請勿重複新增，支援正則匹配）"
+
+msgid "Set Proxy Group"
+msgstr "指定策略組"
+
+msgid "The added Proxy Groups Must Exist"
+msgstr "注意：修改配置檔案前新增的策略組必須已建立"
+
+msgid "The added Dialer Proxy or Group Must Exist"
+msgstr "注意：修改配置檔案前新增的策略組或者節點必須已建立"
+
+msgid "Clean"
+msgstr "清理日誌"
+
+msgid "Stop Refresh"
+msgstr "停止重新整理"
+
+msgid "Start Refresh"
+msgstr "開始重新整理"
+
+msgid "Config File"
+msgstr "配置檔案"
+
+msgid "State"
+msgstr "狀態"
+
+msgid "Update Time"
+msgstr "更新時間"
+
+msgid "File Name"
+msgstr "檔名"
+
+msgid "SwiTch"
+msgstr "切換"
+
+msgid "Size"
+msgstr "檔案大小"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Add Header"
+msgstr "新增請求頭"
+
+msgid "Add Param"
+msgstr "新增引數"
+
+msgid "Add custom HTTP headers to the subscription request"
+msgstr "為訂閱請求新增自定義 HTTP 請求頭"
+
+msgid "Set environment variables for the overwrite script"
+msgstr "為覆寫指令碼設定環境變數"
+
+msgid "(Enable or Disable Subscribe)"
+msgstr "（啟用或禁用更新）"
+
+msgid "Config Alias"
+msgstr "配置檔名"
+
+msgid "Name For Distinguishing"
+msgstr "用於區分，請勿重名"
+
+msgid "Subscribe Address"
+msgstr "訂閱地址"
+
+msgid "Keyword Match"
+msgstr "篩選節點"
+
+msgid "Exclude Keyword Match"
+msgstr "排除節點"
+
+msgid "eg: hk or tw&bgp"
+msgstr "格式示例：香港 或 臺灣&bgp 或 新加坡&bgp&奈飛"
+
+msgid "Config File List"
+msgstr "配置檔案列表"
+
+msgid "Use For All Config File"
+msgstr "新增到所有配置檔案"
+
+msgid "Proxy-Provider"
+msgstr "代理集配置"
+
+msgid "Edit Proxy-Provider"
+msgstr "編輯代理集配置"
+
+msgid "Provider Type"
+msgstr "代理集型別"
+
+msgid "Choose The Provider Type"
+msgstr "選擇代理集的型別"
+
+msgid "Provider Name"
+msgstr "代理集別名（請勿重名）"
+
+msgid "Provider Path"
+msgstr "代理集路徑（Path）"
+
+msgid "Update Your Proxy Provider File From Config Luci Page"
+msgstr "請先在配置檔案管理頁面上傳您的代理集檔案"
+
+msgid "Provider Filter"
+msgstr "代理集節點篩選"
+
+msgid "Provider URL"
+msgstr "代理集 URL"
+
+msgid "Provider Interval(s)"
+msgstr "代理集更新間隔（s）"
+
+msgid "Provider Health Check"
+msgstr "代理集狀態檢查"
+
+msgid "Health Check URL"
+msgstr "狀態檢查 URL"
+
+msgid "Health Check Interval(s)"
+msgstr "狀態檢查間隔（s）"
+
+msgid "Proxy UDP Traffics"
+msgstr "UDP 流量轉發"
+
+msgid "The Servers Must Support UDP forwarding"
+msgstr "啟用時伺服器必須支援 UDP 轉發"
+
+msgid "If Docker is Installed, UDP May Not Forward Normally"
+msgstr "安裝了 Docker 的韌體請使用 TUN 模式，否則可能無法正常轉發 UDP，造成遊戲異常"
+
+msgid "Disable QUIC"
+msgstr "*禁用 QUIC"
+
+msgid "Prevent YouTube and Others To Use QUIC Transmission"
+msgstr "防止 YouTube 等使用 QUIC 導致速度不佳"
+
+msgid "REJECT UDP Traffic(Not Include bypassed regions via China IP Route setting) On Port 443"
+msgstr "禁用 443 埠 UDP 流量（繞過指定區域 IP：啟用或繞過中國大陸時禁用海外方向 QUIC；回國模式禁用大陸方向 QUIC）"
+
+msgid "Operation Mode"
+msgstr "模式設定"
+
+msgid "Select Operation Mode"
+msgstr "*頁面操作模式"
+
+msgid "Select Mode For Page Settings, Switch By Click the Button Bellow"
+msgstr "選擇全域性設定的操作模式，單擊下面的按鈕進行切換"
+
+msgid "redir-host mode"
+msgstr "Redir-Host 模式"
+
+msgid "fake-ip mode"
+msgstr "Fake-IP 模式"
+
+msgid "Switch Operation Mode"
+msgstr "切換操作模式"
+
+msgid "Switch Mode"
+msgstr "切換"
+
+msgid "Black&White"
+msgstr "黑白名單"
+
+msgid "LAN Access Control Mode"
+msgstr "區域網訪問控制模式"
+
+msgid "Black List Mode"
+msgstr "黑名單模式"
+
+msgid "White List Mode"
+msgstr "白名單模式"
+
+msgid "LAN Bypassed Host List"
+msgstr "不走代理的區域網裝置 IP"
+
+msgid "LAN Proxied Host List"
+msgstr "走代理的區域網裝置 IP"
+
+msgid "WAN Bypassed Host List"
+msgstr "不走代理的 WAN IP"
+
+msgid "WAN Bypassed Port List"
+msgstr "不走代理的 WAN 埠"
+
+msgid "LAN Bypassed Mac List"
+msgstr "不走代理的區域網裝置 Mac"
+
+msgid "LAN Proxied Mac List"
+msgstr "走代理的區域網裝置 Mac"
+
+msgid "In The Fake-IP Mode, Only Pure IP Requests Are Supported, Please Setting Fake-IP-Filter First If You Need Domain Type Requests"
+msgstr "在 Fake-IP 模式下，只支援過濾純 IP 型別的請求, 如果涉及域名訪問請提前設定 Fake-IP-Filter"
+
+msgid "iptables DSCP module not available, please try DCSP rule by core instead, skipping DSCP rule for"
+msgstr "iptables 的 DSCP 模組不可用，請嘗試改用核心的 DSCP 規則，來源流量訪問控制跳過設定 DSCP 規則"
+
+msgid "Rule Match Proxy Mode"
+msgstr "僅代理命中規則流量"
+
+msgid "Append Some Rules to Config, Allow Only Traffic Proxies that Match the Rule, Prevent BT/P2P Passing"
+msgstr "附加規則到配置檔案，僅允許匹配規則的流量代理，防止 BT、P2P 下載流量經過代理"
+
+msgid "Common Ports Proxy Mode"
+msgstr "*僅允許常用埠流量"
+
+msgid "Only Common Ports, Prevent BT/P2P Passing"
+msgstr "僅允許常用埠的流量經過 Clash，防止 BT、P2P 下載流量經過代理"
+
+msgid "443 or 21-443, Use Space to Separate"
+msgstr "443 or 21-443, 請使用空格分隔"
+
+msgid "Default Common Ports"
+msgstr "預設常用埠"
+
+msgid "Provider File Manage"
+msgstr "代理（規則）集檔案管理"
+
+msgid "Config File Edit"
+msgstr "配置檔案編輯"
+
+msgid "Delete All File"
+msgstr "刪除所有檔案"
+
+msgid "SS/SSR/Vmess or Other Link And Subscription Address is Supported When Online Subscription Conversion is Enabled, Multiple Links Should be One Per Line or Separated By |"
+msgstr "線上訂閱轉換啟用時支援：SS/SSR/Vmess 等節點連結和訂閱連結，多個連結請每行一個或用 | 分隔"
+
+msgid "URI and subscription address is supported when online subscription conversion enabled, multiple links should be one per line or separated by"
+msgstr "線上訂閱轉換啟用時支援：節點連結和訂閱連結，多個連結請每行一個或使用分隔符"
+
+msgid "Template Name"
+msgstr "訂閱轉換模板"
+
+msgid "Subscribe Convert Online"
+msgstr "線上訂閱轉換"
+
+msgid "Custom Template URL"
+msgstr "自定義模板地址"
+
+msgid "Custom Template"
+msgstr "自定義模板"
+
+msgid "Emoji"
+msgstr "新增 Emoji"
+
+msgid "skip-cert-verify"
+msgstr "跳過證書驗證"
+
+msgid "Sort"
+msgstr "排序"
+
+msgid "Append Node Type"
+msgstr "插入節點型別"
+
+msgid "Convert Subscribe Online With Template"
+msgstr "根據模板線上轉換配置檔案"
+
+msgid "Convert Subscribe function of Online is Supported By subconverter Written By tindy X"
+msgstr "線上訂閱轉換功能由 tindy X 透過 subconverter 提供支援"
+
+msgid "Small Flash Memory"
+msgstr "小快閃記憶體模式"
+
+msgid "Move Core And GEOIP Data File To /tmp/etc/openclash For Small Flash Memory Device"
+msgstr "針對快閃記憶體空間不夠的裝置，移動核心和 GEOIP 資料庫等檔案到 /tmp/etc/openclash 資料夾"
+
+msgid "Round-robin"
+msgstr "輪詢（輪流使用全部代理）"
+
+msgid "Consistent-hashing"
+msgstr "雜湊匹配（訪問相同網站時使用同一個代理）"
+
+msgid "Sticky-sessions"
+msgstr "粘性會話（相同的來源地址-目標地址使用同一個代理）"
+
+msgid "Strategy Type"
+msgstr "策略型別"
+
+msgid "Choose The Load-Balance's Strategy Type"
+msgstr "選擇負載均衡的策略型別"
+
+msgid "Uselightgbm"
+msgstr "Uselightgbm(使用模型)"
+
+msgid "Collectdata"
+msgstr "Collectdata(收集資料)"
+
+msgid "Policy Priority"
+msgstr "Policy Priority(權重加成)"
+
+msgid "Use LightGBM Model For Smart Group Weight Prediction"
+msgstr "使用 LightGBM 模型為 Smart 策略組預測權重"
+
+msgid "Collect Datas For Smart Group Model Training"
+msgstr "收集 Smart 策略組的連線資料，方便用來分析及模型訓練"
+
+msgid "The Priority Of The Nodes, The Higher Than 1, The More Likely It Is To Be Selected, The Default Is 1, Support Regex"
+msgstr "自定義 Smart 策略組內節點的權重加成，大於 1 表示權重加成優先選擇，小於 1 表示權重削減降低使用率，預設為 1，支援正則"
+
+msgid "Smart Group Tolerance"
+msgstr "Smart 策略組排序靈敏度"
+
+msgid "Sort When Proxies Delays Within Tolerance are Treated as Equal, Preventing Jitter"
+msgstr "當代理延遲在容差範圍內時將其視為相等並排序，從而避免抖動"
+
+msgid "Running Status"
+msgstr "執行狀態"
+
+msgid "Running Mode"
+msgstr "執行模式"
+
+msgid "yacd"
+msgstr "Yacd"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Metacubexd"
+msgstr "Metacubexd"
+
+msgid "Zashboard"
+msgstr "Zashboard"
+
+msgid "Control Panel"
+msgstr "控制面板"
+
+msgid "If the control panel does not open properly, please try going to Plugin Settings - Dashboard Settings to reset the panel"
+msgstr "如果控制面板開啟異常，請嘗試前往 [外掛設定 - 外部控制] 重置面板"
+
+msgid "Quick Action"
+msgstr "快捷操作"
+
+msgid "No Backup"
+msgstr "暫未備份"
+
+msgid "Backup"
+msgstr "備份"
+
+msgid "Enhance"
+msgstr "增強"
+
+msgid "Compat"
+msgstr "相容"
+
+msgid "Mix"
+msgstr "混合"
+
+msgid "Close Connect"
+msgstr "關閉連結"
+
+msgid "Close Connect Failed"
+msgstr "關閉連線失敗"
+
+msgid "Restore Nodes Selection"
+msgstr "還原策略組節點選擇"
+
+msgid "Save Nodes Selection"
+msgstr "儲存策略組節點選擇"
+
+msgid "Reload Firewall"
+msgstr "重置防火牆"
+
+msgid "Check Update"
+msgstr "檢查更新"
+
+msgid "Check Config Update"
+msgstr "配置檔案檢查更新"
+
+msgid "Check Third Party Rules Update"
+msgstr "第三方規則檢查更新"
+
+msgid "Check GEOIP Data Update"
+msgstr "GEOIP 資料庫檢查更新"
+
+msgid "Check GeoSite Data Update"
+msgstr "GeoSite 資料庫檢查更新"
+
+msgid "You have not installed the core yet, do you want to download and install it now?"
+msgstr "您還未安裝核心，是否立即下載安裝？"
+
+msgid "Checking..."
+msgstr "正在檢查更新..."
+
+msgid "Reloading..."
+msgstr "正在重置..."
+
+msgid "Restoring..."
+msgstr "正在還原..."
+
+msgid "Saving..."
+msgstr "正在儲存..."
+
+msgid "Save successful"
+msgstr "儲存成功"
+
+msgid "Failed to save"
+msgstr "儲存失敗"
+
+msgid "Failed to save age config"
+msgstr "儲存 age 配置失敗"
+
+msgid "Firewall Rules Reset Failed"
+msgstr "防火牆規則重置失敗"
+
+msgid "Close All Connections Railed"
+msgstr "重置所有連結失敗"
+
+msgid "Restore Nodes Selection Railed"
+msgstr "還原失敗"
+
+msgid "Save Nodes Selection Failed"
+msgstr "備份失敗"
+
+msgid "after started, please wait patiently until the connection is normal"
+msgstr "OpenClash 成功啟動後請耐心等待下方網站訪問檢查連線正常後再使用"
+
+msgid "You can modify the profile on the profile page (for content that is not taken over)"
+msgstr "您可以在配置檔案頁面直接修改配置檔案（適用於沒被接管的內容）"
+
+msgid "do not write configuration files? Try to create one click on the server page"
+msgstr "不會編寫配置檔案？試試在【伺服器與策略組管理】頁面一鍵建立"
+
+msgid "some website are abnormal? Try switching modes or using third-party rules"
+msgstr "某些網站連結出現異常? 試試切換模式或者使用第三方規則"
+
+msgid "using the fake IP mode can get a faster access experience"
+msgstr "使用 Fake-IP 模式可以獲得更加快速的訪問體驗"
+
+msgid "the nameserver group must have at least one server set when using custom DNS"
+msgstr "使用自定義 DNS 上游伺服器時 NameServer 組必須設定至少一個伺服器"
+
+msgid "if you don not use IPv6, please turn off the DHCP service of IPv6, otherwise the connection will be abnormal"
+msgstr "如果不使用 IPv6，請關閉 IPv6 的 DHCP 服務，否則會造成連線異常"
+
+msgid "you can update the version in the settings page"
+msgstr "您可以在外掛設定頁面進行版本更新操作"
+
+msgid "Note: if the update fails, you can manually download and upload"
+msgstr "注意：如更新失敗可手動下載並上傳"
+
+msgid "Note: the client may not support update, because the firmware with squashfs format will not release flash space after updating"
+msgstr "注意：客戶端可能無法更新，因為 squashfs 格式的韌體更新後不會釋放快閃記憶體空間"
+
+msgid "Compiled Version"
+msgstr "編譯版本"
+
+msgid "Release Branch"
+msgstr "更新分支"
+
+msgid "CPU Arch"
+msgstr "處理器架構"
+
+msgid "Last Check Update"
+msgstr "上次檢查更新時間"
+
+msgid "Core path:"
+msgstr "核心路徑："
+
+msgid "Restore Default"
+msgstr "還原預設"
+
+msgid "Are you sure want to restore the default config?"
+msgstr "確定要還原預設配置嗎？"
+
+msgid "Restore succeeded!"
+msgstr "還原預設配置成功！"
+
+msgid "Restore failed!"
+msgstr "還原預設配置失敗！"
+
+msgid "Press"
+msgstr "按"
+
+msgid "for fullscreen,"
+msgstr "全屏，"
+
+msgid "to exit fullscreen,"
+msgstr "退出全屏，"
+
+msgid "to zoom"
+msgstr "縮放"
+
+msgid "Mouse Wheel"
+msgstr "滑鼠滾輪"
+
+msgid "to toggle differences,"
+msgstr "切換差異顯示，"
+
+msgid "Switch page to Fake-IP mode"
+msgstr "切換頁面到 Fake-IP 模式"
+
+msgid "Switch page to Redir-Host mode"
+msgstr "切換頁面到 Redir-Host 模式"
+
+msgid "Page has been switched to Fake-IP mode!"
+msgstr "頁面已切換為 Fake-IP 模式！"
+
+msgid "Page has been switched to Redir-Host mode!"
+msgstr "頁面已切換為 Redir-Host 模式！"
+
+msgid "IP Address"
+msgstr "IP 地址"
+
+msgid "Access Check"
+msgstr "訪問檢查"
+
+msgid "Baidu Search"
+msgstr "百度搜尋"
+
+msgid "NetEase Music"
+msgstr "網易雲音樂"
+
+msgid "Querying..."
+msgstr "查詢中..."
+
+msgid "Testing..."
+msgstr "檢測中..."
+
+msgid "Access Timed Out"
+msgstr "連線超時"
+
+msgid "Access Normal"
+msgstr "連線正常"
+
+msgid "Access Denied"
+msgstr "無法訪問"
+
+msgid "Connection Failed"
+msgstr "連線失敗"
+
+msgid "Invalid Response"
+msgstr "響應異常"
+
+msgid "Installed"
+msgstr "已安裝"
+
+msgid "Select Version"
+msgstr "選擇版本"
+
+msgid "Latest"
+msgstr "最新"
+
+msgid "Latency"
+msgstr "延遲"
+
+msgid "Plugin"
+msgstr "外掛"
+
+msgid "Core"
+msgstr "核心"
+
+msgid "Plugin Version"
+msgstr "外掛版本"
+
+msgid "Core Version"
+msgstr "核心版本"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Failed to get version history"
+msgstr "歷史版本獲取失敗"
+
+msgid "Failed to get data, will retry"
+msgstr "獲取資料失敗，將自動重試"
+
+msgid "Bind Network Interface"
+msgstr "繫結網路介面"
+
+msgid "Default Interface Name:"
+msgstr "當前系統預設介面:"
+
+msgid ",Try Enable If Network Loopback"
+msgstr ", 如發生迴環宕機請嘗試啟用"
+
+msgid "Custom GeoIP MMDB URL"
+msgstr "GeoIP MMDB 資料庫更新 URL"
+
+msgid "Custom GeoSite URL"
+msgstr "GeoSite 資料庫更新 URL"
+
+msgid "Custom Geo ASN URL"
+msgstr "Geo ASN 資料庫更新 URL"
+
+msgid "Custom Chnroute6 Lists URL"
+msgstr "大陸 IPv6 段更新 URL"
+
+msgid "Custom Chnroute Lists URL"
+msgstr "大陸 IP 段更新 URL"
+
+msgid "Custom GeoIP MMDB URL, Click Button Below To Refresh After Edit"
+msgstr "自定義 GeoIP MMDB 資料庫的更新來源，編輯後點選下方按鈕生效"
+
+msgid "Custom GeoSite Data URL, Click Button Below To Refresh After Edit"
+msgstr "自定義 GeoSite 資料庫的更新來源，編輯後點選下方按鈕生效"
+
+msgid "Custom Geo ASN Data URL, Click Button Below To Refresh After Edit"
+msgstr "自定義 Geo ASN 資料庫的更新來源，編輯後點選下方按鈕生效"
+
+msgid "Custom Chnroute Lists URL, Click Button Below To Refresh After Edit"
+msgstr "自定義大陸 IP 段的更新來源，編輯後點選下方按鈕生效"
+
+msgid "Custom Chnroute6 Lists URL, Click Button Below To Refresh After Edit"
+msgstr "自定義大陸 IPv6 段的更新來源，編輯後點選下方按鈕生效"
+
+msgid "(Default)"
+msgstr "(預設)"
+
+msgid "(Default mmdb)"
+msgstr "(預設，全部國家且僅寫入 iso_code 和 geoname_id)"
+
+msgid "(All Info mmdb)"
+msgstr "(全部國家且且包含官方全部資訊資料)"
+
+msgid "(Only CN)"
+msgstr "(僅中國資料)"
+
+msgid "Note"
+msgstr "備註"
+
+msgid "Auto Restart"
+msgstr "定時重啟"
+
+msgid "Auto Restart OpenClash"
+msgstr "定時重啟外掛"
+
+msgid "Restart Time (Every Week)"
+msgstr "重啟時間(每週)"
+
+msgid "Restart time (every day)"
+msgstr "重啟時間(每天)"
+
+msgid "DNS Port"
+msgstr "DNS 監聽埠"
+
+msgid "Log Size (KB)"
+msgstr "日誌大小（KB）"
+
+msgid "Set Log File Size (KB)"
+msgstr "設定日誌檔案大小（KB）"
+
+msgid "Download Log"
+msgstr "下載日誌"
+
+msgid "Convert Address"
+msgstr "訂閱轉換服務地址"
+
+msgid "Note: There is A Risk of Privacy Leakage in Online Convert"
+msgstr "注意：線上訂閱轉換存在隱私洩露風險"
+
+msgid "Remove Core"
+msgstr "刪除核心"
+
+msgid "Are you sure want to remove all core files?"
+msgstr "確定要刪除所有核心檔案嗎？"
+
+msgid "Removing..."
+msgstr "正在刪除..."
+
+msgid "Remove succeeded!"
+msgstr "刪除成功！"
+
+msgid "Remove failed!"
+msgstr "刪除失敗！"
+
+msgid "Import"
+msgstr "匯入配置資訊"
+
+msgid "Import configuration information successfully"
+msgstr "匯入配置資訊成功"
+
+msgid "Invalid format"
+msgstr "無效的格式"
+
+msgid "User cancelled"
+msgstr "使用者已取消"
+
+msgid "Paste sharing link here"
+msgstr "在此處貼上分享連結"
+
+msgid "Unsupported protocol type"
+msgstr "不支援的協議"
+
+msgid "Copy"
+msgstr "複製"
+
+msgid "Copy Debug"
+msgstr "複製除錯日誌"
+
+msgid "Export"
+msgstr "匯出配置資訊"
+
+msgid "Export failed"
+msgstr "匯出失敗"
+
+msgid "Export error"
+msgstr "匯出錯誤"
+
+msgid "Parse error."
+msgstr "解析錯誤"
+
+msgid "to clipboard successfully"
+msgstr "到剪貼簿成功"
+
+msgid "Unable to copy"
+msgstr "無法複製"
+
+msgid "to clipboard"
+msgstr "到剪貼簿"
+
+msgid "Exclude Keyword Match Default"
+msgstr "排除無效節點"
+
+msgid "Start downloading"
+msgstr "開始下載"
+
+msgid "Download successful, start pre update test..."
+msgstr "下載成功，開始更新前測試..."
+
+msgid "opkg update failed or timed out:"
+msgstr "opkg update 失敗或超時:"
+
+msgid "apk update failed or timed out:"
+msgstr "apk update 失敗或超時:"
+
+msgid "opkg update failed:"
+msgstr "opkg update 失敗:"
+
+msgid "apk update failed:"
+msgstr "apk update 失敗:"
+
+msgid "Pre update test failed:"
+msgstr "更新前測試失敗:"
+
+msgid ", retrying..."
+msgstr "，正在重試..."
+
+msgid ", trying pre update test..."
+msgstr "，嘗試進行預安裝..."
+
+msgid "Pre update test failed after 3 attempts, the file is saved in /tmp/openclash.ipk, please try to update manually with"
+msgstr "更新前測試失敗，檔案儲存在 /tmp/openclash.ipk，請嘗試以下命令手動更新"
+
+msgid "Pre update test failed after 3 attempts, the file is saved in /tmp/openclash.apk, please try to update manually with"
+msgstr "更新前測試失敗，檔案儲存在 /tmp/openclash.apk，請嘗試以下命令手動更新"
+
+msgid "Pre update test passed, ready to update and please do not refresh the page and other operations..."
+msgstr "更新前測試透過，準備開始更新，更新過程請不要重新整理頁面..."
+
+msgid "Installing the new version, please do not refresh the page or do other operations..."
+msgstr "正在安裝新版本，更新過程請不要重新整理頁面和進行其他操作..."
+
+msgid "Installation failed:"
+msgstr "軟體包安裝失敗:"
+
+msgid "OpenClash update failed after 3 attempts, the file is saved in /tmp/openclash.ipk, please try to update manually with"
+msgstr "OpenClash 更新失敗，檔案儲存在 /tmp/openclash.ipk，請嘗試以下命令手動更新"
+
+msgid "OpenClash update failed after 3 attempts, the file is saved in /tmp/openclash.apk, please try to update manually with"
+msgstr "OpenClash 更新失敗，檔案儲存在 /tmp/openclash.apk，請嘗試以下命令手動更新"
+
+msgid "Download Failed after 3 attempts, please check the network or try again later!"
+msgstr "下載失敗，請檢查網路或稍後再試！"
+
+msgid "Download failed..."
+msgstr "下載失敗..."
+
+msgid "Failed to get version information, please try again later..."
+msgstr "獲取版本資訊失敗，請稍後再試..."
+
+msgid "OpenClash has not been updated, stop continuing!"
+msgstr "OpenClash 沒有更新，停止繼續操作！"
+
+msgid "Core Version Check Error, Please Try Again Later..."
+msgstr "核心最新版本檢測失敗，請稍後再試..."
+
+msgid "Core Downloading, Please Try to Download and Upload Manually If Fails"
+msgstr "版本核心正在下載，如下載失敗請嘗試手動下載並上傳..."
+
+msgid "Core Download Successful, Start Update..."
+msgstr "版本核心下載成功，開始更新..."
+
+msgid "Core Update Successful"
+msgstr "版本核心更新成功！"
+
+msgid "Core Update Failed:"
+msgstr "版本核心更新失敗:"
+
+msgid "Core Download Failed, Please Check The Network or Try Again Later..."
+msgstr "版本核心下載失敗，請檢查網路情況或稍後再試！"
+
+msgid "Core Download Failed, Please Check The Network or Try Again Later"
+msgstr "版本核心下載失敗，請檢查網路情況或稍後再試"
+
+msgid "Core Move Failed:"
+msgstr "核心移動失敗:"
+
+msgid "Core Verification Failed:"
+msgstr "核心校驗失敗:"
+
+msgid "No Compiled Version Selected, Please Select In Update Page And Try Again!"
+msgstr "未選擇編譯版本，請到升級頁面選擇後再試！"
+
+msgid "Core Has Not Been Updated, Stop Continuing Operation"
+msgstr "版本核心沒有更新，停止繼續操作！"
+
+msgid "Update Successful!"
+msgstr "更新成功！"
+
+msgid "No Change, Do Nothing!"
+msgstr "沒有更新，停止繼續操作!"
+
+msgid "Update Error, Please Try Again Later..."
+msgstr "下載失敗，請檢查網路或稍後再試..."
+
+msgid "Start Picking Nodes..."
+msgstr "檢測到已啟用節點篩選，開始挑選節點..."
+
+msgid "Config File Test Successful, Check If There is Any Update..."
+msgstr "配置檔案測試成功，檢查是否有更新..."
+
+msgid "Are Updates, Start Replacing..."
+msgstr "有更新，開始替換..."
+
+msgid "Download Successful, Start To Create..."
+msgstr "下載成功，本地沒有配置檔案，開始建立..."
+
+msgid "Ruby Works Abnormally, Please Check The Ruby Library Depends!"
+msgstr "Ruby 依賴異常，無法校驗配置檔案，請確認 Ruby 依賴工作正常後重試！"
+
+msgid "Config File Format Validation Failed..."
+msgstr "配置檔案格式校驗失敗..."
+
+msgid "Updated Config"
+msgstr "更新的配置檔案"
+
+msgid "Has No Proxy Field, Update Exit..."
+msgstr "節點部分校驗失敗..."
+
+msgid "Start Updating Config File"
+msgstr "開始更新配置檔案"
+
+msgid "Config File Format Validation Failed, Trying To Download Without Agent..."
+msgstr "配置檔案格式校驗失敗，嘗試不使用代理下載配置檔案..."
+
+msgid "Has No Proxy Field, Trying To Download Without Agent..."
+msgstr "節點部分校驗失敗，嘗試不使用代理下載配置檔案..."
+
+msgid "Config File"
+msgstr "配置檔案"
+
+msgid "Subscribed Failed, Trying to Download Without Agent..."
+msgstr "訂閱失敗，嘗試不使用代理下載配置檔案..."
+
+msgid "Start Downloading The Chnroute Cidr List..."
+msgstr "開始下載大陸 IP 白名單..."
+
+msgid "Start Downloading The Chnroute6 Cidr List..."
+msgstr "開始下載大陸 IPv6 白名單..."
+
+msgid "Version info not ready, please wait and try again"
+msgstr "版本資訊尚未就緒，請稍後重試"
+
+msgid "Link access timed out, cannot download"
+msgstr "連結訪問超時，無法下載"
+
+msgid "Link access failed, cannot download"
+msgstr "連結訪問失敗，無法下載"
+
+msgid "Failed to get plugin version info from this link, please check again later"
+msgstr "此連結的外掛版本資訊獲取失敗，請稍後重試"
+
+msgid "Failed to get core version info from this link, please check again later"
+msgstr "此連結的核心版本資訊獲取失敗，請稍後重試"
+
+msgid "The selected version is the same as the installed version, no need to update"
+msgstr "所選版本與已安裝版本相同，無需更新"
+
+msgid "The selected version is not in the version history, please refresh and try again"
+msgstr "所選版本不在版本歷史中，請重新整理後重試"
+
+msgid "Chnroute Cidr List Download Success, Check Updated..."
+msgstr "大陸 IP 白名單下載成功，檢查版本是否更新..."
+
+msgid "Chnroute6 Cidr List Download Success, Check Updated..."
+msgstr "大陸 IPv6 白名單下載成功，檢查版本是否更新..."
+
+msgid "Chnroute Cidr List Has Been Updated, Starting To Replace The Old Version..."
+msgstr "大陸 IP 白名單有更新，開始替換舊版本..."
+
+msgid "Chnroute6 Cidr List Has Been Updated, Starting To Replace The Old Version..."
+msgstr "大陸 IPv6 白名單有更新，開始替換舊版本..."
+
+msgid "Chnroute Cidr List Update Successful!"
+msgstr "大陸 IP 白名單更新成功！"
+
+msgid "Chnroute6 Cidr List Update Successful!"
+msgstr "大陸 IPv6 白名單更新成功！"
+
+msgid "Updated Chnroute Cidr List No Change, Do Nothing..."
+msgstr "大陸 IP 白名單沒有更新，停止繼續操作..."
+
+msgid "Updated Chnroute6 Cidr List No Change, Do Nothing..."
+msgstr "大陸 IPv6 白名單沒有更新，停止繼續操作..."
+
+msgid "Chnroute Cidr List Update Error, Please Try Again Later..."
+msgstr "大陸 IP 白名單下載失敗，請檢查網路或稍後再試..."
+
+msgid "Chnroute6 Cidr List Update Error, Please Try Again Later..."
+msgstr "大陸 IPv6 白名單下載失敗，請檢查網路或稍後再試..."
+
+msgid "Download Failed: HTML Response Detected, Abort Update..."
+msgstr "下載失敗：檢測到 HTML 響應（可能為 CDN 錯誤頁面），終止更新..."
+
+msgid "Download Failed: File Size Too Small, Abort Update..."
+msgstr "下載失敗：檔案大小過小（可能被截斷），終止更新..."
+
+msgid "Download Success, Check Updated..."
+msgstr "下載成功，檢查資料庫是否已更新..."
+
+msgid "Has Been Updated, Starting To Replace The Old Version..."
+msgstr "有新版本，開始替換舊版本..."
+
+msgid "Update Successful!"
+msgstr "更新成功！"
+
+msgid "No Change, Do Nothing..."
+msgstr "無變化，停止操作..."
+
+msgid "Update Error, Please Try Again Later..."
+msgstr "更新失敗，請稍後再試..."
+
+msgid "Start Downloading Database..."
+msgstr "開始下載資料庫..."
+
+msgid "Start Getting"
+msgstr "開始獲取"
+
+msgid "Groups Setting..."
+msgstr "的策略組配置..."
+
+msgid "Group Setting..."
+msgstr "的策略組配置..."
+
+msgid "Proxy-providers Setting..."
+msgstr "的代理集配置..."
+
+msgid "Proxy-provider Setting..."
+msgstr "的代理集配置..."
+
+msgid "Proxies Setting..."
+msgstr "的伺服器節點配置..."
+
+msgid "Proxy Setting..."
+msgstr "的伺服器節點配置..."
+
+msgid "Read Error, Config File"
+msgstr "讀取錯誤，配置檔案"
+
+msgid "Abnormal!"
+msgstr "異常！"
+
+msgid "Deleting Old Configuration..."
+msgstr "正在刪除舊配置..."
+
+msgid "Unable To Parse Config File, Please Check And Try Again!"
+msgstr "配置檔案校驗失敗，請檢查配置檔案後重試！"
+
+msgid "Start Writing"
+msgstr "開始寫入"
+
+msgid "Group To Config File..."
+msgstr "策略組到配置檔案..."
+
+msgid "Proxy To Config File..."
+msgstr "節點到配置檔案..."
+
+msgid "Proxy-provider To Config File..."
+msgstr "代理集到配置檔案..."
+
+msgid "Unable To Parse..."
+msgstr "的資訊讀取失敗..."
+
+msgid "Setting Secondary DNS Server List..."
+msgstr "正在設定第二 DNS 伺服器列表..."
+
+msgid "Deleting"
+msgstr "刪除"
+
+msgid "Proxy-providers That no Longer Exists in Subscription"
+msgstr "訂閱中已不存在的代理集..."
+
+msgid "Proxies That no Longer Exists in Subscription"
+msgstr "訂閱中已不存在的節點..."
+
+msgid "Read Successful!"
+msgstr "讀取完成！"
+
+msgid "Write Successful!"
+msgstr "寫入完成！"
+
+msgid "Proxies, Proxy-providers, Groups Edited Successful, Updating Config File"
+msgstr "伺服器、代理集、策略組資訊修改完成，正在更新配置檔案"
+
+msgid "Detected That The nameserver DNS Option Has No Server Set, Starting To Complete..."
+msgstr "檢測到 DNS 選項下的 Nameserver 未設定伺服器，開始補全..."
+
+msgid "Detected That The default-nameserver DNS Option Has No Server Set, Starting To Complete..."
+msgstr "檢測到 DNS 選項下的 Default-nameserver 未設定伺服器，開始補全..."
+
+msgid "Nameserver Option Must Be Setted, Stop Customing DNS Servers"
+msgstr "配置檔案 DNS 選項下的 Nameserver 必須設定伺服器，已停止設定自定義 DNS 伺服器！"
+
+msgid "Config File Does Not Exist, You Have Set Subscription Information, Ready To Download..."
+msgstr "配置檔案不存在，您已設定訂閱資訊，準備開始下載..."
+
+msgid "Config Not Found"
+msgstr "缺少配置檔案，請上傳或更新配置檔案！"
+
+msgid "Config File Format Validation Failed..."
+msgstr "配置檔案格式校驗失敗..."
+
+msgid "Detected that the GEOIP Database is not Installed, Ready to Download..."
+msgstr "檢測到 GEOIP 資料庫檔案不存在，準備開始下載..."
+
+msgid "Detected that the GEOSITE Database is not Installed, Ready to Download..."
+msgstr "檢測到 GEOSITE 資料庫檔案不存在，準備開始下載..."
+
+msgid "Detected that the GEOIP Dat is not Installed, Ready to Download..."
+msgstr "檢測到 GEOIP Dat 資料庫檔案不存在，準備開始下載..."
+
+msgid "Core is not Detected installed, Ready to Download..."
+msgstr "核心不存在，準備開始下載..."
+
+msgid "Detected that the Chnroute Cidr is not Installed, Ready to Download..."
+msgstr "檢測到大陸白名單列表不存在，準備開始下載..."
+
+msgid "Detected that the Chnroute Cidr List Format is wrong, Ready to Reformat..."
+msgstr "檢測到大陸白名單列表格式錯誤，準備重新格式化..."
+
+msgid "OpenClash Can Not Start, Please Check The Error Info And Try Again!"
+msgstr "OpenClash 啟動失敗，請到日誌頁面檢視詳細錯誤資訊！"
+
+msgid "Found 53 Port Hijacked, Clean Up Firewall Rules..."
+msgstr "發現 53 埠被劫持，清理防火牆規則..."
+
+msgid "OpenClash Start Running..."
+msgstr "OpenClash 開始啟動..."
+
+msgid "OpenClash Restart..."
+msgstr "OpenClash 重新啟動中..."
+
+msgid "Step 1: Get The Configuration..."
+msgstr "第一步: 獲取配置..."
+
+msgid "Step 2: Check The Components..."
+msgstr "第二步: 元件執行前檢查..."
+
+msgid "Step 3: Modify The Config File..."
+msgstr "第三步: 修改配置檔案..."
+
+msgid "Step 3: Quick Start Mode, Skip Modify The Config File..."
+msgstr "第三步: 快速啟動模式，跳過修改配置檔案..."
+
+msgid "Step 4: Start Running The Clash Core..."
+msgstr "第四步: 啟動主程式..."
+
+msgid "Step 5: Add Cron Rules, Start Daemons..."
+msgstr "第五步: 新增計劃任務,啟動程序守護程式..."
+
+msgid "Step 6: Core Status Checking and Firewall Rules Setting..."
+msgstr "第六步: 核心狀態檢查及防火牆規則設定..."
+
+msgid "OpenClash Start Successful!"
+msgstr "OpenClash 啟動成功，請等待伺服器上線！"
+
+msgid "OpenClash Already Running, Exit..."
+msgstr "OpenClash 正在執行，退出啟動..."
+
+msgid "Firewall Reload Successful!"
+msgstr "防火牆重置成功！"
+
+msgid "Please Note That Network May Abnormal With IPv6's DHCP Server"
+msgstr "檢測到您啟用了 IPv6 的 DHCP 服務，可能會造成連線異常！"
+
+msgid "OpenClash Stoping..."
+msgstr "OpenClash 開始關閉..."
+
+msgid "Step 1: Backup The Current Groups State..."
+msgstr "第一步: 備份當前策略組狀態..."
+
+msgid "Step 2: Delete OpenClash Firewall Rules..."
+msgstr "第二步: 刪除 OpenClash 防火牆規則..."
+
+msgid "Step 3: Close The OpenClash Services..."
+msgstr "第三步: 關閉 OpenClash 相關服務..."
+
+msgid "Step 4: Restart Dnsmasq..."
+msgstr "第四步: 重啟 Dnsmasq 程式..."
+
+msgid "Step 5: Delete OpenClash Residue File..."
+msgstr "第五步：刪除 OpenClash 殘留檔案..."
+
+msgid "OpenClash Already Stop!"
+msgstr "OpenClash 已關閉！"
+
+msgid "Skip Reload OpenClash Firewall Rules Until 5 Minutes Later..."
+msgstr "5 分鐘內重置已超過限制次數，跳過本次 OpenClash 防火牆規則重置..."
+
+msgid "Reload OpenClash Firewall Rules..."
+msgstr "重置 OpenClash 防火牆規則..."
+
+msgid "Manually Reload Firewall Rules..."
+msgstr "重置 OpenClash 防火牆規則..."
+
+msgid "OpenClash Now Disabled, Need Start From Luci Page, Exit..."
+msgstr "OpenClash 目前處於未啟用狀態，請從外掛頁面啟動本外掛，指令碼退出..."
+
+msgid "Log Size Limit, Clean Up All Log Records..."
+msgstr "因日誌大小限制，清理所有日誌內容..."
+
+msgid "Setting Firewall For Rules Order..."
+msgstr "檢測到防火牆規則順序有誤，修改外掛防火牆規則..."
+
+msgid "Setting Firewall For IP Rules Table Recreate..."
+msgstr "檢測到路由表異常，重置外掛防火牆規則..."
+
+msgid "Force Reset DNS Hijack..."
+msgstr "重新設定 Dnsmasq 的 DNS 轉發選項..."
+
+msgid "Rule File"
+msgstr "規則檔案"
+
+msgid "Download Error!"
+msgstr "下載失敗！"
+
+msgid "Download Successful!"
+msgstr "下載成功！"
+
+msgid "Switch To The New Proxy When The Delay Difference Between Old and The Fastest Currently is Greater Than This Value"
+msgstr "僅當舊代理和當前最快代理之間的延遲差大於此值時，才會切換到新代理"
+
+msgid "URL-Test Group Tolerance"
+msgstr "URL-Test 策略組切換靈敏度"
+
+msgid "Attention:"
+msgstr "注意事項："
+
+msgid "Introduction to proxy usage:"
+msgstr "代理使用介紹："
+
+msgid "Introduction to proxy-provider usage:"
+msgstr "代理集使用介紹："
+
+msgid "Subconverter external configuration (subscription conversion template) Description: https://github.com/tindy2013/subconverter#external-configuration-file"
+msgstr "subconverter 外部配置(訂閱轉換模板)說明：https://github.com/tindy2013/subconverter#external-configuration-file"
+
+msgid "If you need to customize the external configuration file (subscription conversion template), please write it according to the instructions, upload it to the accessible location of the external network, and fill in the address correctly when using it"
+msgstr "如需自定義外部配置檔案(訂閱轉換模板)，請按照說明編寫後上傳至外部網路可訪問的位置，並在使用時正確填寫地址"
+
+msgid "If you have a recommended external configuration file (subscription conversion template), you can modify by following The file format of /usr/share/openclash/res/sub_ini.list and pr"
+msgstr "如您有值得推薦的外部配置檔案(訂閱轉換模板)，可以按照 /usr/share/openclash/res/sub_ini.list 的檔案格式修改後提交 PR"
+
+msgid "Note: To restore the default configuration, try accessing:"
+msgstr "注意: 如遇到配置丟失或者需要還原預設配置，請嘗試訪問地址:"
+
+msgid "Take Effect If Fallback DNS Setted, Prevent DNS Pollution"
+msgstr "只有在配置檔案設定了 Fallback 組的 DNS 時才會生效，正確設定可以有效防止 DNS 汙染"
+
+msgid "Fallback-Filter Need fallback of DNS Been Setted, Ignore..."
+msgstr "只有在配置檔案設定了 Fallback 組的 DNS 時 Fallback-Filter 才會生效，跳過此項修改..."
+
+msgid "Unable To Parse Custom Fallback-Filter File, Ignore..."
+msgstr "讀取自定義的 Fallback-Filter 設定失敗，跳過此項修改..."
+
+msgid "Downloading Rule..."
+msgstr "正在下載規則..."
+
+msgid "Download Failed"
+msgstr "下載失敗"
+
+msgid "Download Successful"
+msgstr "下載成功"
+
+msgid "Download Timeout"
+msgstr "下載超時"
+
+msgid "Load File Failed,"
+msgstr "檔案解析失敗，"
+
+msgid "Set General Failed,"
+msgstr "修改 General 配置失敗，"
+
+msgid "Set authentication Failed,"
+msgstr "修改 Authentication 配置失敗，"
+
+msgid "DNS Loop Check,"
+msgstr "DNS 迴環檢查失敗，"
+
+msgid "proxy-groups Get Failed,"
+msgstr "proxy-groups 獲取失敗，"
+
+msgid "Set Hosts Rules Failed,"
+msgstr "修改 Hosts 配置失敗，"
+
+msgid "Set Fake-IP-Filter Failed,"
+msgstr "修改 Fake-IP-Filter 配置失敗，"
+
+msgid "Set Nameserver-Policy Failed,"
+msgstr "修改 Nameserver-Policy 配置失敗，"
+
+msgid "Set Custom Rules Failed,"
+msgstr "設定自定義規則失敗，"
+
+msgid "Set BT/P2P DIRECT Rules Failed,"
+msgstr "設定僅代理命中規則流量（BT/P2P 直連）失敗，"
+
+msgid "Filter Proxies Failed,"
+msgstr "節點篩選失敗，"
+
+msgid "Unable To Parse Config File,"
+msgstr "配置檔案解析失敗，"
+
+msgid "Edit Provider Path Failed,"
+msgstr "修改集路徑失敗，"
+
+msgid "Edit Provider CDN Failed,"
+msgstr "修改集 CDN 地址失敗，"
+
+msgid "Edit URL-Test Group Tolerance Option Failed,"
+msgstr "修改 URL-Test 策略組容忍值失敗，"
+
+msgid "Resolve Proxy-providers Failed,"
+msgstr "解析代理集失敗，"
+
+msgid "Resolve Proxies Failed,"
+msgstr "節點解析失敗，"
+
+msgid "Resolve Groups Failed,"
+msgstr "策略組解析失敗，"
+
+msgid "Set default-nameserver Failed,"
+msgstr "修改 Default-nameserver 配置失敗，"
+
+msgid "switching succeeded!"
+msgstr "切換成功！"
+
+msgid "switching failed!"
+msgstr "切換失敗！"
+
+msgid "Current Config"
+msgstr "當前配置"
+
+msgid "Up"
+msgstr "上傳"
+
+msgid "Down"
+msgstr "下載"
+
+msgid "Up Total"
+msgstr "上傳總量"
+
+msgid "Down Total"
+msgstr "下載總量"
+
+msgid "Connect"
+msgstr "活動連線"
+
+msgid "Ram"
+msgstr "記憶體佔用"
+
+msgid "CPU"
+msgstr "CPU 佔用"
+
+msgid "Load Avg"
+msgstr "系統負載"
+
+msgid "Bad address specified!"
+msgstr "輸入的地址不合法！"
+
+msgid "Could not find any connection logs!"
+msgstr "找不到任何連線日誌！"
+
+msgid "Some error occurred!"
+msgstr "發生了一些錯誤！"
+
+msgid "Click to Test"
+msgstr "點選測試"
+
+msgid "Connection Test"
+msgstr "連線測試"
+
+msgid "Connection Test Result"
+msgstr "連線測試結果"
+
+msgid "Backing up..."
+msgstr "正在備份..."
+
+msgid "Backup File"
+msgstr "備份檔案"
+
+msgid "Backup File Restore Successful!"
+msgstr "備份檔案恢復成功！"
+
+msgid "Not Select"
+msgstr "未選擇"
+
+msgid "1. It may be that the plugin is not running"
+msgstr "1. 可能是外掛未在執行"
+
+msgid "2. It may be that the cache causes the browser to directly use the IP for access"
+msgstr "2. 可能是快取導致瀏覽直接使用 IP 地址進行訪問"
+
+msgid "3. It may be that DNS hijacking did not take effect, so clash unable to reverse the domain name"
+msgstr "3. 可能是 DNS 未劫持成功，導致 Clash 無法正確反推出域名連線"
+
+msgid "4. It may be that the filled address cannot be resolved and connected"
+msgstr "4. 可能是所填地址無法進行解析和連線"
+
+msgid "Plugin Logs"
+msgstr "外掛日誌"
+
+msgid "Core Logs"
+msgstr "核心日誌"
+
+msgid "Append Upstream DNS"
+msgstr "追加上游 DNS"
+
+msgid "Append The Upstream Assigned DNS And Gateway IP To The Nameserver"
+msgstr "將上游分配的 DNS 和閘道器 IP 追加到 Nameserver"
+
+msgid "All Groups"
+msgstr "所有策略組"
+
+msgid "Are you sure want to switch the running mode?"
+msgstr "確認要切換執行模式嗎?"
+
+msgid "Because of the file"
+msgstr "由於檔案"
+
+msgid "modificated, Pause quick start..."
+msgstr "被修改，暫停快速啟動..."
+
+msgid "Click to Update"
+msgstr "點選更新規則"
+
+msgid "Click to Install"
+msgstr "點選安裝"
+
+msgid "Persistence Fake-IP"
+msgstr "Fake-IP 持久化"
+
+msgid "Cache Fake-IP DNS Resolution Records To File, Improve The Response Speed After Startup"
+msgstr "儲存 Fake-IP 的 DNS 解析記錄到檔案，提升核心啟動後的反應速度和穩定性"
+
+msgid "Test failed"
+msgstr "檢測失敗"
+
+msgid "OpenClash Start Failed"
+msgstr "OpenClash 啟動失敗"
+
+msgid "interface-name"
+msgstr "指定出口網絡卡"
+
+msgid "routing-mark"
+msgstr "指定路由標記"
+
+msgid "Streaming Enhance"
+msgstr "流媒體增強"
+
+msgid "Auto Select Unlock Proxy"
+msgstr "*自動選擇解鎖節點"
+
+msgid "Auto Select Proxy For Streaming Unlock, Support Netflix, Disney Plus, HBO And YouTube Premium, etc"
+msgstr "自動選擇解鎖節點，支援 Netflix、Disney Plus、HBO 和 YouTube Premium 等"
+
+msgid "Auto Select Interval(min)"
+msgstr "自動選擇（檢測）間隔（分鐘）"
+
+msgid "Expand Group"
+msgstr "展開策略組"
+
+msgid "Automatically Expand The Group When Selected"
+msgstr "自動展開巢狀的策略組並進行解鎖檢測，啟用後可能會造成網路不穩定"
+
+msgid "Group Filter"
+msgstr "策略組篩選"
+
+msgid "Unlock Region Filter"
+msgstr "解鎖區域篩選"
+
+msgid "Unlock Nodes Filter"
+msgstr "解鎖節點篩選"
+
+msgid "Start Auto Select Unlock Proxy..."
+msgstr "開始自動選擇（檢測）解鎖節點..."
+
+msgid "Group:"
+msgstr "策略組："
+
+msgid "full support"
+msgstr "完整解鎖"
+
+msgid "full support, area:"
+msgstr "完整解鎖，區域："
+
+msgid "only support homemade!"
+msgstr "僅支援自制劇！"
+
+msgid "unlock test failed!"
+msgstr "解鎖檢測失敗！"
+
+msgid ", the type of group is not select, auto select could not work!"
+msgstr "，當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid "Start auto select unlock proxy..."
+msgstr "開始進行解鎖節點自動選擇..."
+
+msgid "only support homemade! the type of group is not select, auto select could not work!"
+msgstr "僅支援自制劇！當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid "unlock test failed! the type of group is not select, auto select could not work!"
+msgstr "解鎖檢測失敗！當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid "only support homemade! start auto select unlock proxy..."
+msgstr "僅支援自制劇！開始進行解鎖節點自動選擇..."
+
+msgid "unlock test failed! start auto select unlock proxy..."
+msgstr "解鎖檢測失敗！開始進行解鎖節點自動選擇..."
+
+msgid "It Will Be Searched According To The Regex When Auto Search Group Fails"
+msgstr "策略組自動獲取失敗時將會根據正規表示式進行匹配"
+
+msgid "It Will Be Selected Region(Country Shortcode) According To The Regex"
+msgstr "解鎖區域(國家簡碼)將會根據正規表示式進行匹配"
+
+msgid "It Will Be Selected Nodes According To The Regex"
+msgstr "解鎖節點的名字將會根據正規表示式進行匹配"
+
+msgid "not support unlock!"
+msgstr "不支援解鎖！"
+
+msgid "not support unlock! the type of group is not select, auto select could not work!"
+msgstr "不支援解鎖！當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid "not support unlock! start auto select unlock proxy..."
+msgstr "不支援解鎖！開始進行解鎖節點自動選擇..."
+
+msgid "unlock node auto selected successfully, the current selected is"
+msgstr "解鎖節點自動選擇成功，當前選擇的是"
+
+msgid "unlock node auto selected failed, no node available, rolled back to the"
+msgstr "解鎖節點自動選擇失敗，無完整解鎖節點，回退到"
+
+msgid ", area:"
+msgstr "，區域："
+
+msgid "failed to search based on keywords and automatically obtain the group, please confirm the validity of the regex!"
+msgstr "根據關鍵字搜尋且自動獲取策略組失敗，請確認關鍵字的有效性！"
+
+msgid "unlock node auto selected failed, no node match the regex, rolled back to other full support node"
+msgstr "解鎖節點自動選擇失敗，未找到區域匹配的節點，回退到其他區域的解鎖節點"
+
+msgid "unlock node auto selected successfully, no node match the old region, rolled back to other full support node"
+msgstr "解鎖節點自動選擇成功，未找到與先前解鎖區域匹配的節點，回退到其他區域且符合條件的解鎖節點"
+
+msgid ", but not match the regex!"
+msgstr "，但區域與設定不匹配！"
+
+msgid "full support but not match the old region!"
+msgstr "完整解鎖但與先前解鎖區域不匹配！"
+
+msgid ", but not match the old region:"
+msgstr "，但不匹配先前解鎖區域："
+
+msgid "the type of group is not select, auto select could not work!"
+msgstr "當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid ", but not match the regex! the type of group is not select, auto select could not work!"
+msgstr "完整解鎖但區域與設定不匹配！當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid "but not match the old region! the type of group is not select, auto select could not work!"
+msgstr "但與先前解鎖區域不匹配！當前策略組型別非 Select，無法進行自動選擇！"
+
+msgid ", but not match the regex! start auto select unlock proxy..."
+msgstr "，但區域與設定不匹配！開始進行解鎖節點自動選擇..."
+
+msgid "unlock node test finished, rolled back to the full support node"
+msgstr "解鎖檢測完成，回退到完整解鎖的節點"
+
+msgid "unlock node test finished, no node match the old region, rolled back to other full support node"
+msgstr "解鎖檢測完成，未找到與先前解鎖區域匹配的節點，回退到其他區域的解鎖節點"
+
+msgid "unlock node test finished, no node match the regex, rolled back to other full support node"
+msgstr "解鎖檢測完成，未找到區域匹配的節點，回退到其他區域的解鎖節點"
+
+msgid "unlock node test finished, no node available, rolled back to the"
+msgstr "解鎖檢測完成，無完整解鎖節點，回退到"
+
+msgid "no nodes name match the regex!"
+msgstr "未找到名稱匹配的節點!"
+
+msgid "Bypass Gateway Compatible"
+msgstr "旁路閘道器（旁路由）相容"
+
+msgid "If The Network Cannot be Connected in Bypass Gateway Mode, Please Try to Enable."
+msgstr "旁路閘道器（旁路由）模式下網路無法連線時請嘗試啟用。"
+
+msgid "Suggestion: If The Device Does Not Have WLAN, Please Disable The Lan Interface's Bridge Option"
+msgstr "建議：如果裝置沒有 WLAN，請禁用 Lan 介面的橋接介面選項"
+
+msgid "GitHub Address Proxy"
+msgstr "GitHub 地址代理"
+
+msgid "Proxy The GitHub Address In The Config And OpenClash With Proxy(CDN) To Prevent File Download Failed."
+msgstr "使用指定代理（CDN）反代外掛和配置檔案中的 GitHub 地址，以防止檔案下載失敗。"
+
+msgid "Format Reference:"
+msgstr "格式參考："
+
+msgid "File Edit"
+msgstr "檔案編輯"
+
+msgid "Overwrite Edit"
+msgstr "覆寫設定"
+
+msgid "Create File"
+msgstr "新建檔案"
+
+msgid "You are editing the overwrite script, please note that some settings may cause the abnormal, be careful with the modification!"
+msgstr "您正在編輯覆寫指令碼，請注意某些設定可能會導致異常，請謹慎修改！"
+
+msgid "Paste the name of the new file (including the extension) here:"
+msgstr "請在此輸入要新建的檔名稱（含副檔名）："
+
+msgid "Delay Start (s)"
+msgstr "延遲啟動（秒）"
+
+msgid "Delay Start On Boot"
+msgstr "系統重啟時延遲啟動"
+
+msgid "Enable Delay Start, OpenClash Will Start After"
+msgstr "延遲啟動已啟用，OpenClash 將在"
+
+msgid "Secends..."
+msgstr "秒後開始啟動..."
+
+msgid "Waiting for command to complete..."
+msgstr "等待命令執行完成..."
+
+msgid "Collecting data..."
+msgstr "正在收集資料..."
+
+msgid "Flushing..."
+msgstr "清理中..."
+
+msgid "Flush Successful"
+msgstr "清理成功"
+
+msgid "Flush Timeout"
+msgstr "清理超時"
+
+msgid "Flush"
+msgstr "清理"
+
+msgid "Flush DNS"
+msgstr "清理 DNS 快取"
+
+msgid "Dnsmasq Fix"
+msgstr "Dnsmasq 修復"
+
+msgid "If DNS is abnormal after stopping the OpenClash, please try to fix"
+msgstr "如果關閉 OpenClash 後 DNS 異常，請嘗試修復"
+
+msgid "Fix"
+msgstr "修復"
+
+msgid "No Specify Upload File"
+msgstr "未選擇上傳檔案"
+
+msgid "Custom Params"
+msgstr "自定義引數"
+
+msgid "eg: \"rename=match@replace\" , \"rename=\\s+([2-9])[xX]@ (HIGH:$1)\""
+msgstr "格式示例：\"rename=match@replace\" , \"rename=\\s+([2-9])[xX]@ (高倍率:$1)\""
+
+msgid "Custom Headers"
+msgstr "自定義請求頭"
+
+msgid "Custom HTTP request headers, one per line, format: Header-Name: value"
+msgstr "自定義 HTTP 請求頭，每行一個，格式：Header-Name: value"
+
+msgid "eg: x-hwid: device-001, one header per line, format: Name: value"
+msgstr "例如：x-hwid: device-001，每行一個請求頭，格式：Name: value"
+
+msgid "Use Rule Provider"
+msgstr "使用規則集"
+
+msgid "Note: Please Make Sure Backend Service Supports This Feature"
+msgstr "注意：請確保您選擇的後端服務支援此功能，否則可能導致核心啟動失敗"
+
+msgid "Rename"
+msgstr "重新命名"
+
+msgid "Paste the new file name (including the extension) here:"
+msgstr "請在此輸入新檔名（含副檔名）："
+
+msgid "Illegal extension!"
+msgstr "不支援的副檔名！"
+
+msgid "Manual Test"
+msgstr "手動測試"
+
+msgid "Unlock Test(Select)"
+msgstr "解鎖檢測(選擇)"
+
+msgid "All Proxies Test"
+msgstr "測試所有節點"
+
+msgid "Unlock Test Result"
+msgstr "解鎖檢測結果"
+
+msgid "All Proxies Test Result"
+msgstr "所有節點測試結果"
+
+msgid "Something Wrong While Testing..."
+msgstr "發生了一些錯誤，測試失敗..."
+
+msgid "Network instability may occur during testing, Are you sure want to start test?"
+msgstr "測試過程中可能會造成網路不穩定,確定要開始測試嗎？"
+
+msgid "Subscription Info"
+msgstr "訂閱資訊"
+
+msgid "No Sub Info Found"
+msgstr "無訂閱資訊"
+
+msgid "Router-Self Proxy"
+msgstr "*路由本機代理"
+
+msgid "Only Supported for Rule Mode"
+msgstr "僅支援規則（Rule）模式，其他模式預設分流"
+
+msgid "Rule Mode"
+msgstr "規則模式"
+
+msgid "ALL Functions In Stream Enhance Tag Will Not Work After Disable"
+msgstr "禁用後將無法使用流媒體增強標籤中的所有功能"
+
+msgid "Set Router Self Proxy Rule Failed,"
+msgstr "修改路由自身代理規則失敗，"
+
+msgid "Streaming Unlock Has No Parameter of Type, Exiting..."
+msgstr "流媒體解鎖沒有指定需要檢測的流媒體型別，退出..."
+
+msgid "Streaming Unlock Could not Work Because of Router-Self Proxy Disabled, Exiting..."
+msgstr "因為禁用了代理路由器自身流量，流媒體解鎖無法工作，退出..."
+
+msgid "Multiple Scripts Running, Exiting..."
+msgstr "多個指令碼執行中，退出..."
+
+msgid "Enable Sniffer"
+msgstr "*啟用流量（域名）探測"
+
+msgid "Sniffer Will Prevent Domain Name Proxy and DNS Hijack Failure"
+msgstr "流量（域名）探測能有效防止域名分流異常和 DNS 劫持失敗"
+
+msgid "Override All Dns Query"
+msgstr "啟用後將儘可能的覆蓋 DNS 查詢到的域名"
+
+msgid "Rules Setting"
+msgstr "規則設定"
+
+msgid "Meta Settings"
+msgstr "Meta 設定"
+
+msgid "Smart Settings"
+msgstr "Smart 設定"
+
+msgid "Geodata Loader Mode"
+msgstr "Geodata 資料載入方式"
+
+msgid "Memconservative"
+msgstr "低記憶體模式"
+
+msgid "Standard"
+msgstr "標準模式"
+
+msgid "Enable GeoIP Dat"
+msgstr "啟用 GeoIP Dat 版資料庫"
+
+msgid "Replace GEOIP MMDB With GEOIP Dat, Large Size File"
+msgstr "使用 Geoip Dat 替換 GEOIP MMDB 資料庫, 檔案體積較大且無內建"
+
+msgid "Need Download First"
+msgstr "請提前下載"
+
+msgid "Auto Update GeoIP Dat"
+msgstr "自動更新 GeoIP Dat 資料庫"
+
+msgid "Custom GeoIP Dat URL"
+msgstr "GeoIP Dat 資料庫更新 URL"
+
+msgid "Custom GeoIP Dat URL, Click Button Below To Refresh After Edit"
+msgstr "自定義 GeoIP Dat 資料庫的更新來源，編輯後點選下方按鈕生效"
+
+msgid "Update GeoIP Dat"
+msgstr "更新 GeoIP Dat 資料庫"
+
+msgid "Note: It is not recommended to enable IPv6 and related services for routing. Most of the network connection problems reported so far are related to it"
+msgstr "注意: 路由不建議開啟 IPv6 和相關服務，目前反饋的網路連線問題多數與它有關"
+
+msgid "Note: Turning on secure DNS in the browser will cause abnormal shunting, please be careful to turn it off"
+msgstr "注意: 瀏覽器開啟安全 DNS，會導致分流異常，請注意關閉"
+
+msgid "Note: Some software will modify the device HOSTS, which will cause abnormal shunt, please pay attention to check"
+msgstr "注意: 部分軟體會修改裝置 HOSTS，會導致分流異常，請注意檢查"
+
+msgid "Note: The default proxy routes local traffic, BT, PT download, etc., please use Redir-Host mode as much as possible and pay attention to traffic avoidance"
+msgstr "注意: 預設代理路由本機流量，BT、PT 下載等請儘量使用 Redir-Host 模式並注意進行流量規避"
+
+msgid "Note: Game proxy please use nodes except VMess"
+msgstr "注意: 遊戲代理請使用 VMess 以外的節點"
+
+msgid "Note: If the connection is abnormal, please follow the steps on this page to check first"
+msgstr "注意: 連線異常時請按照此頁步驟先進行檢查"
+
+msgid "Note: If you need to perform client access control in Fake-IP mode, please change the DNS hijacking mode to firewall forwarding"
+msgstr "注意: Fake-IP 模式下如需要進行客戶端訪問控制，請將 DNS 劫持模式改為防火牆轉發"
+
+msgid "Click to the page"
+msgstr "點選前往"
+
+msgid "Custom Sniffer Settings"
+msgstr "自定義流量探測（嗅探）設定"
+
+msgid "Custom The Force and Skip Sniffing Doamin Lists"
+msgstr "自定義強制和忽略流量探測（嗅探）的域名列表等"
+
+msgid "Enable Tcp Concurrent"
+msgstr "*啟用 TCP 併發"
+
+msgid "TCP Concurrent Request IPs, Choose The Lowest Latency One To Connection"
+msgstr "TCP 併發請求所有 IP 地址，然後選擇延遲最低的一個進行連線"
+
+msgid "Remaining"
+msgstr "剩餘"
+
+msgid "days"
+msgstr "天"
+
+msgid "Douyin"
+msgstr "抖音（Douyin）"
+
+msgid "Specific Interface"
+msgstr "指定介面"
+
+msgid "DNS Lookup Only Through The Specific Interface"
+msgstr "DNS 僅透過特定介面進行查詢"
+
+msgid "Specific Group (Support Regex)"
+msgstr "指定策略組（支援正則匹配）"
+
+msgid "Group Use For Proxy The DNS"
+msgstr "用於代理此 DNS 的策略組"
+
+msgid "Direct Nameserver"
+msgstr "直連域名解析"
+
+msgid "Use For Domain Need Direct"
+msgstr "用於解析直連域名的 IP 地址"
+
+msgid "Node Domain Resolve"
+msgstr "節點域名解析"
+
+msgid "Use For Node Domain Resolve"
+msgstr "用於解析節點域名的 IP 地址"
+
+msgid "Lan Traffic Access List"
+msgstr "來源流量訪問控制"
+
+msgid "The Traffic From The Local Specified Port Will Not Pass The Core, Try To Set When The Bypass Gateway Forwarding Fails"
+msgstr "來自本地指定埠的流量不會透過核心，在旁路閘道器（旁路由）下轉發失敗時嘗試設定"
+
+msgid "Local IPv4 Network Bypassed List"
+msgstr "本地 IPv4 繞過地址"
+
+msgid "Local IPv6 Network Bypassed List"
+msgstr "本地 IPv6 繞過地址"
+
+msgid "The Traffic of The Destination For The Specified Address Will Not Pass The Core"
+msgstr "目的地為指定地址的流量不會透過核心"
+
+msgid "Force HTTP/3"
+msgstr "強制 HTTP/3"
+
+msgid "Force HTTP/3 to connect"
+msgstr "強制使用 HTTP/3 進行連線"
+
+msgid "Unzip Error!"
+msgstr "解壓失敗！"
+
+msgid "Unzip Error"
+msgstr "解壓失敗"
+
+msgid "Switch To Official Version"
+msgstr "切換至官方版本"
+
+msgid "Switch To Meta Version"
+msgstr "切換至 Meta 版本"
+
+msgid "Switch(Update) Dashboard Version"
+msgstr "切換（更新） Dashboard 版本"
+
+msgid "Switch(Update) Yacd Version"
+msgstr "切換（更新） Yacd 版本"
+
+msgid "Update Metacubexd Version"
+msgstr "更新 Metacubexd 版本"
+
+msgid "Update Zashboard Version"
+msgstr "更新 Zashboard 版本"
+
+msgid "Downloading File..."
+msgstr "檔案下載中..."
+
+msgid "Update Failed"
+msgstr "更新失敗"
+
+msgid "Update Successful"
+msgstr "更新成功"
+
+msgid "Switch Successful"
+msgstr "切換成功"
+
+msgid "Close Old Connections"
+msgstr "關閉舊連結"
+
+msgid "Automatically Close Old Connections When New Unlock Node Selected"
+msgstr "解鎖節點切換時關閉對應策略組的所有舊連結"
+
+msgid "Append Default DNS"
+msgstr "追加預設 DNS"
+
+msgid "Automatically Append Compliant DNS to default-nameserver"
+msgstr "自動將符合要求的 DNS 追加到 default-nameserver"
+
+msgid "China Mainland Only"
+msgstr "大陸限定"
+
+msgid "Hongkong/Macau/Taiwan"
+msgstr "港澳臺限定"
+
+msgid "Taiwan Only"
+msgstr "臺灣限定"
+
+msgid "Backup Exclude Cores"
+msgstr "不備份核心"
+
+msgid "Backup Core"
+msgstr "僅備份核心"
+
+msgid "Backup Config"
+msgstr "僅備份配置檔案"
+
+msgid "Backup Rule Provider"
+msgstr "僅備份規則集"
+
+msgid "Backup Proxy Provider"
+msgstr "僅備份代理集"
+
+msgid "Chnroute Bypassed List"
+msgstr "繞過指定區域 IPv4 黑名單"
+
+msgid "Chnroute6 Bypassed List"
+msgstr "繞過指定區域 IPv6 黑名單"
+
+msgid "Domains or IPs in The List Will Not be Affected by The China IP Route Option, Depend on Dnsmasq"
+msgstr "列表中的域名或 IP 將不會受到繞過指定區域 IP 選項的影響，此功能依賴於 Dnsmasq"
+
+msgid "You May Need to Turn off The Rebinding Protection Option of Dnsmasq When Hosts Has Set a Reserved Address..."
+msgstr "Hosts 設定了保留地址時需要關閉 Dnsmasq 的重繫結保護選項才能生效..."
+
+msgid "Auto Select Logic"
+msgstr "*自動選擇邏輯"
+
+msgid "Urltest"
+msgstr "低延遲優先"
+
+msgid "Random"
+msgstr "隨機選擇"
+
+msgid "You have seted the authentication of SOCKS5/HTTP(S) proxy with"
+msgstr "您為 SOCKS5/HTTP(S) 代理設定的賬戶密碼為"
+
+msgid "Google Not CN"
+msgstr "Google 非送中"
+
+msgid "In Fake-ip Mode, Even If This Option is Turned Off, Domain Type Connections Still Pass Through The Core For The Availability"
+msgstr "在 Fake-IP 模式時，即使關閉此選項，域名型別的連線可能仍將透過核心以保證可用性"
+
+msgid "TUN Interface Start Failed, Please Check The Dependence or Try to Restart Again!"
+msgstr "TUN 介面啟動失敗，請檢查依賴情況或稍後重試！"
+
+msgid "TUN Interface Start Failed, Try to Restart Again..."
+msgstr "TUN 介面啟動失敗，嘗試重啟核心..."
+
+msgid "Core Start Failed, Please Check The Log Infos!"
+msgstr "核心啟動失敗，請檢視《核心日誌》排查失敗原因！"
+
+msgid "Core Initial Configuration Timeout, Please Check The Log Infos!"
+msgstr "核心載入配置超時，請檢視《核心日誌》排查原因！"
+
+msgid "Forced Sniff Pure IP Connections"
+msgstr "強制探測（嗅探）所有純 IP 的連線"
+
+msgid "Forced Sniff Pure IP"
+msgstr "探測（嗅探）純 IP 連線"
+
+msgid "Download Failed:"
+msgstr "下載失敗："
+
+msgid "Dnsmasq not Support nftset, Use ipset..."
+msgstr "Dnsmasq 不支援 nftset, 使用 ipset 代替..."
+
+msgid "Firewall4 was Detected, Use NFTABLE Rules..."
+msgstr "檢測到 Firewall4，使用 NFTABLE 規則..."
+
+msgid "Specify CN DNS Server"
+msgstr "大陸域名 DNS 伺服器"
+
+msgid "Seconds..."
+msgstr "秒後開始啟動..."
+
+msgid "1. Before modifying the configuration file, please click the button below to read the configuration file"
+msgstr "1. 修改配置檔案前，請先點選下方按鈕讀取配置檔案"
+
+msgid "2. Proxy-providers address can be directly filled in the subscription link"
+msgstr "2. 代理集地址可以直接填寫訂閱連結"
+
+msgid "Edit URL-Test URL Failed,"
+msgstr "修改測速地址失敗，"
+
+msgid "Edit URL-Test Interval Failed,"
+msgstr "修改測速間隔失敗，"
+
+msgid "URL-Test Address Modify"
+msgstr "測速（連通性）地址修改"
+
+msgid "Modify The URL-Test Address In The Config"
+msgstr "修改配置檔案中的測速（連通性）地址"
+
+msgid "URL-Test Interval Modify"
+msgstr "測速（連通性）間隔修改"
+
+msgid "Modify The URL-Test Interval In The Config"
+msgstr "修改配置檔案中的測速（連通性）間隔"
+
+msgid "Whether to Enable Process Rules, Only Works on Routerself, If You Are Not Sure, Please Choose off Which Useful in Router Environment, Depend on kmod-inet-diag"
+msgstr "是否啟用程序規則，僅能匹配路由器自身程序，在路由環境下保持關閉可以提升效能，依賴 kmod-inet-diag"
+
+msgid "Enable Process Rule"
+msgstr "啟用程序規則"
+
+msgid "DNS Hijacking Mode is Dnsmasq Redirect..."
+msgstr "DNS 劫持模式為 Dnsmasq 轉發..."
+
+msgid "DNS Hijacking Mode is Firewall Redirect..."
+msgstr "DNS 劫持模式為防火牆轉發..."
+
+msgid "DNS Hijacking is Disabled..."
+msgstr "DNS 劫持未開啟..."
+
+msgid "Fake-IP Range"
+msgstr "Fake-IP 地址範圍"
+
+msgid "Set Fake-IP Range"
+msgstr "設定 Fake-IP 地址範圍"
+
+msgid "IPv6 Settings"
+msgstr "IPv6 設定"
+
+msgid "Custom Firewall Rules, Support IPv4 and IPv6, All Rules Will Be Added After Plugin Own Completely"
+msgstr "自定義防火牆規則，支援 IPv4 和 IPv6，此指令碼將在外掛內建規則完成後執行"
+
+msgid "Start Add Custom Firewall Rules..."
+msgstr "開始新增自定義防火牆規則..."
+
+msgid "Start Running Custom Overwrite Scripts..."
+msgstr "開始執行自定義覆寫指令碼..."
+
+msgid "Developer Settings"
+msgstr "開發者選項"
+
+msgid "Restore"
+msgstr "還原"
+
+msgid "DNS Test"
+msgstr "DNS 測試"
+
+msgid "DNS Test Result"
+msgstr "DNS 測試結果"
+
+msgid "No Response Found!"
+msgstr "結果獲取失敗！"
+
+msgid "Client Fingerprint"
+msgstr "客戶端指紋"
+
+msgid "Edit Client-fingerprint Failed,"
+msgstr "修改 Client-fingerprint 失敗，"
+
+msgid "Edit Client-fingerprint Failed,"
+msgstr "修改 Client-fingerprint 失敗，"
+
+msgid "Traffic Control"
+msgstr "流量控制"
+
+msgid "Hide IP"
+msgstr "隱藏 IP 地址"
+
+msgid "Show IP"
+msgstr "顯示 IP 地址"
+
+msgid "Router Mode"
+msgstr "路由器模式"
+
+msgid "Browser Mode"
+msgstr "瀏覽器模式"
+
+msgid "Refresh"
+msgstr "重新整理"
+
+msgid "Specify URL"
+msgstr "指定訂閱資訊獲取地址"
+
+msgid "Paste the new url of subscribe infos sources here:"
+msgstr "在此處貼上並指定訂閱資訊來源的新地址："
+
+msgid "Specify subscribe infos sources url successfully!"
+msgstr "指定新的訂閱資訊來源地址成功！"
+
+msgid "Delete Specify Subscribe infos sources url successfully!"
+msgstr "已刪除指定的訂閱資訊來源地址！"
+
+msgid "Specify subscribe infos sources url failed:"
+msgstr "指定新的訂閱資訊來源地址失敗："
+
+msgid "IPv6 Proxy Mode"
+msgstr "IPv6 代理模式"
+
+msgid "TProxy Mode"
+msgstr "TProxy 模式"
+
+msgid "Redirect Mode"
+msgstr "Redirect 模式"
+
+msgid "TUN Mode"
+msgstr "TUN 模式"
+
+msgid "Mix Mode"
+msgstr "Mix 混合模式【UDP-TUN，TCP-轉發】"
+
+msgid "IPv6 Proxy Mode is Redirect..."
+msgstr "IPv6 代理模式為 Redirect..."
+
+msgid "IPv6 Proxy Mode is TUN..."
+msgstr "IPv6 代理模式為 TUN..."
+
+msgid "IPv6 Proxy Mode is TProxy..."
+msgstr "IPv6 代理模式為 TProxy..."
+
+msgid "IPv6 Proxy Mode is Mix..."
+msgstr "IPv6 代理模式為 Mix 混合..."
+
+msgid "Can't Settting Only Intranet Allowed Function, Get IPv4 WAN Interfaces error, Please Verify The Firewall's WAN Zone Name is wan, Ignore This IF The Device Does not Have a WAN Interfaces..."
+msgstr "設定僅允許內網功能失敗，無法獲取 IPv4 的 WAN 介面名稱，請確保防火牆設定中 IPv4 WAN 區域的名稱為 wan，如裝置無 WAN 口請忽略此提示..."
+
+msgid "Can't Settting Only Intranet Allowed Function, Get IPv6 WAN Interfaces error, Please Verify The Firewall's WAN Zone Name is wan, Ignore This IF The Device Does not Have a WAN Interfaces..."
+msgstr "設定僅允許內網功能失敗，無法獲取 IPv6 的 WAN 介面名稱，請確保防火牆設定中 IPv6 WAN 區域的名稱為 wan，如裝置無 WAN 口請忽略此提示..."
+
+msgid "Config File Download Successful, Test If There is Any Errors..."
+msgstr "配置檔案下載成功，使用核心測試是否有錯誤..."
+
+msgid "configuration file"
+msgstr "配置檔案"
+
+msgid "test failed"
+msgstr "測試失敗..."
+
+msgid "test is successful"
+msgstr "測試成功..."
+
+msgid "Config File Tested Failed, Please Check The Log Infos!"
+msgstr "配置檔案測試失敗，請檢視《核心日誌》排查失敗原因！"
+
+msgid "Test The Config File First..."
+msgstr "啟動前呼叫核心測試配置檔案..."
+
+msgid "Other Parameters"
+msgstr "其他附加配置"
+
+msgid "Empty URL"
+msgstr "URL 為空"
+
+msgid "Only HTTP/HTTPS URLs are supported"
+msgstr "僅支援 HTTP/HTTPS 連結"
+
+msgid "Invalid URL format"
+msgstr "無效的 URL 格式"
+
+msgid "URL missing hostname"
+msgstr "URL 缺少主機名"
+
+msgid "Invalid URL on line"
+msgstr "無效的 URL"
+
+msgid "Edit Your Other Parameters Here"
+msgstr "請在此編輯您的附加配置"
+
+msgid "Config Not Found, Switch Config File to"
+msgstr "未找到配置檔案，切換至配置檔案"
+
+msgid "Enable Unified Delay"
+msgstr "*啟用統一延遲"
+
+msgid "Change The Delay Calculation Method To Remove Extra Delays Such as Handshaking"
+msgstr "更換延遲計算方式，透過去除握手等額外開銷來降低延遲數值"
+
+msgid "If the download fails, try setting the CDN in Overwrite Settings - General Settings - GitHub Address Proxy Options"
+msgstr "如果下載失敗，您可以嘗試在覆寫設定 - 常規設定 -  GitHub 地址代理中設定 CDN"
+
+msgid "Used for Downloading Subscriptions, Defaults to"
+msgstr "用於下載訂閱時指定 UA，預設為"
+
+msgid "Set Proxies Address Skip: Bypass"
+msgstr "繞過代理伺服器地址設定：跳過"
+
+msgid "Set Proxies Address Skip: Failed"
+msgstr "繞過代理伺服器地址設定：失敗"
+
+msgid "Failed to parse config file with Lua helper"
+msgstr "繞過代理伺服器地址解析失敗"
+
+msgid "File is AGE encrypted but no secret key provided"
+msgstr "檔案已 Age 加密但未提供金鑰"
+
+msgid "File is AGE encrypted, cannot parse with Lua"
+msgstr "檔案已 Age 加密，無法使用 Lua 解析"
+
+msgid "Flush Failed"
+msgstr "清理失敗"
+
+msgid "Respect Rules"
+msgstr "遵循規則"
+
+msgid "Whether or not The Connection to the DNS Server Follow the Rules in Config"
+msgstr "與 DNS 伺服器的連線是否遵循配置檔案中的規則"
+
+msgid "To Use in Fake-IP Mode, Please Switch The Dns Redirect Mode To Firewall Forwarding"
+msgstr "要在 Fake-IP 模式下使用，請將 Dns 重定向模式切換為防火牆轉發模式"
+
+msgid "Skip Proxy Address"
+msgstr "繞過伺服器地址"
+
+msgid "Bypassing Server Addresses And Preventing Duplicate Proxies"
+msgstr "繞過伺服器地址，防止重複代理"
+
+msgid "Unsupported format, Proxies Address Skip Function Ignore Proxy-providers File"
+msgstr "不支援的格式，繞過代理伺服器地址功能已忽略代理集檔案"
+
+msgid "Custom Your CDN URL"
+msgstr "自定義連結地址"
+
+msgid "Type CDN URL, Format Like"
+msgstr "輸入連結地址，格式請參考"
+
+msgid "Please enter a valid URL!"
+msgstr "請參考示例輸入正確的連結地址！"
+
+msgid "WAN Interface Name"
+msgstr "WAN 介面名稱"
+
+msgid "Select WAN Interface Name For The Intranet Allowed"
+msgstr "為僅允許內網指定正確的 WAN 介面名稱"
+
+msgid "LAN Interface Name"
+msgstr "LAN 介面名稱"
+
+msgid "Select LAN Interface Name"
+msgstr "指定正確的 LAN 介面名稱"
+
+msgid "For More Useful Meta Core Functions Go Wiki"
+msgstr "如需要了解更多關於 Meta 核心的功能，請前往 Wiki"
+
+msgid "Because Need Ensure Bypassing IP Option Work, Deleted The Fake-IP-Filter Rule"
+msgstr "為保證繞過 IP 正常工作，已在 Fake-IP-Filter 中刪除規則"
+
+msgid "Because Need Ensure Bypassing IP Option Work, Added The Fake-IP-Filter Rule"
+msgstr "為保證繞過 IP 正常工作，已在 Fake-IP-Filter 中新增規則"
+
+msgid "Fake-IP is not returned if the matching succeeds when blacklist mode or Fake-IP is returned if the matching succeeds when whitelist mode"
+msgstr "黑名單模式表示如果匹配成功則不返回 Fake-IP, 白名單模式時只有匹配成功才返回 Fake-IP"
+
+msgid "Blacklist Mode"
+msgstr "黑名單模式"
+
+msgid "Whitelist Mode"
+msgstr "白名單模式"
+
+msgid "Cached Compliant Nodes Number:"
+msgstr "已快取的符合優先測試條件的節點數量:"
+
+msgid ", Cached Non-compliant Nodes Number:"
+msgstr "，不符合優先測試條件的節點數量:"
+
+msgid ", Prioritize Testing With Cached Compliant Nodes..."
+msgstr "，將優先使用符合條件的節點進行測試..."
+
+msgid "Flush Unlock Test Cache"
+msgstr "清理解鎖檢測快取"
+
+msgid "Flush Cache"
+msgstr "清理快取"
+
+msgid "ECS Subnet"
+msgstr "ECS 區域地址"
+
+msgid "Specify the ECS Subnet Address"
+msgstr "指定 ECS 子網區域地址"
+
+msgid "ECS Override"
+msgstr "ECS 區域地址覆蓋"
+
+msgid "Override the ECS Subnet Address"
+msgstr "強制覆蓋 DNS 查詢的子網區域地址"
+
+msgid "Need Proxy-server-nameserver Option Must Be Setted, Auto Set to"
+msgstr "啟用時 Proxy-server-nameserver 必須配置，外掛將預設將其設定為"
+
+msgid "Nameserver Option Maybe All Setted The Proxy Option, Auto Set Proxy-server-nameserver Option to"
+msgstr "Nameserver 選項可能全部設定了代理選項，外掛已自動設定 Proxy-server-nameserver 選項為"
+
+msgid "Proxy-server-nameserver Option Maybe All Setted The Proxy Option, Auto Set Proxy-server-nameserver Option to"
+msgstr "Proxy-server-nameserver 選項可能全部設定了代理選項，外掛已自動為 Proxy-server-nameserver 選項新增設定"
+
+msgid "For Avoiding Proxies Server Resolve Loop..."
+msgstr "以避免代理伺服器解析迴環..."
+
+msgid "Config File"
+msgstr "配置檔案"
+
+msgid "Downloading URL"
+msgstr "訂閱的下載連結為"
+
+msgid "Downloading User-Agent"
+msgstr "訂閱的 User-Agent 為"
+
+msgid "Option"
+msgstr "選項"
+
+msgid "Option"
+msgstr "選項"
+
+msgid "is Setted"
+msgstr "設定了"
+
+msgid "as DNS Server Which May Cause DNS Loop, Please Consider Removing It When DNS Works Abnormally..."
+msgstr "作為 DNS 伺服器，這可能造成 DNS 迴環錯誤，如發現 DNS 工作異常請考慮移除該設定..."
+
+msgid "as DNS Server Which May Cause DNS Loop, Already Remove It..."
+msgstr "作為 DNS 伺服器，這可能造成 DNS 迴環錯誤，已移除該設定..."
+
+msgid "Set Custom DNS Failed,"
+msgstr "設定自定義 DNS 錯誤，"
+
+msgid "Set proxy-server-nameserver Failed,"
+msgstr "設定 proxy-server-nameserver 錯誤，"
+
+msgid "Set direct-nameserver Failed,"
+msgstr "設定 direct-nameserver 錯誤，"
+
+msgid "Set fallback-filter Failed,"
+msgstr "設定 fallback-filter 錯誤，"
+
+msgid "Rule"
+msgstr "規則"
+
+msgid "Global"
+msgstr "全域性"
+
+msgid "Direct"
+msgstr "直連"
+
+msgid "Config File Overwrite Failed,"
+msgstr "配置檔案覆寫失敗，"
+
+msgid "Config File params checked Failed,"
+msgstr "配置檔案引數檢查失敗，"
+
+msgid "Edit"
+msgstr "編輯"
+
+msgid "Proto"
+msgstr "通訊協議"
+
+msgid "Family"
+msgstr "地址型別"
+
+msgid "Comment"
+msgstr "備註"
+
+msgid "Internal addresses"
+msgstr "內部地址"
+
+msgid "Internal ports"
+msgstr "內部埠"
+
+msgid "Target"
+msgstr "物件"
+
+msgid "Network Anomaly, Suspend Unlock Detection..."
+msgstr "網路異常，暫停解鎖檢測..."
+
+msgid "(Not Support mrs Format)"
+msgstr "(不支援 mrs 格式)"
+
+msgid "UpDate"
+msgstr "更新"
+
+msgid "Local Network"
+msgstr "內部網路地址"
+
+msgid "LAN IP Address Get Error, Please Check The LAN Interface Setting or Choose the Correct Interface in the Setting!"
+msgstr "LAN IP 地址獲取失敗，請檢查 LAN 介面設定或在外掛設定中選擇正確的 LAN 介面名稱"
+
+msgid "Skiped The Custom Rule Because Group & Proxy Not Found:"
+msgstr "因未找到對應的策略組或代理，為避免啟動失敗，已跳過此條自定義規則的新增:"
+
+msgid "Disable quic-go GSO Support"
+msgstr "禁用 quic-go GSO 支援"
+
+msgid "Suggestion: If Encountering Issues With QUIC UDP on The Linux Kernel Version Above 6.6, Please Try to Enable."
+msgstr "建議： 如果韌體 Linux 核心版本在 6.6 以上時遇到 quic-go 的 UDP 連線問題，請嘗試啟用。"
+
+msgid "Drop The Type of DNS Responsed"
+msgstr "丟棄指定型別的 DNS 回應"
+
+msgid "Disable-IPv4"
+msgstr "禁用 IPv4"
+
+msgid "Disable-IPv6"
+msgstr "禁用 IPv6"
+
+msgid "Smart Core"
+msgstr "Smart 核心"
+
+msgid "Failed to create update script!"
+msgstr "建立外掛升級程序失敗！"
+
+msgid "Attempting to start update service..."
+msgstr "正在啟動升級程序..."
+
+msgid "Service start failed, retrying in 2 seconds..."
+msgstr "外掛升級程序啟動失敗，將在2秒後重試..."
+
+msgid "Failed to start update service after 3 attempts, please check and try again later..."
+msgstr "升級程序啟動失敗，請稍後再試..."
+
+msgid "View core infos that support smart group"
+msgstr "檢視支援 smart 策略組的核心資訊"
+
+msgid "Control panel address copied:"
+msgstr "控制面板地址已複製："
+
+msgid "Control panel secret copied:"
+msgstr "控制面板金鑰已複製："
+
+msgid "No control panel secret set"
+msgstr "未設定控制面板金鑰"
+
+msgid "Proxy auth info copied:"
+msgstr "代理認證資訊已複製："
+
+msgid "No proxy auth info set"
+msgstr "未設定代理認證資訊"
+
+msgid "Proxy info not available, please try again later"
+msgstr "獲取代理資訊失敗，請稍後再試"
+
+msgid "Mix proxy address copied:"
+msgstr "混合代理地址已複製："
+
+msgid "Mix Proxy"
+msgstr "混合代理"
+
+msgid "Area Bypass"
+msgstr "區域繞過"
+
+msgid "Area bypass setting switched to:"
+msgstr "區域繞過設定已切換為："
+
+msgid "Area bypass setting failed"
+msgstr "區域繞過設定失敗"
+
+msgid "Sniffer"
+msgstr "域名嗅探"
+
+msgid "Sniffer setting"
+msgstr "域名嗅探已"
+
+msgid "Sniffer setting failed"
+msgstr "域名嗅探設定失敗"
+
+msgid "DNS Proxy"
+msgstr "DNS 代理"
+
+msgid "Respect Rules setting"
+msgstr "DNS 代理已"
+
+msgid "Respect Rules setting failed"
+msgstr "DNS 代理設定失敗"
+
+msgid "Copy failed, please copy manually:"
+msgstr "複製失敗，請手動複製："
+
+msgid "Copy Address"
+msgstr "複製地址"
+
+msgid "Copy Secret"
+msgstr "複製金鑰"
+
+msgid "Copy Auth Info"
+msgstr "複製認證資訊"
+
+msgid "Not Available"
+msgstr "不可用"
+
+msgid "Off"
+msgstr "停用"
+
+msgid "Mainland"
+msgstr "大陸"
+
+msgid "Oversea"
+msgstr "海外"
+
+msgid "On"
+msgstr "啟用"
+
+msgid "Get PAC Config"
+msgstr "獲取 PAC 配置"
+
+msgid "PAC file URL copied:"
+msgstr "PAC 檔案地址已複製："
+
+msgid "PAC file URL:"
+msgstr "PAC 檔案地址："
+
+msgid "PAC file generation failed"
+msgstr "PAC 檔案建立失敗"
+
+msgid "Proxy service not available, please try again later"
+msgstr "代理服務不可用，請稍後再試"
+
+msgid "No authentication configured, please be aware of the risk of information leakage!"
+msgstr "未設定代理認證資訊，請注意資訊洩露風險！"
+
+msgid "Other"
+msgstr "其他"
+
+msgid "Apply"
+msgstr "應用"
+
+msgid "Proxy service not running"
+msgstr "代理服務未在執行"
+
+msgid "Unable to get proxy IP"
+msgstr "無法獲取代理地址"
+
+msgid "Failed to write PAC file"
+msgstr "建立 PAC 檔案失敗"
+
+msgid "Downloading:"
+msgstr "下載進度："
+
+msgid "Downloading..."
+msgstr "下載中..."
+
+msgid "Downloading config..."
+msgstr "正在下載配置..."
+
+msgid "Downloading core..."
+msgstr "正在下載核心..."
+
+msgid "Fetching subscription..."
+msgstr "正在獲取訂閱..."
+
+msgid "Logging in..."
+msgstr "正在登入..."
+
+msgid "Saving token..."
+msgstr "正在儲存令牌..."
+
+msgid "Sniff the domain name of the traffics to avoid rule-based proxy failure"
+msgstr "嗅探流量的域名資訊，避免基於規則的代理失敗"
+
+msgid "DNS querys respect-rules to preventing access failure"
+msgstr "DNS 查詢遵循規則進行代理，防止訪問失敗"
+
+msgid "Upload File"
+msgstr "上傳檔案"
+
+msgid "Subscribe Link"
+msgstr "訂閱連結"
+
+msgid "Click to select file or drag and drop"
+msgstr "點選選擇檔案或拖拽上傳"
+
+msgid "Support YAML file, max size 10MB"
+msgstr "支援 YAML 檔案，最大 10MB"
+
+msgid "Support txt,conf files, max size 10MB"
+msgstr "支援 txt,conf 檔案，最大 10MB"
+
+msgid "Subscription URL"
+msgstr "訂閱地址"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Optional"
+msgstr "可選"
+
+msgid "Custom"
+msgstr "自定義"
+
+msgid "Config Name"
+msgstr "配置名稱"
+
+msgid "Enter config name (without extension)"
+msgstr "輸入配置名稱（不含副檔名）"
+
+msgid "Processing..."
+msgstr "處理中..."
+
+msgid "Ready to add config"
+msgstr "準備新增配置"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Add Config"
+msgstr "新增配置"
+
+msgid "Edit Config"
+msgstr "編輯配置"
+
+msgid "Edit Subscription"
+msgstr "編輯訂閱"
+
+msgid "Ready to upload file"
+msgstr "準備上傳檔案"
+
+msgid "Ready to add subscription"
+msgstr "準備新增訂閱"
+
+msgid "Ready to edit subscription"
+msgstr "準備編輯訂閱"
+
+msgid "File selected:"
+msgstr "已選擇檔案："
+
+msgid "Size:"
+msgstr "大小："
+
+msgid "Please select a YAML file"
+msgstr "請選擇 YAML 檔案"
+
+msgid "File size exceeds 10MB limit"
+msgstr "檔案大小超過 10MB 限制"
+
+msgid "File ready to upload"
+msgstr "檔案準備就緒"
+
+msgid "Please enter a filename"
+msgstr "請輸入檔名"
+
+msgid "Filename contains invalid characters"
+msgstr "檔名包含無效字元"
+
+msgid "Uploading..."
+msgstr "上傳中..."
+
+msgid "Generating..."
+msgstr "生成中..."
+
+msgid "Upload completed"
+msgstr "上傳完成"
+
+msgid "Upload successful"
+msgstr "上傳成功"
+
+msgid "Upload failed:"
+msgstr "上傳失敗："
+
+msgid "Failed to read file"
+msgstr "檔案讀取失敗"
+
+msgid "Please enter subscription URL and config name"
+msgstr "請輸入訂閱地址和配置名稱"
+
+msgid "Invalid subscription URL format"
+msgstr "訂閱地址格式無效"
+
+msgid "Config name contains invalid characters"
+msgstr "配置名稱包含無效字元"
+
+msgid "Adding subscription..."
+msgstr "新增訂閱中..."
+
+msgid "Updating subscription..."
+msgstr "修改訂閱中..."
+
+msgid "Failed to download subscription config"
+msgstr "訂閱配置下載失敗"
+
+msgid "Failed to add subscription"
+msgstr "新增訂閱失敗"
+
+msgid "Failed to update subscription"
+msgstr "修改訂閱失敗"
+
+msgid "Subscription added successfully"
+msgstr "訂閱新增成功"
+
+msgid "Subscription updated successfully"
+msgstr "訂閱修改成功"
+
+msgid "Failed to get subscribe data"
+msgstr "獲取訂閱資訊失敗"
+
+msgid "Process failed"
+msgstr "處理失敗"
+
+msgid "Close"
+msgstr "關閉"
+
+msgid "Loading..."
+msgstr "載入中..."
+
+msgid "Minimize"
+msgstr "最小化"
+
+msgid "Maximize"
+msgstr "最大化"
+
+msgid "Download"
+msgstr "下載"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Compare"
+msgstr "對比"
+
+msgid "Loading config file..."
+msgstr "正在載入配置檔案..."
+
+msgid "Ready"
+msgstr "就緒"
+
+msgid "Compare mode: left(Original Config), right(Runtime Config)"
+msgstr "對比模式：左側（原始配置），右側（執行配置）"
+
+msgid "Please select a config file first"
+msgstr "請先選擇一個配置檔案"
+
+msgid "No config files found, Please upload a config file to get started"
+msgstr "未找到配置檔案，請先上傳或訂閱一個配置"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Failed to load config file"
+msgstr "配置檔案載入失敗"
+
+msgid "Load failed"
+msgstr "載入失敗"
+
+msgid "Config file content is empty"
+msgstr "配置檔案內容為空"
+
+msgid "Saved successfully"
+msgstr "儲存成功"
+
+msgid "Save failed"
+msgstr "儲存失敗"
+
+msgid "Failed to save config file:"
+msgstr "配置檔案儲存失敗："
+
+msgid "Unknown error"
+msgstr "未知錯誤"
+
+msgid "Editor not ready"
+msgstr "編輯器未準備就緒"
+
+msgid "Download started"
+msgstr "下載已開始"
+
+msgid "Download failed:"
+msgstr "下載失敗："
+
+msgid "You have unsaved changes. Are you sure you want to close?"
+msgstr "您有未儲存的更改。確定要關閉嗎？"
+
+msgid "Restart"
+msgstr "重啟"
+
+msgid "No Config Selected"
+msgstr "未選擇配置"
+
+msgid "Modified"
+msgstr "修改時間"
+
+msgid "No Config Files Found"
+msgstr "未找到配置檔案"
+
+msgid "Please select a config file"
+msgstr "請選擇配置檔案"
+
+msgid "Failed to load config files"
+msgstr "配置檔案載入失敗"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Failed to get startup log after retries"
+msgstr "重試後仍無法獲取啟動日誌"
+
+msgid "Starting..."
+msgstr "啟動中..."
+
+msgid "Stopping..."
+msgstr "關閉中..."
+
+msgid "Failed to start OpenClash"
+msgstr "OpenClash 啟動失敗"
+
+msgid "Failed to stop OpenClash"
+msgstr "OpenClash 關閉失敗"
+
+msgid "Operation Failed"
+msgstr "操作失敗"
+
+msgid "Switching Config..."
+msgstr "切換配置中..."
+
+msgid "Failed to switch config file:"
+msgstr "切換配置檔案失敗："
+
+msgid "Switch Failed"
+msgstr "切換失敗"
+
+msgid "Updating Config..."
+msgstr "更新配置中..."
+
+msgid "Failed to update config file:"
+msgstr "更新配置檔案失敗："
+
+msgid "Failed to update config file, please try again later"
+msgstr "更新配置檔案失敗，請稍後再試"
+
+msgid "Restarting..."
+msgstr "重啟中..."
+
+msgid "Failed to restart core"
+msgstr "重啟核心失敗"
+
+msgid "Invalid config file selected"
+msgstr "選擇的配置檔案無效"
+
+msgid "Config editor not ready, please try again"
+msgstr "配置編輯未就緒，請重試"
+
+msgid "New version available"
+msgstr "發現新版本"
+
+msgid "Failed to get subscription config"
+msgstr "獲取訂閱配置失敗"
+
+msgid "Expire Date"
+msgstr "到期時間"
+
+msgid "RAW"
+msgstr "RAW"
+
+msgid "Address"
+msgstr "地址"
+
+msgid "Timeout"
+msgstr "超時"
+
+msgid "Enter custom User-Agent"
+msgstr "輸入自定義 User-Agent"
+
+msgid "Stream Unlock"
+msgstr "流媒體解鎖"
+
+msgid "Previous"
+msgstr "上一個"
+
+msgid "Next"
+msgstr "下一個"
+
+msgid "Enter subscription URL or multiple links (one per line)"
+msgstr "輸入訂閱地址或多個連結（每行一個）"
+
+msgid "Enter custom convert address"
+msgstr "輸入自定義轉換地址"
+
+msgid "Enter custom template URL"
+msgstr "輸入自定義模板地址"
+
+msgid "eg: rename=match@replace, one param per line"
+msgstr "例如：rename=match@replace，每行一個引數"
+
+msgid "Enter keywords to include nodes (one per line)"
+msgstr "輸入包含節點的關鍵詞（每行一個）"
+
+msgid "Enter keywords to exclude nodes (one per line)"
+msgstr "輸入排除節點的關鍵詞（每行一個）"
+
+msgid "Expire"
+msgstr "到期"
+
+msgid "Traffic"
+msgstr "流量"
+
+msgid "Plan"
+msgstr "套餐"
+
+msgid "Official"
+msgstr "官網"
+
+msgid "Invalid subscription URL format. Support HTTP/HTTPS subscription URLs or protocol links, can be separated by newlines or |"
+msgstr "訂閱地址格式無效。支援 HTTP/HTTPS 訂閱地址或協議連結，可以用換行符或 | 分隔"
+
+msgid "Invalid subscription URL format. Only single HTTP/HTTPS subscription URL is supported when subscription conversion is disabled"
+msgstr "訂閱地址格式無效。未啟用訂閱轉換時僅支援單個 HTTP/HTTPS 訂閱地址"
+
+msgid "Advanced Options"
+msgstr "高階選項"
+
+msgid "Show more subscription options"
+msgstr "顯示更多訂閱設定"
+
+msgid "Show more upload options"
+msgstr "顯示更多上傳設定"
+
+msgid "Overwrite"
+msgstr "覆寫"
+
+msgid "Original Config"
+msgstr "原始配置"
+
+msgid "Runtime Config"
+msgstr "執行配置"
+
+msgid "Runtime config (read only)"
+msgstr "執行配置（只讀）"
+
+msgid "Start Downloading LightGBM Model..."
+msgstr "開始下載 LightGBM 模型..."
+
+msgid "LightGBM Model Download Success, Check Updated..."
+msgstr "LightGBM 模型下載成功，檢查是否有更新..."
+
+msgid "LightGBM Model Has Been Updated, Starting To Replace The Old Version..."
+msgstr "LightGBM 模型有更新，正在替換舊版本..."
+
+msgid "LightGBM Model Update Successful!"
+msgstr "LightGBM 模型更新成功！"
+
+msgid "Updated LightGBM Model No Change, Do Nothing..."
+msgstr "LightGBM 模型沒有更新，停止繼續操作..."
+
+msgid "LightGBM Model Update Error, Please Try Again Later..."
+msgstr "LightGBM 模型更新失敗，請檢查網路或稍後再試..."
+
+msgid "Smart Auto Switch"
+msgstr "Smart 策略自動切換"
+
+msgid "Auto Switch Url-test and Load-balance Group to Smart Group"
+msgstr "自動切換 Url-test、Load-balance 策略組到 Smart 策略組"
+
+msgid "Enable LightGBM Model"
+msgstr "啟用 LightGBM 模型"
+
+msgid "Use LightGBM Model To Predict Weight"
+msgstr "使用 LightGBM 模型來預測權重"
+
+msgid "Auto Update LightGBM Model"
+msgstr "自動更新模型"
+
+msgid "Custom Model URL"
+msgstr "自定義模型更新 URL"
+
+msgid "Update Model"
+msgstr "更新模型"
+
+msgid "Custom LightGBM Model URL, Click Button Below To Refresh After Edit"
+msgstr "自定義模型的更新來源，編輯後點選下方按鈕生效"
+
+msgid "Colletct Training Data"
+msgstr "收集訓練資料"
+
+msgid "Data Colletct File Size (MB)"
+msgstr "資料收集檔案大小（MB）"
+
+msgid "Limit The File Size of Collected Data, The Default is 100MB"
+msgstr "限制資料收集檔案大小，預設為 100MB"
+
+msgid "Data Colletct Rate"
+msgstr "資料收集取樣率"
+
+msgid "Data Acquisition Rate, Desirable Values are 0-1, The Default is 1"
+msgstr "指定資料收集時的取樣率，值為 0-1 之間的數字，預設為 1"
+
+msgid "Setting Smart Auto Switch Failed,"
+msgstr "Smart 策略組自動切換失敗，"
+
+msgid "Flush Smart Cache"
+msgstr "清理 Smart 快取"
+
+msgid "Current Version:"
+msgstr "當前版本:"
+
+msgid "Light Version"
+msgstr "輕量版"
+
+msgid "Middle Version"
+msgstr "中等版"
+
+msgid "Large Version"
+msgstr "完整版"
+
+msgid "Add New File"
+msgstr "新增新檔案"
+
+msgid "Local File"
+msgstr "本地檔案"
+
+msgid "Refresh Subscription"
+msgstr "重新整理訂閱"
+
+msgid "Refreshing subscription..."
+msgstr "正在重新整理訂閱..."
+
+msgid "Subscription refreshed successfully"
+msgstr "訂閱重新整理成功"
+
+msgid "Subscription refresh failed"
+msgstr "訂閱重新整理失敗"
+
+msgid "Edit Subscription Info"
+msgstr "編輯訂閱資訊"
+
+msgid "Are you sure you want to delete this file and its subscription info?"
+msgstr "確定要刪除該檔案及其訂閱資訊嗎？"
+
+msgid "Add Overwrite Module"
+msgstr "新增覆寫模組"
+
+msgid "Ready to add file"
+msgstr "準備新增檔案"
+
+msgid "openclash_custom_overwrite.sh already exists and cannot be added again"
+msgstr "openclash_custom_overwrite.sh 已存在，不能重複新增"
+
+msgid "Created successfully"
+msgstr "新建成功"
+
+msgid "Please enter subscription URL"
+msgstr "請輸入訂閱 URL"
+
+msgid "Invalid subscription URL format, only single HTTP/HTTPS link is supported"
+msgstr "無效的訂閱 URL 格式，僅支援單一 HTTP/HTTPS 連結"
+
+msgid "Downloading subscription content..."
+msgstr "正在下載訂閱內容..."
+
+msgid "Download completed"
+msgstr "下載完成"
+
+msgid "Failed to save subscription info:"
+msgstr "訂閱資訊儲存失敗:"
+
+msgid "Ready to edit"
+msgstr "準備編輯"
+
+msgid "Subscription saved successfully"
+msgstr "訂閱儲存成功"
+
+msgid "Failed to save subscription"
+msgstr "訂閱儲存失敗"
+
+msgid "Environment variable"
+msgstr "環境變數"
+
+msgid "DOWNLOAD FILE no target in"
+msgstr "檔案下載未指定目標引數"
+
+msgid "DOWNLOAD FILE failed for"
+msgstr "檔案下載失敗"
+
+msgid "skip General key not allowed"
+msgstr "跳過不支援的引數"
+
+msgid "skip General key type error"
+msgstr "跳過值型別錯誤的引數"
+
+msgid "skip invalid Overwrite command"
+msgstr "跳過不支援的覆寫命令"
+
+msgid "Processing Overwrite Module"
+msgstr "執行覆寫模組"
+
+msgid "Load Overwrite Script"
+msgstr "載入覆寫命令"
+
+msgid "DOWNLOAD FILE for"
+msgstr "執行檔案下載"
+
+msgid "Add Cron for"
+msgstr "新增計劃任務"
+
+msgid "Delete"
+msgstr "刪除"
+
+msgid "Delete failed"
+msgstr "刪除失敗"
+
+msgid "Overwrite Module Edit"
+msgstr "覆寫模組編輯"
+
+msgid "Nodes Weight Priority, <1 Means Lower Priority, >1 Means Higher Priority, The Default is 1, Pattern Support Regex and String"
+msgstr "節點權重加成，<1 表示較低優先順序，>1 表示較高優先順序，預設為 1，匹配模式支援 Regex 和字串"
+
+msgid "Edit Module Info"
+msgstr "編輯模組資訊"
+
+msgid "Subscription"
+msgstr "訂閱"
+
+msgid "HTTP Module"
+msgstr "遠端模組"
+
+msgid "File Module"
+msgstr "本地模組"
+
+msgid "Overwrite Module"
+msgstr "覆寫模組"
+
+msgid "module not found, please check your system depends if something abnormal!"
+msgstr "模組未找到，如遇到異常請檢查您的韌體依賴！"
+
+msgid "Select Nodes Force Lookup and Use Target ASN Info First For More Stable Experience"
+msgstr "選擇節點時強制 DNS 查詢並優先使用目標的 ASN 資訊，以獲得更穩定的體驗"
+
+msgid "Prefer-ASN"
+msgstr "ASN 優先"
+
+msgid "Light Theme"
+msgstr "淺色主題"
+
+msgid "Dark Theme"
+msgstr "暗色主題"
+
+msgid "Auto Theme"
+msgstr "自適應主題"
+
+msgid "Set Subscription Info URL"
+msgstr "設定訂閱資訊來源地址"
+
+msgid "Enter URLs, one per line, use #name=example end for specifing display name"
+msgstr "輸入訂閱資訊來源地址，多個地址請每行一個，在最後可以使用 #name=example 指定名字"
+
+msgid "Set to Default"
+msgstr "設為預設"
+
+msgid "Are you sure you want to delete this panel?"
+msgstr "確定要刪除此面板嗎？"
+
+msgid "Default"
+msgstr "預設"
+
+msgid "Disable-Qtype"
+msgstr "禁用 Qtype"
+
+msgid "Disable Reuse"
+msgstr "禁止複用"
+
+msgid "Disable Reuse The Connection"
+msgstr "禁止連線複用"
+
+msgid "Write file failed:"
+msgstr "寫入檔案失敗："
+
+msgid "Interface"
+msgstr "介面"
+
+msgid "User"
+msgstr "使用者"
+
+msgid "Serial Number"
+msgstr "序號"
+
+msgid "Enter YAML configuration..."
+msgstr "請輸入 YAML 配置..."
+
+msgid "Enter shell script..."
+msgstr "請輸入 Shell 指令碼..."
+
+msgid "Enter configuration..."
+msgstr "請輸入配置..."
+
+msgid "Edit original config..."
+msgstr "編輯原始配置..."
+
+msgid "Runtime config (read only)"
+msgstr "執行配置（只讀）"
+
+msgid "Set Custom Overwrite Script Failed,"
+msgstr "自定義覆寫命令執行失敗，"
+
+msgid "Load YAML Override Block"
+msgstr "載入 YAML 覆寫模組"
+
+msgid "Invalid YAML Override format, skipped..."
+msgstr "無效的 YAML 覆寫格式，跳過..."
+
+msgid "Parse YAML Override failed:"
+msgstr "YAML 覆寫模組解析失敗："
+
+msgid "files selected"
+msgstr "配置已選擇"
+
+msgid "Global User-Agent"
+msgstr "全域性 User-Agent"
+
+msgid "depended package reinstalling..."
+msgstr "依賴正在重新安裝..."
+
+msgid "failed to install:"
+msgstr "依賴安裝失敗:"
+
+msgid ", please try to install it manually..."
+msgstr "，請重試手動安裝..."
+
+msgid "Decrypted content empty or still encrypted"
+msgstr "解密後內容為空或仍為加密狀態"
+
+msgid "Decrypt attempt failed:"
+msgstr "解密嘗試失敗:"
+
+msgid "Decrypt attempt failed for a found secret:"
+msgstr "使用找到的私鑰解密嘗試失敗:"
+
+msgid "Encrypt attempt failed:"
+msgstr "加密嘗試失敗:"
+
+msgid "oixCloud Website"
+msgstr "官方網站"
+
+msgid "Login..."
+msgstr "登入中..."
+
+msgid "Logout..."
+msgstr "退出中..."
+
+msgid "Checkin..."
+msgstr "簽到中..."
+
+msgid "oixCloud Login Successful"
+msgstr "oixCloud 登入成功"
+
+msgid "Note: oixCloud need a specific core installed, OpenClash will auto download, After the core start, an oixCloud nodes provider will be added, which you can customize as needed"
+msgstr "注意：oixCloud 需要安裝專用核心才能使用，外掛會自動識別並進行核心下載，專用核心啟動後，會新增一個 oixCloud 節點組到配置檔案，供您自定義使用"
+
+msgid "oixCloud Login Failed"
+msgstr "oixCloud 登入失敗"
+
+msgid "Login Account"
+msgstr "登入賬號"
+
+msgid "oixCloud Logout Successful"
+msgstr "oixCloud 已成功退出"
+
+msgid "oixCloud Logout Failed"
+msgstr "oixCloud 退出失敗"
+
+msgid "Logout Account"
+msgstr "退出賬號"
+
+msgid "Account Login"
+msgstr "賬號登入"
+
+msgid "Simple & trustworthy"
+msgstr "簡單 & 值得信賴"
+
+msgid "Cross-platform Support"
+msgstr "豐富的第三方應用相容性"
+
+msgid "Global Acceleration Network"
+msgstr "全球網路基礎設施"
+
+msgid "Easy to Use"
+msgstr "操作簡易"
+
+msgid "Intelligent Shunting"
+msgstr "智慧分流"
+
+msgid "Perfect Technical Support"
+msgstr "完善技術支援"
+
+msgid "Plan Expiration Time"
+msgstr "到期時間"
+
+msgid "Account Balances"
+msgstr "賬戶餘額"
+
+msgid "Aff Balances"
+msgstr "返利餘額"
+
+msgid "Account Integral"
+msgstr "賬戶積分"
+
+msgid "Today Used"
+msgstr "今日已用"
+
+msgid "Plan Used"
+msgstr "本月已用"
+
+msgid "Plan Unused"
+msgstr "剩餘流量"
+
+msgid "Plan Traffic"
+msgstr "套餐流量"
+
+msgid "oixCloud Account Login Failed! Please Check And Try Again..."
+msgstr "oixCloud 賬戶登入失敗！請檢查賬戶資訊並重試..."
+
+msgid "oixCloud Account Login Failed, The Error Info is"
+msgstr "oixCloud 賬戶登入失敗，錯誤資訊"
+
+msgid "invalid token"
+msgstr "無效的令牌"
+
+msgid "login failed"
+msgstr "登入失敗"
+
+msgid "email or passwd is wrong"
+msgstr "郵箱或密碼錯誤"
+
+msgid "oixCloud Checkin Failed! Please Check And Try Again..."
+msgstr "oixCloud 簽到失敗，請稍後再試！"
+
+msgid "Account Email Address"
+msgstr "賬號地址"
+
+msgid "Account Password"
+msgstr "賬號密碼"
+
+msgid "Checkin Multiple"
+msgstr "簽到倍數"
+
+msgid "Optional Parameters"
+msgstr "可選項引數"
+
+msgid "Optional parameters saved"
+msgstr "可選項引數已儲存"
+
+msgid "Failed to save optional parameters, please try again"
+msgstr "可選項引數儲存失敗，請重試"
+
+msgid "For more information, please visit the"
+msgstr "如需檢視更多資訊，請前往"
+
+msgid "official documentation"
+msgstr "官方文件"
+
+msgid "Must start with &"
+msgstr "必須以 & 開頭"
+
+msgid "Params must not contain spaces"
+msgstr "引數不能包含空格"
+
+msgid "Params too long, max 8192 characters"
+msgstr "引數過長，最多 8192 個字元"
+
+msgid "Invalid params format"
+msgstr "引數格式無效"
+
+msgid "Invalid params format, must start with & and use key=value pairs"
+msgstr "引數格式無效，必須以 & 開頭並使用 key=value 鍵值對"
+
+msgid "Params too long"
+msgstr "引數過長"
+
+msgid "Usage Help"
+msgstr "使用幫助"
+
+msgid "Click to get usage help"
+msgstr "點選獲取使用幫助"
+
+msgid "Copy the following text to any AI (ChatGPT, DeepSeek, etc.) to get usage help for OpenClash:"
+msgstr "將以下文字複製到任意 AI 工具（ChatGPT、DeepSeek 等），即可獲取 OpenClash 的使用幫助："
+
+msgid "OpenClash Expert Assistant"
+msgstr "OpenClash 專家助手"
+
+msgid "The guide is the single source of truth — it covers everything from debug log procedures to external resource queries. Do NOT rely on memory; always verify against the guide."
+msgstr "指南是唯一權威來源 —— 涵蓋從除錯日誌流程到外部資源查詢的所有內容。禁止憑記憶回答，必須對照指南驗證。"
+
+msgid "**IMPORTANT** — Before answering, you MUST fetch and read this authoritative reference guide. ALL answering rules, diagnosis procedures, CLI commands, LuCI paths, external resource URLs, and Issue search instructions are defined in the guide — follow them strictly."
+msgstr "**重要** —— 在回答之前，你必須獲取並閱讀這份權威參考指南。所有回答規則、診斷流程、CLI 命令、LuCI 路徑、外部資源 URL 和 Issue 搜尋指引均在指南中定義 —— 請嚴格遵守。"
+
+msgid "External Resources (when beyond the guide's scope)"
+msgstr "外部資源（超出指南範圍時）"
+
+msgid "Question"
+msgstr "問題"
+
+msgid "You are an OpenClash expert assistant. OpenClash is a LuCI plugin for OpenWrt that manages the Mihomo core."
+msgstr "你是 OpenClash 專家助手。OpenClash 是 OpenWrt 上管理 Mihomo 核心的 LuCI 外掛。"
+
+msgid "OpenClash User Guide"
+msgstr "OpenClash 使用者指南"
+
+msgid "This guide contains: AI behavior rules with diagnosis priority, complete dependency checklist, error message lookup tables with exact fixes, nftables/iptables firewall chain rules, all LuCI configuration options with UCI paths, CLI commands and API reference, DNS setup and leak prevention, subscription/GEO update procedures, and more."
+msgstr "本指南包含：AI 行為規則與診斷優先順序、完整依賴清單、含精確修復方案的錯誤資訊速查表、nftables/iptables 防火牆規則鏈、所有 LuCI 配置選項及 UCI 路徑、命令列與 API 參考、DNS 設定與洩露防護、訂閱/GEO 更新流程等。"
+
+msgid "When I report any problem or error (cannot access internet, DNS failure, startup failure, connection timeout, etc.), FIRST ask me to generate a debug log — either via LuCI (**Server Logs → Debug Logs → Generate Logs**) or SSH (`/usr/share/openclash/openclash_debug.sh`). The debug log contains dependency checks, configuration, firewall rules, and system info in one step — do NOT ask me to check things individually. (Note: this rule does NOT apply to feature configuration questions like \"how do I enable X?\" — see rule 3 for those.)"
+msgstr "當我報告任何故障或錯誤（無法上網、DNS 異常、啟動失敗、連線超時等）時，**首先**要求我生成除錯日誌 —— 透過 LuCI（**執行日誌 → 除錯日誌 → 生成日誌**）或 SSH（`/usr/share/openclash/openclash_debug.sh`）。除錯日誌一步包含依賴檢查、配置、防火牆規則和系統資訊 —— **不要**讓我逐項檢查。（注意：此規則**不適用**於功能配置類問題如「如何開啟 XX？」—— 此類問題請參見規則 3。）"
+
+msgid "If the debug log is insufficient to pinpoint the issue, give me precise diagnostic commands to run on the router and ask me to paste back the output."
+msgstr "如果除錯日誌不足以定位問題，給我精確的診斷命令在路由器上執行，並讓我貼上輸出結果。"
+
+msgid "For feature configuration and post-diagnosis fixes, provide LuCI web UI navigation paths (e.g. **Services → OpenClash → Plugin Settings**). Only give command-line when LuCI is unavailable or I explicitly ask for it."
+msgstr "對於功能配置和診斷後的修復，提供 LuCI Web 介面操作路徑（如 **服務 → OpenClash → 外掛設定**）。僅在 LuCI 不可用或我明確要求時才提供命令列。"
+
+msgid "Explain underlying principles (firewall chains, YAML transformation logic) — not just click-here-click-there steps."
+msgstr "解釋底層原理（防火牆規則鏈、YAML 轉換邏輯）—— 而不只是點選步驟。"
+
+msgid "If the guide does not cover something, actively query these resources — never guess or fabricate information:"
+msgstr "如果指南未覆蓋某項內容，請主動查詢這些資源 —— 絕不猜測或編造資訊："
+
+msgid "Mihomo Wiki"
+msgstr "Mihomo Wiki"
+
+msgid "Meta-Docs"
+msgstr "Meta-Docs"
+
+msgid "OpenClash source"
+msgstr "OpenClash 原始碼"
+
+msgid "Mihomo core source"
+msgstr "Mihomo 核心原始碼"
+
+msgid "Smart core source"
+msgstr "Smart 核心原始碼"
+
+msgid "Fetch Wiki pages to read docs; search repos to find implementation code. Do NOT answer from memory — always verify against the actual source."
+msgstr "抓取 Wiki 頁面閱讀文件；搜尋倉庫查詢實現程式碼。禁止憑記憶回答 —— 必須對照實際來源驗證。"
+
+msgid "For bug reports or failure scenarios not covered by the guide, search GitHub Issues first:"
+msgstr "對於指南未覆蓋的 bug 報告或故障場景，優先搜尋 GitHub Issues："
+
+msgid "OpenClash Issues (config/subscribe/firewall/UI)"
+msgstr "OpenClash Issues（配置/訂閱/防火牆/UI）"
+
+msgid "Mihomo Issues (proxy protocols/TUN/DNS/rule engine)"
+msgstr "Mihomo Issues（代理協議/TUN/DNS/規則引擎）"
+
+msgid "Prioritize maintainer replies and highly upvoted community answers in Issues."
+msgstr "優先參考 Issues 中維護者的回覆和高贊社群答案。"
+
+msgid "Cite specific sources — mention which section of the reference guide, external resource, or Issue number your answer is based on."
+msgstr "註明具體來源 —— 說明你的回答基於參考指南的哪個章節、哪個外部資源或哪個 Issue 編號。"
+
+msgid "If my problem description is incomplete or lacks error messages, ask me to generate a debug log first (**Server Logs → Debug Logs → Generate Logs**) — do NOT speculate about the cause."
+msgstr "如果我的問題描述不完整或缺少錯誤資訊，請先要求我生成除錯日誌（**執行日誌 → 除錯日誌 → 生成日誌**）—— 不要猜測原因。"
+
+msgid "My question is:"
+msgstr "我的問題是："
+
+msgid "Copied!"
+msgstr "已複製！"
+
+msgid "oixCloud Checkin Successful, Result:"
+msgstr "oixCloud 簽到成功，結果："
+
+msgid "oixCloud Checkin Failed, Result:"
+msgstr "oixCloud 簽到失敗，結果："
+
+msgid "Checking backend version..."
+msgstr "正在檢測後端版本..."
+
+msgid "Backend Version"
+msgstr "後端版本"
+
+msgid "Please enter backend URL"
+msgstr "請輸入後端地址"
+
+msgid "Invalid backend URL"
+msgstr "後端地址格式無效"
+
+msgid "Backend version information not detected"
+msgstr "未識別到後端版本資訊"
+
+msgid "Unable to detect backend version"
+msgstr "無法檢測後端版本"
+
+msgid "Token Login"
+msgstr "Token 登入"
+
+msgid "Please enter your oixCloud token"
+msgstr "請輸入您的 oixCloud Token"
+
+msgid "Show Password"
+msgstr "顯示密碼"
+
+msgid "Hide Password"
+msgstr "隱藏密碼"
+
+msgid "Show Token"
+msgstr "顯示 Token"
+
+msgid "Hide Token"
+msgstr "隱藏 Token"
+
+msgid "Token login does not require email and password"
+msgstr "Token 登入無需填寫郵箱和密碼"
+
+msgid "Please enter email address"
+msgstr "請輸入郵箱地址"
+
+msgid "Please enter a valid email address"
+msgstr "請輸入有效的郵箱地址"
+
+msgid "Please enter password"
+msgstr "請輸入密碼"
+
+msgid "Please enter a valid token"
+msgstr "請輸入有效的 Token"
+
+msgid "Checkin"
+msgstr "試試手氣"
+
+msgid "Auto Checkin"
+msgstr "自動簽到"
+
+msgid "Auto check in for oixCloud account daily bonus"
+msgstr "自動簽到來獲取 oixCloud 每日獎勵"
+
+msgid "Auto check-in for traffic rewards and penalties"
+msgstr "自動簽到來獲取流量獎勵（懲罰）"
+
+msgid "Multiple Must Be a Positive Integer and No More Than 100"
+msgstr "倍數必須是正整數且不大於 100"
+
+msgid "Checkin Interval"
+msgstr "簽到間隔"
+
+msgid "Hours"
+msgstr "小時"
+
+msgid "Checkin interval must be between 1 and 720"
+msgstr "簽到間隔必須為 1 到 720 小時之間的整數"
+
+msgid "Checkin settings saved"
+msgstr "簽到設定已儲存"
+
+msgid "Failed to save checkin settings, please try again"
+msgstr "簽到設定儲存失敗，請重試"
+
+msgid "Network request failed, please check your connection and try again"
+msgstr "網路請求失敗，請檢查網路連線後重試"
+
+msgid "Server response error, please try again later"
+msgstr "伺服器響應異常，請稍後重試"
+
+msgid "Show on Overview"
+msgstr "主頁顯示"
+
+msgid "Display oixCloud account info on the overview page"
+msgstr "在概覽頁面顯示 oixCloud 賬戶資訊"
+
+msgid "Display account info on the main page"
+msgstr "在主頁顯示賬戶資訊"
+
+msgid "Setting saved"
+msgstr "設定已儲存"
+
+msgid "Announcement"
+msgstr "公告"
+
+msgid "oixCloud Login Failed:"
+msgstr "oixCloud 登入失敗："
+
+msgid "oixCloud Logout Failed:"
+msgstr "oixCloud 退出失敗："
+
+msgid "Checkin Failed:"
+msgstr "簽到失敗："
+
+msgid "Fetching data..."
+msgstr "資料獲取中..."
+
+msgid "Click"
+msgstr "點選"
+
+msgid "link"
+msgstr "連結"
+
+msgid "to update all, click"
+msgstr "可同時更新，點選"
+
+msgid "version"
+msgstr "版本號"
+
+msgid "to update individually"
+msgstr "則獨立更新"
+

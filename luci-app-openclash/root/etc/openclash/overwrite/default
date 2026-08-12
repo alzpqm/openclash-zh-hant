@@ -1,0 +1,581 @@
+
+# ==========================================================
+# ==== 以下為可設定的外掛配置引數 ====
+# ==========================================================
+
+# CONFIG_FILE (原始配置檔案路徑)
+# CORE_TYPE (核心型別 Smart or Meta)
+
+# --- 網路與介面 ---
+# LAN_INTERFACE_NAME (LAN 介面名稱)
+# INTERFACE_NAME (繫結 wan 介面的名稱)
+
+# --- 控制面板相關 ---
+# CN_PORT (控制面板埠)
+# DA_PASSWORD (控制面板訪問密碼)
+
+# --- 埠相關 ---
+# PROXY_PORT (Redir代理埠)
+# TPROXY_PORT (TPROXY代理埠)
+# HTTP_PORT (HTTP 代理埠)
+# SOCKS_PORT (SOCKS 代理埠)
+# MIXED_PORT (混合代理埠)
+# DNS_PORT (DNS 監聽埠)
+
+# --- DNS 相關 ---
+# ENABLE_REDIRECT_DNS (DNS 重定向模式，0：禁用，1：Dnsmasq Redirect, 2：Firewall Redirect)
+# ENABLE_CUSTOM_DNS (自定義 DNS, 0: 外掛不覆寫, 1: 啟用，使用外掛內建規則)
+# APPEND_DEFAULT_DNS (自動追加 default-nameserver DNS, 0: 外掛不覆寫, 1: 啟用)
+# APPEND_WAN_DNS (追加上游分配 DNS, 0: 外掛不覆寫, 1: 啟用)
+# STORE_FAKEIP (啟用 fake-ip 快取, 0: 外掛不覆寫, 1: 啟用)
+# CUSTOM_FAKEIP_FILTER (啟用 Fake-IP-Filter, 0: 外掛不覆寫, 1: 啟用，使用外掛內建規則)
+    # CUSTOM_FAKEIP_FILTER_MODE (Fake-IP 過濾模式, blacklist/whitelist)
+# FAKEIP_RANGE (自定義 Fake-IP 地址段, 如 198.18.0.1/16)
+# ENABLE_RESPECT_RULES (DNS 查詢是否遵循規則, 0: 外掛不覆寫, 1: 啟用)
+# CUSTOM_NAME_POLICY (自定義 Nameserver-Policy, 0: 外掛不覆寫, 1: 啟用，使用外掛內建規則)
+# CUSTOM_HOST (自定義 Hosts, 0: 外掛不覆寫, 1: 啟用，使用外掛內建規則)
+# CUSTOM_FALLBACK_FILTER (自定義 Fallback-Filter, 0: 外掛不覆寫, 1: 啟用，使用外掛內建規則)
+
+# --- IPv6 相關 ---
+# IPV6_ENABLE (啟用 IPv6，0: 禁用, 1: 啟用)
+# IPV6_DNS (啟用 IPv6 DNS，0: 禁用, 1: 啟用)
+# IPV6_MODE (IPv6 代理模式, 0: TProxy Mode, 1: Redirect Mode, 2: TUN Mode, 3: Mix Mode)
+# ENABLE_V6_UDP_PROXY (啟用 IPv6 UDP 代理，0: 禁用, 1: 啟用, only for Redirect Mode and Redirect Mode)
+
+# --- 代理與模式 ---
+# EN_MODE (外掛執行模式：fake-ip/fake-ip-tun/fake-ip-mix or redir-host/redir-host-tun/redir-host-mix)
+# ENABLE_UDP_PROXY (啟用 UDP 代理, 0: 禁用, 1: 啟用, only for EN_MODE_TUN is nil)
+# DISABLE_UDP_QUIC (禁用 UDP QUIC, 0: 啟用, 1: 禁用)
+# ROUTER_SELF_PROXY (路由器自身代理, 0: 禁用, 1: 啟用)
+# STACK_TYPE (TUN 網路棧型別, system/gvisor/mixed, default is system)
+# PROXY_MODE (代理模式, rule/global/direct, default is rule)
+
+# --- 防火牆與訪問控制 ---
+# INTRANET_ALLOWED (僅允許內網訪問, 0: 禁用, 1: 啟用)
+    # INTRANET_ALLOWED_WAN_NAME (僅允許內網時 WAN 介面列表名稱)
+# BYPASS_GATEWAY_COMPATIBLE (旁路閘道器相容模式, 0: 禁用, 1: 啟用)
+# COMMON_PORTS (繞過常用埠的埠列表, 0: 禁用 or "21 22 23 53 80 123 143 194 443 465 587 853 993 995 998 2052 2053 2082 2083 2086 2095 2096 2197 5222 5223 5228 5229 5230 8080 8443 8880 8888 8889")
+
+# --- 分流相關 ---
+# CHINA_IP_ROUTE (IPv4 繞過 IP 模式, 0: 禁用, 1: 繞過大陸, 2: 回國)
+# CHINA_IP6_ROUTE (IPv6 繞過 IP 模式, 0: 禁用, 1: 繞過大陸, 2: 回國)
+# CHNR_AUTO_UPDATE (大陸IP自動更新, 0: 禁用, 1: 啟用)
+# CHNR_UPDATE_WEEK_TIME (大陸IP更新星期, 0-6 or *, 0代表星期天, *代表每天, default 0)
+# CHNR_UPDATE_DAY_TIME (大陸IP更新小時, 0-23 or *, default 1)
+# CHNR_CUSTOM_URL (大陸IP列表自定義更新地址, URL or default)
+# CHNR6_CUSTOM_URL (大陸IPv6列表自定義更新地址, URL or default)
+# CHINA_IP_ROUTE_PASS (繞過大陸 IP 時排除類別, 域名、IP or 外掛內建規則, eg: services.googleapis.cn googleapis.cn 114.114.114.114)
+# CHINA_IP6_ROUTE_PASS (繞過大陸 IPv6 時排除類別, 域名、IP or 外掛內建規則)
+
+# ENABLE_META_SNIFFER (啟用域名嗅探, 0: 外掛不覆寫, 1: 啟用)
+    # ENABLE_META_SNIFFER_CUSTOM (啟用自定義嗅探規則, 0: 外掛不覆寫, 1: 啟用，使用外掛內建規則)
+    # ENABLE_META_SNIFFER_PURE_IP (強制嗅探純 IP 連線, 0: 外掛不覆寫, 1: 啟用)
+
+# ENABLE_TCP_CONCURRENT (啟用 TCP 併發, 0: 外掛不覆寫, 1: 啟用)
+# FIND_PROCESS_MODE (程序查詢模式, 0: 外掛不覆寫, off: 關閉, always, strict)
+# ENABLE_UNIFIED_DELAY (啟用統一延遲計算, 0: 外掛不覆寫, 1: 啟用)
+
+# ENABLE_RULE_PROXY (僅代理命中規則流量, 0: 禁用, 1: 啟用)
+# ENABLE_CUSTOM_CLASH_RULES (啟用使用者自定義規則, 0: 禁用, 1: 啟用，使用外掛規則)
+
+# TOLERANCE (URL-Test 策略組切換靈敏度, 毫秒數 or default 0 不覆寫)
+# URLTEST_INTERVAL_MOD (測速（連通性）間隔修改, 秒數 or default 0 不覆寫)
+# URLTEST_ADDRESS_MOD (測速（連通性）地址修改, URL or default 0 不覆寫)
+# GITHUB_ADDRESS_MOD (GitHub 地址修改, URL or default 0 不覆寫)
+
+# --- Smart 相關 ---
+# AUTO_SMART_SWITCH (啟用 Smart 自動切換, 0: 外掛不覆寫, 1: 啟用)
+# SMART_ENABLE_LGBM (啟用 LightGBM 模型, 0: 外掛不覆寫, 1: 啟用)
+# SMART_POLICY_PRIORITY (節點權重加成, 正則或字元，格式：Premium:0.9;SG:1.3)
+# SMART_PREFER_ASN (強制查詢並使用 ASN 資訊, 0: 外掛不覆寫, 1: 啟用)
+# SMART_COLLECT (模型訓練資料收集, 0: 外掛不覆寫, 1: 啟用)
+    # SMART_COLLECT_SIZE (模型訓練資料收集的檔案大小, MB, 數值 or default 100)
+    # SMART_COLLECT_RATE (模型訓練資料收集的取樣率, 0-1 or default 1)
+# LGBM_AUTO_UPDATE (LGBM 模型自動更新, 0: 外掛不覆寫, 1: 啟用)
+    # LGBM_UPDATE_INTERVAL (LGBM 模型更新間隔, 小時數 or default 72)
+    # LGBM_CUSTOM_URL (LGBM 模型自定義下載 URL (URL 地址 or default)
+
+# --- 資料庫載入相關 ---
+# ENABLE_GEOIP_DAT (啟用 GEOIP DAT 資料庫, 0: 外掛不覆寫, 1: 啟用)
+# GEODATA_LOADER (Geo 資料載入模式, memconservative/standard/0: 外掛不覆寫)
+# GEO_AUTO_UPDATE (GeoIP MMDB 資料自動更新, 0: 禁用, 1: 啟用)
+# GEO_UPDATE_WEEK_TIME (GeoIP MMDB 資料更新日, 0-6 or *, 0代表星期天, *代表每天, default 0)
+# GEO_UPDATE_DAY_TIME (GeoIP MMDB 資料更新小時, 0-23 or *, default 1)
+# GEO_CUSTOM_URL (GeoIP MMDB 資料自定義更新地址, URL or default)
+# GEOIP_AUTO_UPDATE (GeoIP Dat 資料自動更新, 0: 禁用, 1: 啟用)
+# GEOIP_UPDATE_WEEK_TIME (GeoIP Dat 資料更新日, 0-6 or *, 0代表星期天, *代表每天, default 0)
+# GEOIP_UPDATE_DAY_TIME (GeoIP Dat 資料更新小時, 0-23 or *, default 1)
+# GEOIP_CUSTOM_URL (GeoIP Dat 資料自定義更新地址, URL or default)
+# GEOSITE_AUTO_UPDATE (GeoSite 資料自動更新, 0: 禁用, 1: 啟用)
+# GEOSITE_UPDATE_WEEK_TIME (GeoSite 資料更新日, 0-6 or *, 0代表星期天, *代表每天, default 0)
+# GEOSITE_UPDATE_DAY_TIME (GeoSite 資料更新小時, 0-23 or *, default 1)
+# GEOSITE_CUSTOM_URL (GeoSite 資料自定義更新地址, URL or default)
+# GEOASN_AUTO_UPDATE (GeoASN 資料自動更新, 0: 禁用, 1: 啟用)
+# GEOASN_UPDATE_WEEK_TIME (GeoASN 資料更新日, 0-6 or *, 0代表星期天, *代表每天, default 0)
+# GEOASN_UPDATE_DAY_TIME (GeoASN 資料更新小時, 0-23 or *, default 1)
+# GEOASN_CUSTOM_URL (GeoASN 資料自定義更新地址, URL or default)
+
+# --- 其它功能 ---
+# GLOBAL_UA (全域性 User-Agent, 0:不覆寫，或具體 UA)
+# SMALL_FLASH_MEMORY (小快閃記憶體模式, 0: 禁用, 1: 啟用)
+# DISABLE_QUIC_GO_GSO (禁用 QUIC GO GSO, 0: 外掛不覆寫, 1: 啟用)
+# DELAY_START (延時啟動, 0: 禁用 or 秒數)
+# SKIP_PROXY_ADDRESS (跳過代理地址, 0: 禁用, 1: 啟用)
+# SUB_INFO_URL (訂閱資訊 URL)
+# DOWNLOAD_FILE (下載外部檔案到指定路徑, need URL and path)
+# AGE_PUBLIC_KEY (指定配置檔案的 AGE 公鑰)
+# AGE_SECRET_KEY (指定配置檔案的 AGE 私鑰)
+# RESTART (模組更新後重啟外掛, true: 啟用, false: 禁用)
+# =========================
+
+# ==========================================================
+# ==== 以下為呼叫外部第三方模板作為配置檔案示例，使用者需在新增模組時設定指定環境變數，可以不再需要進行大部分外掛設定 ====
+# ==========================================================
+
+#[General]
+#EN_MODE = fake-ip-mix
+#DISABLE_UDP_QUIC = 1
+#ROUTER_SELF_PROXY = 1
+#CHINA_IP_ROUTE = 1
+#DISABLE_QUIC_GO_GSO = 1
+#CORE_TYPE = Smart
+#ENABLE_REDIRECT_DNS = 1
+#IPV6_ENABLE = 0
+#IPV6_DNS = 0
+#CHINA_IP6_ROUTE = 0
+
+#restart: true 代表更新後重啟外掛，false 代表不重啟外掛
+#force: true 代表強制下載，false 代表不強制下載（當檔案不存在時會自動下載）
+#ua: 下載時使用的User-Agent，預設不設定
+#cron: 定時下載時間，格式為標準的 cron 表示式，0 代表不啟用定時下載
+#示例：每天凌晨6點下載一次
+#cron=0 6 * * *
+#示例：每週一凌晨6點下載一次
+#cron=0 6 * * 1
+#DOWNLOAD_FILE = url=https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/config/OneSmartPro.yaml, path=/etc/openclash/config/OneSmartPro.yaml, cron=0 6 * * *, force=false
+
+#將模板作為預設配置檔案
+#CONFIG_FILE = /etc/openclash/config/OneSmartPro.yaml
+
+#指定展示訂閱資訊的 URL 地址
+#SUB_INFO_URL = $EN_KEY1
+
+#[Overwrite]
+#EN_KEY 為對應模組需要使用者指定的環境變數值, EN_KEY1=URL1;EN_KEY2=URL2;EN_KEY3=URL3
+#其他 Ruby 編輯函式請參考 openclash_custom_overwrite.sh
+#ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "優質服務商" "['url']" "$EN_KEY1"
+#ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "備用服務商" "['url']" "$EN_KEY2"
+#ruby_map_edit "$CONFIG_FILE" "['proxy-providers']" "落地服務商" "['url']" "$EN_KEY3"
+
+# ==========================================================
+# ==== 以下為向下遊客戶端下發配置時使用conf形式的示例，直接使用包含節點資訊的配置，使用者可以不再需要進行大部分外掛設定 ====
+# ==========================================================
+
+#[General]
+#CORE_TYPE = Meta
+
+# --- DNS 相關 ---
+#ENABLE_REDIRECT_DNS = 1
+#ENABLE_CUSTOM_DNS = 1
+#APPEND_DEFAULT_DNS = 1
+#APPEND_WAN_DNS = 0
+#STORE_FAKEIP = 1
+#CUSTOM_FAKEIP_FILTER = 1
+#CUSTOM_FAKEIP_FILTER_MODE = blacklist
+#FAKEIP_RANGE = 198.18.0.1/16
+#ENABLE_RESPECT_RULES = 1
+#CUSTOM_NAME_POLICY = 1
+#CUSTOM_HOST = 1
+#CUSTOM_FALLBACK_FILTER = 1
+
+# --- IPv6 相關 ---
+#IPV6_ENABLE = 0
+#IPV6_DNS = 0
+
+# --- 代理與模式 ---
+#EN_MODE = fake-ip-mix
+#DISABLE_UDP_QUIC = 1
+#ROUTER_SELF_PROXY = 1
+#PROXY_MODE = rule
+#STACK_TYPE = system
+
+# --- 模組更新後重啟 ---
+#RESTART = true
+
+# --- 下載包含代理節點資訊的配置檔案 ---
+#DOWNLOAD_FILE = url=https://default-demo.yaml, path=/etc/openclash/config/default-demo.yaml, cron=0 6 * * *, force=true, restart=false
+
+#將配置作為預設配置檔案
+#ONFIG_FILE = /etc/openclash/config/default-demo.yaml
+
+#指定展示訂閱資訊的 URL 地址
+#SUB_INFO_URL = https://default-demo.yaml
+
+# ==========================================================
+# ==== 以下為 YAML 塊覆寫示例 ====
+# ==========================================================
+# YAML 覆寫塊識別標記
+# [YAML]
+
+# ----------------------------------------------------------
+# 運算子速查表：
+#   key        → 預設合併（Hash 遞迴合併，其他直接覆蓋）
+#   key!       → 強制覆蓋整個值
+#   key+       → 陣列後置追加
+#   +key       → 陣列前置插入
+#   key-       → 陣列差集刪除 / 非陣列則刪除該鍵
+#   key*       → 批次條件更新（需配合 where/set）
+#   <key>字尾  → 同上（+, !, *, -），適用於鍵名含特殊字元時
+#   +<key>     → 陣列前置插入，適用於鍵名含特殊字元時
+# ----------------------------------------------------------
+
+# 1. 預設合併 - 合併雜湊鍵值，鍵不存在則新增，Hash 值遞迴合併
+# 示例：修改 dns.enable 並新增新鍵
+# dns:
+#   enable: true
+#   cache-algorithm: lru
+
+# 示例：直接替換標量值
+# mixed-port: 10802
+# allow-lan: false
+
+# 示例：合併 tun 配置（僅修改指定欄位，其餘保留）
+# tun:
+#   enable: true
+#   stack: gvisor
+
+# ----------------------------------------------------------
+
+# 2. 強制覆蓋 (key!) - 強制替換整個值，不做遞迴合併
+# 示例：替換整個 dns.fake-ip-filter 陣列
+# dns:
+#   fake-ip-filter!:
+#     - '*.lan'
+#     - 'new.domain.com'
+
+# 示例：強制覆蓋整個 rules 陣列
+# rules!:
+#   - DOMAIN-SUFFIX,example.com,DIRECT
+#   - MATCH,PROXY
+
+# 示例：使用 <> 強制覆蓋整個 dns 配置（鍵名含特殊字元時）
+# <dns>!:
+#   enable: false
+#   nameserver:
+#     - '114.114.114.114'
+
+# ----------------------------------------------------------
+
+# 3. 陣列後置 (key+) - 將新元素追加到陣列末尾
+# 示例：向 dns.nameserver 末尾追加 DNS
+# dns:
+#   nameserver+:
+#     - '1.1.1.1'
+#     - '8.8.8.8'
+
+# 示例：向 rules 末尾追加規則
+# rules+:
+#   - DOMAIN-SUFFIX,example.com,REJECT
+
+# 示例：使用 <> 後置
+# dns:
+#   <nameserver>+:
+#     - '8.8.8.8'
+
+# ----------------------------------------------------------
+
+# 4. 陣列前置 (+key / +<key>) - 將新元素插入到陣列開頭
+# 示例：向 dns.nameserver 開頭插入 DNS
+# dns:
+#   +nameserver:
+#     - '223.5.5.5'
+#     - '119.29.29.29'
+
+# 示例：向 rules 開頭插入規則（優先匹配）
+# +rules:
+#   - DOMAIN-SUFFIX,priority.com,DIRECT
+
+# 示例：使用 +<> 前置插入（鍵名含特殊字元時）
+# dns:
+#   +<nameserver>:
+#     - '119.29.29.29'
+
+# ----------------------------------------------------------
+
+# 5. 陣列刪除 (key-) - 從陣列中移除指定元素，非陣列則刪除整個鍵
+# 示例：從 dns.nameserver 中移除指定 DNS
+# dns:
+#   nameserver-:
+#     - '8.8.8.8'
+#     - '8.8.4.4'
+
+# 示例：從 rules 中移除指定規則
+# rules-:
+#   - DOMAIN-SUFFIX,old.com,REJECT
+
+# 示例：刪除整個鍵（值為 null/~ 或空）
+# dns:
+#   cache-algorithm-:
+
+# ----------------------------------------------------------
+
+# 6. 批次條件更新 (key*) - 按 where 條件匹配集合元素，用 set 子句更新
+#
+# 支援的集合型別：
+#   - 陣列（元素為 Hash 或 String）
+#   - Hash（值為 Hash）
+#
+# where 條件支援：
+#   - 普通值相等：  type: select
+#   - 正則匹配：    name: '/^HK/'
+#   - 陣列包含：    proxies: ['proxy1']  （檢查陣列是否包含所有指定元素）
+#   - Hash 鍵匹配： key: 'some-key'      （僅用於 Hash 型別集合）
+#   - 字串匹配：  value: 'some-string' （僅用於字串陣列）
+#
+# set 子句支援的運算子（同頂層運算子）：
+#   field        → 直接覆蓋該欄位
+#   field!       → 強制覆蓋該欄位
+#   field+       → 陣列後置追加
+#   +field       → 陣列前置插入
+#   field-       → 陣列差集刪除 / 非陣列則刪除該鍵
+#   value        → 替換字串陣列中的匹配項
+#   value: ~     → 刪除字串陣列中的匹配項
+#   key: ~       → 刪除 Hash 中的匹配鍵（僅 Hash 集合）
+#   key-:        → 同上
+
+# 示例：按 type 匹配，替換 proxy-groups 的 proxies
+# proxy-groups*:
+#   where:
+#     type: select
+#   set:
+#     proxies:
+#       - 'new-proxy1'
+#       - 'new-proxy2'
+
+# 示例：按 type 匹配，向 proxies 末尾追加節點
+# proxy-groups*:
+#   where:
+#     type: select
+#   set:
+#     proxies+:
+#       - 'new-proxy3'
+
+# 示例：按 type 匹配，向 proxies 開頭插入節點
+# proxy-groups*:
+#   where:
+#     type: url-test
+#   set:
+#     +proxies:
+#       - 'new-proxy1'
+
+# 示例：按 type 匹配，從 proxies 中移除指定節點
+# proxy-groups*:
+#   where:
+#     type: select
+#   set:
+#     proxies-:
+#       - 'old-proxy1'
+#       - 'old-proxy2'
+
+# 示例：使用陣列包含條件（proxies 中必須包含指定元素才匹配）
+# proxy-groups*:
+#   where:
+#     type: select
+#     proxies:
+#       - 'old-proxy1'
+#   set:
+#     proxies:
+#       - 'new-proxy1'
+#       - 'new-proxy2'
+
+# 示例：使用正則匹配 name 欄位
+# proxy-groups*:
+#   where:
+#     name: '/^HK/'
+#   set:
+#     +proxies:
+#       - 'hk-new-proxy'
+
+# 示例：刪除 proxy-groups 中某個欄位（set value 為 null/~）
+# proxy-groups*:
+#   where:
+#     name: Proxy
+#   set:
+#     icon-:
+
+# 示例：按 type 匹配修改 proxies 中 socks5 節點埠
+# proxies*:
+#   where:
+#     type: socks5
+#   set:
+#     port: 1080
+
+# 示例：更新 hosts Hash 中的指定鍵
+# hosts*:
+#   where:
+#     key: '*.mihomo.dev'
+#   set:
+#     '*.mihomo.dev': '::1'
+
+# 示例：刪除 hosts Hash 中的匹配鍵
+# hosts*:
+#   where:
+#     key: '*.old.dev'
+#   set:
+#     key-:
+
+# 示例：替換字串陣列中的匹配項
+# rules*:
+#   where:
+#     value: 'DOMAIN-SUFFIX,old.com,REJECT'
+#   set:
+#     value: 'DOMAIN-SUFFIX,new.com,DIRECT'
+
+# 示例：使用正則匹配並刪除字串陣列中的規則
+# rules*:
+#   where:
+#     value: '/,REJECT$/'
+#   set:
+#     value:
+
+# 示例：刪除 fake-ip-filter 中的指定項
+# dns:
+#   fake-ip-filter*:
+#     where:
+#       value: '+.localhost.ptlogin2.qq.com'
+#     set:
+#       value:
+
+# 示例：使用 <> 批次更新
+# <proxy-groups>*:
+#   where:
+#     type: url-test
+#   set:
+#     interval: 300
+
+# ----------------------------------------------------------
+
+# 7. 組合操作 - 在同一塊內同時使用多個運算子
+# 示例：同時前置和後置追加 DNS（必須寫在同一 dns 塊內）
+# dns:
+#   nameserver+:
+#     - '1.0.0.1'
+#   +nameserver:
+#     - '119.29.29.29'
+
+# 示例：同時刪除舊 DNS 並前置插入新 DNS
+# dns:
+#   nameserver-:
+#     - '8.8.8.8'
+#   +nameserver:
+#     - '223.5.5.5'
+
+# ----------------------------------------------------------
+
+# 8. <key> 語法補充 - 適用於鍵名含特殊字元時
+# 字尾支援：+（後置）、-（刪除）、!（強制覆蓋）、*（批次更新），空串為預設合併
+# 前置插入請使用 +<key> 寫法（字首形式）
+
+# 示例：使用 <> 後置追加
+# dns:
+#   <nameserver>+:
+#     - '8.8.8.8'
+
+# 示例：使用 <> 刪除陣列元素
+# dns:
+#   <nameserver>-:
+#     - '8.8.8.8'
+
+# 示例：使用 <> 強制覆蓋
+# dns:
+#   <nameserver>!:
+#     - '114.114.114.114'
+
+# 示例：使用 <> 批次更新（等同於 key*）
+# <proxy-groups>*:
+#   where:
+#     type: url-test
+#   set:
+#     interval: 300
+
+# 示例：使用 +<> 前置插入（鍵名含特殊字元時的前置寫法）
+# dns:
+#   +<nameserver>:
+#     - '119.29.29.29'
+
+# ==========================================================
+# ==== 以下為僅修改外掛設定示例 ====
+# ==========================================================
+
+[General]
+CORE_TYPE = Meta
+
+# --- DNS 相關 ---
+ENABLE_REDIRECT_DNS = 1
+ENABLE_CUSTOM_DNS = 1
+APPEND_DEFAULT_DNS = 1
+APPEND_WAN_DNS = 0
+STORE_FAKEIP = 1
+CUSTOM_FAKEIP_FILTER = 1
+CUSTOM_FAKEIP_FILTER_MODE = blacklist
+FAKEIP_RANGE = 198.18.0.1/16
+ENABLE_RESPECT_RULES = 1
+CUSTOM_NAME_POLICY = 1
+CUSTOM_HOST = 1
+CUSTOM_FALLBACK_FILTER = 1
+
+# --- IPv6 相關 ---
+IPV6_ENABLE = 0
+IPV6_DNS = 0
+
+# --- 代理與模式 ---
+EN_MODE = fake-ip-mix
+DISABLE_UDP_QUIC = 1
+ROUTER_SELF_PROXY = 1
+PROXY_MODE = rule
+STACK_TYPE = system
+
+# --- 防火牆與訪問控制 ---
+INTRANET_ALLOWED = 1
+BYPASS_GATEWAY_COMPATIBLE = 0
+
+# --- 分流相關 ---
+CHINA_IP_ROUTE = 1
+CHINA_IP6_ROUTE = 0
+CHNR_AUTO_UPDATE = 1
+CHNR_UPDATE_WEEK_TIME = *
+CHNR_UPDATE_DAY_TIME = 6
+
+ENABLE_META_SNIFFER = 1
+ENABLE_META_SNIFFER_CUSTOM = 1
+ENABLE_META_SNIFFER_PURE_IP = 1
+
+ENABLE_TCP_CONCURRENT = 1
+FIND_PROCESS_MODE = off
+GLOBAL_CLIENT_FINGERPRINT = random
+
+ENABLE_RULE_PROXY = 0
+ENABLE_CUSTOM_CLASH_RULES = 1
+
+# --- Smart 相關 ---
+AUTO_SMART_SWITCH = 0
+LGBM_AUTO_UPDATE = 1
+LGBM_UPDATE_INTERVAL = 72
+LGBM_CUSTOM_URL = https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model.bin
+
+# --- 資料庫載入相關 ---
+ENABLE_GEOIP_DAT = 1
+GEODATA_LOADER = standard
+GEOIP_AUTO_UPDATE = 1
+GEOIP_UPDATE_WEEK_TIME = *
+GEOIP_UPDATE_DAY_TIME = 5
+GEOSITE_AUTO_UPDATE = 1
+GEOSITE_UPDATE_WEEK_TIME = *
+GEOSITE_UPDATE_DAY_TIME = 5
+
+# --- 其它功能 ---
+SMALL_FLASH_MEMORY = 0
+DISABLE_QUIC_GO_GSO = 1
+DELAY_START = 0
+SKIP_PROXY_ADDRESS = 1
+RESTART = false

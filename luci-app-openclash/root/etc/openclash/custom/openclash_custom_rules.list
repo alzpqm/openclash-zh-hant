@@ -1,0 +1,96 @@
+rule-providers:
+##  google:
+##    type: http
+##    path: ./rule1.yaml
+##    url: "https://raw.githubusercontent.com/../Google.yaml"
+##    interval: 600
+##    proxy: DIRECT
+##    behavior: classical
+##    format: yaml
+##    size-limit: 0
+##    header:
+##      User-Agent:
+##      - "mihomo/1.18.3"
+##      Authorization:
+##      - 'token 1231231'
+##    payload:
+##      - 'DOMAIN-SUFFIX,google.com'
+
+rules:
+##- PROCESS-NAME,curl,DIRECT #匹配路由自身程序(curl直連)
+##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名字尾(交由Proxy代理伺服器組)
+##- DOMAIN-KEYWORD,google,Proxy #匹配域名關鍵字(交由Proxy代理伺服器組)
+##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理伺服器組)
+##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名字尾(拒絕)
+##- IP-CIDR,127.0.0.0/8,DIRECT #匹配資料目標IP(直連)
+##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配資料發起IP(直連)
+##- DST-PORT,80,DIRECT #匹配資料目標埠(直連)
+##- SRC-PORT,7777,DIRECT #匹配資料來源埠(直連)
+##- GEOSITE,category-public-tracker,DIRECT #匹配GEOSITE資料庫規則(直連)
+##- DOMAIN-REGEX,^abc.*com,PROXY #正則匹配域名
+##- RULE-SET,providername,PROXY #匹配規則集
+
+##- IP-CIDR6,2620:0:2d0:200::7/32,PROXY
+##- IP-SUFFIX,8.8.8.8/24,PROXY
+##- IP-ASN,13335,DIRECT
+
+##- SRC-GEOIP,cn,DIRECT
+##- SRC-IP-ASN,9808,DIRECT
+##- SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
+
+##- IN-PORT,7890,PROXY
+##- IN-TYPE,SOCKS/HTTP,PROXY
+##- IN-USER,mihomo,PROXY
+##- IN-NAME,ss,PROXY
+
+##- PROCESS-NAME-REGEX,curl$,PROXY
+##- PROCESS-NAME-REGEX,(?i)Telegram,PROXY
+##- PROCESS-NAME-REGEX,.*telegram.*,PROXY
+
+##- NETWORK,udp,DIRECT
+##- DSCP,4,DIRECT
+
+##- AND,((DOMAIN,baidu.com),(NETWORK,UDP)),DIRECT
+##- OR,((NETWORK,UDP),(DOMAIN,baidu.com)),REJECT
+##- NOT,((DOMAIN,baidu.com)),PROXY
+##- SUB-RULE,(NETWORK,tcp),sub-rule
+
+##排序在上的規則優先生效,如新增（去除規則前的#號）：
+##IP段：192.168.1.2-192.168.1.200 直連
+##- SRC-IP-CIDR,192.168.1.2/31,DIRECT
+##- SRC-IP-CIDR,192.168.1.4/30,DIRECT
+##- SRC-IP-CIDR,192.168.1.8/29,DIRECT
+##- SRC-IP-CIDR,192.168.1.16/28,DIRECT
+##- SRC-IP-CIDR,192.168.1.32/27,DIRECT
+##- SRC-IP-CIDR,192.168.1.64/26,DIRECT
+##- SRC-IP-CIDR,192.168.1.128/26,DIRECT
+##- SRC-IP-CIDR,192.168.1.192/29,DIRECT
+##- SRC-IP-CIDR,192.168.1.200/32,DIRECT
+
+##IP段：192.168.1.202-192.168.1.255 直連
+##- SRC-IP-CIDR,192.168.1.202/31,DIRECT
+##- SRC-IP-CIDR,192.168.1.204/30,DIRECT
+##- SRC-IP-CIDR,192.168.1.208/28,DIRECT
+##- SRC-IP-CIDR,192.168.1.224/27,DIRECT
+
+##此時IP為192.168.1.1和192.168.1.201的客戶端流量走代理（策略），其餘客戶端不走代理
+##因為Fake-IP模式下，IP地址為192.168.1.1的路由器自身流量可走代理（策略），所以需要排除
+
+##僅設定路由器自身直連：
+##- SRC-IP-CIDR,192.168.1.1/32,DIRECT
+##- SRC-IP-CIDR,198.18.0.1/32,DIRECT
+
+##DDNS
+##- DOMAIN-KEYWORD,synology,DIRECT
+##- DOMAIN-KEYWORD,quickconnect,DIRECT
+##- DOMAIN-SUFFIX,checkip.dyndns.org,DIRECT
+##- DOMAIN-SUFFIX,checkipv6.dyndns.org,DIRECT
+##- DOMAIN-SUFFIX,checkip.synology.com,DIRECT
+##- DOMAIN-SUFFIX,ifconfig.co,DIRECT
+##- DOMAIN-SUFFIX,api.myip.com,DIRECT
+##- DOMAIN-SUFFIX,ip-api.com,DIRECT
+##- DOMAIN-SUFFIX,ipapi.co,DIRECT
+##- DOMAIN-SUFFIX,ip6.seeip.org,DIRECT
+##- DOMAIN-SUFFIX,members.3322.org,DIRECT
+
+##線上IP段轉CIDR地址：http://ip2cidr.com

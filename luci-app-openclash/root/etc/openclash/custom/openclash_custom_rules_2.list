@@ -1,0 +1,26 @@
+rule-providers:
+##  google:
+##    type: http
+##    path: ./rule1.yaml
+##    url: "https://raw.githubusercontent.com/../Google.yaml"
+##    interval: 600
+##    proxy: DIRECT
+##    behavior: classical
+##    format: yaml
+##    size-limit: 0
+##    header:
+##      User-Agent:
+##      - "mihomo/1.18.3"
+##      Authorization:
+##      - 'token 1231231'
+##    payload:
+##      - 'DOMAIN-SUFFIX,google.com'
+rules:
+##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名字尾(交由Proxy代理伺服器組)
+##- DOMAIN-KEYWORD,google,Proxy #匹配域名關鍵字(交由Proxy代理伺服器組)
+##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理伺服器組)
+##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名字尾(拒絕)
+##- IP-CIDR,127.0.0.0/8,DIRECT #匹配資料目標IP(直連)
+##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配資料發起IP(直連)
+##- DST-PORT,80,DIRECT #匹配資料目標埠(直連)
+##- SRC-PORT,7777,DIRECT #匹配資料來源埠(直連)
