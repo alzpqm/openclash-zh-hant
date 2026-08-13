@@ -233,7 +233,7 @@ msgid "Select Core's Log Level"
 msgstr "選擇核心日誌的預設輸出模式"
 
 msgid "Only intranet allowed"
-msgstr "僅允許內部網路"
+msgstr "僅允許內網"
 
 msgid "When Enabled, The Control Panel And The Connection Broker Port Will Not Be Accessible From The Public Network"
 msgstr "啟用後將禁止從公用網路存取控制面板和連線代理連接埠"
@@ -479,7 +479,7 @@ msgid "Auto Update Server subscription"
 msgstr "自動更新設定檔"
 
 msgid "Modify Your Config file:"
-msgstr "您可以在下方直接修改設定檔:"
+msgstr "您可以在下方直接修改設定檔："
 
 msgid "Here, Except The Settings That Were Taken Over"
 msgstr "，僅支援未被接管的設定"
@@ -593,7 +593,7 @@ msgid "Custom Clash Rules"
 msgstr "*自訂規則"
 
 msgid "Custom Rules Here, For More Go:"
-msgstr "在上方設定自訂規則，詳細資訊請參閱:"
+msgstr "在上方設定自訂規則，詳細資訊請參閱："
 
 msgid "(Priority)"
 msgstr "（優先比對）"
@@ -902,7 +902,7 @@ msgid "Exclude Keyword Match"
 msgstr "排除節點"
 
 msgid "eg: hk or tw&bgp"
-msgstr "格式示例：香港 或 臺灣&bgp 或 新加坡&bgp&奈飛"
+msgstr "格式範例：香港 或 臺灣&bgp 或 新加坡&bgp&奈飛"
 
 msgid "Config File List"
 msgstr "設定檔清單"
@@ -1019,7 +1019,7 @@ msgid "LAN Proxied Mac List"
 msgstr "走代理的區域網路裝置 Mac"
 
 msgid "In The Fake-IP Mode, Only Pure IP Requests Are Supported, Please Setting Fake-IP-Filter First If You Need Domain Type Requests"
-msgstr "在 Fake-IP 模式下，只支援篩選純 IP 類型的請求, 如果涉及網域名稱存取請提前設定 Fake-IP-Filter"
+msgstr "在 Fake-IP 模式下，只支援篩選純 IP 類型的請求；如果涉及網域名稱存取，請先設定 Fake-IP-Filter"
 
 msgid "iptables DSCP module not available, please try DCSP rule by core instead, skipping DSCP rule for"
 msgstr "iptables 的 DSCP 模組不可用，請嘗試改用核心的 DSCP 規則，來源流量存取控制跳過設定 DSCP 規則"
@@ -1037,7 +1037,7 @@ msgid "Only Common Ports, Prevent BT/P2P Passing"
 msgstr "僅允許常用連接埠的流量經過 Clash，防止 BT、P2P 下載流量經過代理"
 
 msgid "443 or 21-443, Use Space to Separate"
-msgstr "443 or 21-443, 請使用空格分隔"
+msgstr "443 或 21-443，請使用空格分隔"
 
 msgid "Default Common Ports"
 msgstr "預設常用連接埠"
@@ -1073,7 +1073,7 @@ msgid "Emoji"
 msgstr "新增 Emoji"
 
 msgid "skip-cert-verify"
-msgstr "跳過證書驗證"
+msgstr "跳過憑證驗證"
 
 msgid "Sort"
 msgstr "排序"
@@ -1346,7 +1346,7 @@ msgid "Testing..."
 msgstr "偵測中..."
 
 msgid "Access Timed Out"
-msgstr "連線超時"
+msgstr "連線逾時"
 
 msgid "Access Normal"
 msgstr "連線正常"
@@ -1397,10 +1397,10 @@ msgid "Bind Network Interface"
 msgstr "繫結網路介面"
 
 msgid "Default Interface Name:"
-msgstr "目前系統預設介面:"
+msgstr "目前系統預設介面："
 
 msgid ",Try Enable If Network Loopback"
-msgstr ", 如發生迴環宕機請嘗試啟用"
+msgstr "，如發生網路迴環問題，請嘗試啟用"
 
 msgid "Custom GeoIP MMDB URL"
 msgstr "GeoIP MMDB 資料庫更新 URL"
@@ -1439,7 +1439,7 @@ msgid "(Default mmdb)"
 msgstr "(預設，全部國家且僅寫入 iso_code 和 geoname_id)"
 
 msgid "(All Info mmdb)"
-msgstr "(全部國家且且包含官方全部資訊資料)"
+msgstr "（包含所有國家及官方完整資訊資料）"
 
 msgid "(Only CN)"
 msgstr "(僅中國資料)"
@@ -1547,10 +1547,10 @@ msgid "Download successful, start pre update test..."
 msgstr "下載成功，開始更新前測試..."
 
 msgid "opkg update failed or timed out:"
-msgstr "opkg update 失敗或超時:"
+msgstr "opkg update 失敗或逾時："
 
 msgid "apk update failed or timed out:"
-msgstr "apk update 失敗或超時:"
+msgstr "apk update 失敗或逾時："
 
 msgid "opkg update failed:"
 msgstr "opkg update 失敗:"
@@ -1568,25 +1568,25 @@ msgid ", trying pre update test..."
 msgstr "，嘗試進行預安裝..."
 
 msgid "Pre update test failed after 3 attempts, the file is saved in /tmp/openclash.ipk, please try to update manually with"
-msgstr "更新前測試失敗，檔案儲存在 /tmp/openclash.ipk，請嘗試以下命令手動更新"
+msgstr "更新前測試失敗，檔案儲存在 /tmp/openclash.ipk，請嘗試以下指令手動更新"
 
 msgid "Pre update test failed after 3 attempts, the file is saved in /tmp/openclash.apk, please try to update manually with"
-msgstr "更新前測試失敗，檔案儲存在 /tmp/openclash.apk，請嘗試以下命令手動更新"
+msgstr "更新前測試失敗，檔案儲存在 /tmp/openclash.apk，請嘗試以下指令手動更新"
 
 msgid "Pre update test passed, ready to update and please do not refresh the page and other operations..."
 msgstr "更新前測試通過，準備開始更新；更新過程請不要重新整理頁面或進行其他操作……"
 
 msgid "Installing the new version, please do not refresh the page or do other operations..."
-msgstr "正在安裝新版本，更新過程請不要重新整理頁面和進行其他操作..."
+msgstr "正在安裝新版本，更新過程請不要重新整理頁面或進行其他操作……"
 
 msgid "Installation failed:"
-msgstr "軟體包安裝失敗:"
+msgstr "軟體套件安裝失敗："
 
 msgid "OpenClash update failed after 3 attempts, the file is saved in /tmp/openclash.ipk, please try to update manually with"
-msgstr "OpenClash 更新失敗，檔案儲存在 /tmp/openclash.ipk，請嘗試以下命令手動更新"
+msgstr "OpenClash 更新失敗，檔案儲存在 /tmp/openclash.ipk，請嘗試以下指令手動更新"
 
 msgid "OpenClash update failed after 3 attempts, the file is saved in /tmp/openclash.apk, please try to update manually with"
-msgstr "OpenClash 更新失敗，檔案儲存在 /tmp/openclash.apk，請嘗試以下命令手動更新"
+msgstr "OpenClash 更新失敗，檔案儲存在 /tmp/openclash.apk，請嘗試以下指令手動更新"
 
 msgid "Download Failed after 3 attempts, please check the network or try again later!"
 msgstr "下載失敗，請檢查網路或稍後再試！"
@@ -1637,7 +1637,7 @@ msgid "Update Successful!"
 msgstr "更新成功！"
 
 msgid "No Change, Do Nothing!"
-msgstr "沒有更新，停止繼續操作!"
+msgstr "沒有更新，停止繼續操作！"
 
 msgid "Update Error, Please Try Again Later..."
 msgstr "更新／下載失敗，請檢查網路或稍後再試……"
@@ -1688,7 +1688,7 @@ msgid "Version info not ready, please wait and try again"
 msgstr "版本資訊尚未就緒，請稍後重試"
 
 msgid "Link access timed out, cannot download"
-msgstr "連結存取超時，無法下載"
+msgstr "連結存取逾時，無法下載"
 
 msgid "Link access failed, cannot download"
 msgstr "連結存取失敗，無法下載"
@@ -1724,10 +1724,10 @@ msgid "Chnroute6 Cidr List Update Successful!"
 msgstr "大陸 IPv6 白名單更新成功！"
 
 msgid "Updated Chnroute Cidr List No Change, Do Nothing..."
-msgstr "大陸 IP 白名單沒有更新，停止繼續操作..."
+msgstr "中國大陸 IP 白名單沒有更新，停止繼續操作……"
 
 msgid "Updated Chnroute6 Cidr List No Change, Do Nothing..."
-msgstr "大陸 IPv6 白名單沒有更新，停止繼續操作..."
+msgstr "中國大陸 IPv6 白名單沒有更新，停止繼續操作……"
 
 msgid "Chnroute Cidr List Update Error, Please Try Again Later..."
 msgstr "大陸 IP 白名單下載失敗，請檢查網路或稍後再試..."
@@ -1748,7 +1748,7 @@ msgid "Has Been Updated, Starting To Replace The Old Version..."
 msgstr "有新版本，開始替換舊版本..."
 
 msgid "No Change, Do Nothing..."
-msgstr "無變化，停止操作..."
+msgstr "無變化，停止操作……"
 
 msgid "Start Downloading Database..."
 msgstr "開始下載資料庫..."
@@ -1883,7 +1883,7 @@ msgid "Step 4: Start Running The Clash Core..."
 msgstr "第四步: 啟動主程式..."
 
 msgid "Step 5: Add Cron Rules, Start Daemons..."
-msgstr "第五步: 新增計劃任務,啟動程序守護程式..."
+msgstr "第五步：新增排程工作，啟動背景服務……"
 
 msgid "Step 6: Core Status Checking and Firewall Rules Setting..."
 msgstr "第六步: 核心狀態檢查及防火牆規則設定..."
@@ -2000,7 +2000,7 @@ msgid "Download Successful"
 msgstr "下載成功"
 
 msgid "Download Timeout"
-msgstr "下載超時"
+msgstr "下載逾時"
 
 msgid "Load File Failed,"
 msgstr "檔案解析失敗，"
@@ -2315,7 +2315,7 @@ msgid "unlock node test finished, no node available, rolled back to the"
 msgstr "解鎖測試完成，無完整解鎖節點，回退到"
 
 msgid "no nodes name match the regex!"
-msgstr "未找到名稱比對的節點!"
+msgstr "未找到名稱符合正規表示式的節點！"
 
 msgid "Bypass Gateway Compatible"
 msgstr "旁路閘道器（旁路由）相容"
@@ -2363,7 +2363,7 @@ msgid "Secends..."
 msgstr "秒後開始啟動..."
 
 msgid "Waiting for command to complete..."
-msgstr "等待命令執行完成..."
+msgstr "等待指令執行完成..."
 
 msgid "Collecting data..."
 msgstr "正在收集資料..."
@@ -2375,7 +2375,7 @@ msgid "Flush Successful"
 msgstr "清理成功"
 
 msgid "Flush Timeout"
-msgstr "清理超時"
+msgstr "清理逾時"
 
 msgid "Flush"
 msgstr "清理"
@@ -2399,7 +2399,7 @@ msgid "Custom Params"
 msgstr "自訂參數"
 
 msgid "eg: \"rename=match@replace\" , \"rename=\\s+([2-9])[xX]@ (HIGH:$1)\""
-msgstr "格式示例：\"rename=match@replace\" , \"rename=\\s+([2-9])[xX]@ (高倍率:$1)\""
+msgstr "格式範例：\"rename=match@replace\"、\"rename=\\s+([2-9])[xX]@（高倍率：$1）\""
 
 msgid "Custom Headers"
 msgstr "自訂請求頭"
@@ -2444,7 +2444,7 @@ msgid "Something Wrong While Testing..."
 msgstr "發生了一些錯誤，測試失敗..."
 
 msgid "Network instability may occur during testing, Are you sure want to start test?"
-msgstr "測試過程中可能會造成網路不穩定,確定要開始測試嗎？"
+msgstr "測試過程中可能會造成網路不穩定，確定要開始測試嗎？"
 
 msgid "Subscription Info"
 msgstr "訂閱資訊"
@@ -2507,7 +2507,7 @@ msgid "Enable GeoIP Dat"
 msgstr "啟用 GeoIP Dat 版資料庫"
 
 msgid "Replace GEOIP MMDB With GEOIP Dat, Large Size File"
-msgstr "使用 Geoip Dat 替換 GEOIP MMDB 資料庫, 檔案體積較大且無內建"
+msgstr "使用 GeoIP Dat 替換 GEOIP MMDB 資料庫，檔案體積較大且未內建"
 
 msgid "Need Download First"
 msgstr "請提前下載"
@@ -2726,7 +2726,7 @@ msgid "Core Start Failed, Please Check The Log Infos!"
 msgstr "核心啟動失敗，請檢視《核心日誌》排查失敗原因！"
 
 msgid "Core Initial Configuration Timeout, Please Check The Log Infos!"
-msgstr "核心載入設定超時，請檢視《核心日誌》排查原因！"
+msgstr "核心載入設定逾時，請檢視《核心日誌》排查原因！"
 
 msgid "Forced Sniff Pure IP Connections"
 msgstr "強制探測（嗅探）所有純 IP 的連線"
@@ -2738,7 +2738,7 @@ msgid "Download Failed:"
 msgstr "下載失敗："
 
 msgid "Dnsmasq not Support nftset, Use ipset..."
-msgstr "Dnsmasq 不支援 nftset, 使用 ipset 代替..."
+msgstr "Dnsmasq 不支援 nftset，使用 ipset 代替……"
 
 msgid "Firewall4 was Detected, Use NFTABLE Rules..."
 msgstr "偵測到 Firewall4，使用 NFTABLE 規則..."
@@ -2774,10 +2774,10 @@ msgid "Modify The URL-Test Interval In The Config"
 msgstr "修改設定檔中的測速（連通性）間隔"
 
 msgid "Whether to Enable Process Rules, Only Works on Routerself, If You Are Not Sure, Please Choose off Which Useful in Router Environment, Depend on kmod-inet-diag"
-msgstr "是否啟用程序規則；僅適用於路由器本身的程序。若不確定，建議停用此選項以提升路由器環境的效能；此功能依賴 kmod-inet-diag"
+msgstr "是否啟用程式規則；僅適用於路由器本身的程式。若不確定，建議停用此選項以提升路由器環境的效能；此功能依賴 kmod-inet-diag"
 
 msgid "Enable Process Rule"
-msgstr "啟用程序規則"
+msgstr "啟用程式規則"
 
 msgid "DNS Hijacking Mode is Dnsmasq Redirect..."
 msgstr "DNS 劫持模式為 Dnsmasq 轉發..."
@@ -2888,10 +2888,10 @@ msgid "IPv6 Proxy Mode is Mix..."
 msgstr "IPv6 代理模式為 Mix 混合..."
 
 msgid "Can't Settting Only Intranet Allowed Function, Get IPv4 WAN Interfaces error, Please Verify The Firewall's WAN Zone Name is wan, Ignore This IF The Device Does not Have a WAN Interfaces..."
-msgstr "設定僅允許內部網路功能失敗，無法取得 IPv4 的 WAN 介面名稱，請確保防火牆設定中 IPv4 WAN 區域的名稱為 wan，如裝置無 WAN 口請忽略此提示..."
+msgstr "設定僅允許內網功能失敗，無法取得 IPv4 的 WAN 介面名稱，請確保防火牆設定中 IPv4 WAN 區域的名稱為 wan，如裝置無 WAN 口請忽略此提示..."
 
 msgid "Can't Settting Only Intranet Allowed Function, Get IPv6 WAN Interfaces error, Please Verify The Firewall's WAN Zone Name is wan, Ignore This IF The Device Does not Have a WAN Interfaces..."
-msgstr "設定僅允許內部網路功能失敗，無法取得 IPv6 的 WAN 介面名稱，請確保防火牆設定中 IPv6 WAN 區域的名稱為 wan，如裝置無 WAN 口請忽略此提示..."
+msgstr "設定僅允許內網功能失敗，無法取得 IPv6 的 WAN 介面名稱，請確保防火牆設定中 IPv6 WAN 區域的名稱為 wan，如裝置無 WAN 口請忽略此提示..."
 
 msgid "Config File Download Successful, Test If There is Any Errors..."
 msgstr "設定檔下載成功，使用核心測試是否有錯誤..."
@@ -2990,13 +2990,13 @@ msgid "Type CDN URL, Format Like"
 msgstr "輸入連結網址，格式請參考"
 
 msgid "Please enter a valid URL!"
-msgstr "請參考示例輸入正確的連結網址！"
+msgstr "請參考範例輸入正確的連結網址！"
 
 msgid "WAN Interface Name"
 msgstr "WAN 介面名稱"
 
 msgid "Select WAN Interface Name For The Intranet Allowed"
-msgstr "為僅允許內部網路指定正確的 WAN 介面名稱"
+msgstr "為僅允許內網指定正確的 WAN 介面名稱"
 
 msgid "LAN Interface Name"
 msgstr "LAN 介面名稱"
@@ -3164,16 +3164,16 @@ msgid "Smart Core"
 msgstr "Smart 核心"
 
 msgid "Failed to create update script!"
-msgstr "建立外掛升級程序失敗！"
+msgstr "建立外掛升級程式失敗！"
 
 msgid "Attempting to start update service..."
-msgstr "正在啟動升級程序..."
+msgstr "正在啟動升級程式..."
 
 msgid "Service start failed, retrying in 2 seconds..."
-msgstr "外掛升級程序啟動失敗，將在2秒後重試..."
+msgstr "外掛升級程式啟動失敗，將在2秒後重試..."
 
 msgid "Failed to start update service after 3 attempts, please check and try again later..."
-msgstr "升級程序啟動失敗，請稍後再試..."
+msgstr "升級程式啟動失敗，請稍後再試..."
 
 msgid "View core infos that support smart group"
 msgstr "檢視支援 smart 策略群組的核心資訊"
@@ -3329,7 +3329,7 @@ msgid "Support YAML file, max size 10MB"
 msgstr "支援 YAML 檔案，最大 10MB"
 
 msgid "Support txt,conf files, max size 10MB"
-msgstr "支援 txt,conf 檔案，最大 10MB"
+msgstr "支援 txt、conf 檔案，最大 10 MB"
 
 msgid "Subscription URL"
 msgstr "訂閱網址"
@@ -3605,7 +3605,7 @@ msgid "Address"
 msgstr "位址"
 
 msgid "Timeout"
-msgstr "超時"
+msgstr "逾時"
 
 msgid "Enter custom User-Agent"
 msgstr "輸入自訂 User-Agent"
@@ -3827,19 +3827,19 @@ msgid "skip General key type error"
 msgstr "跳過值類型錯誤的參數"
 
 msgid "skip invalid Overwrite command"
-msgstr "跳過不支援的覆寫命令"
+msgstr "跳過不支援的覆寫指令"
 
 msgid "Processing Overwrite Module"
 msgstr "執行覆寫模組"
 
 msgid "Load Overwrite Script"
-msgstr "載入覆寫命令"
+msgstr "載入覆寫指令"
 
 msgid "DOWNLOAD FILE for"
 msgstr "執行檔案下載"
 
 msgid "Add Cron for"
-msgstr "新增計劃任務"
+msgstr "新增排程工作"
 
 msgid "Delete"
 msgstr "刪除"
@@ -3935,7 +3935,7 @@ msgid "Edit original config..."
 msgstr "編輯原始設定..."
 
 msgid "Set Custom Overwrite Script Failed,"
-msgstr "自訂覆寫命令執行失敗，"
+msgstr "自訂覆寫指令執行失敗，"
 
 msgid "Load YAML Override Block"
 msgstr "載入 YAML 覆寫模組"
@@ -4127,7 +4127,7 @@ msgid "The guide is the single source of truth — it covers everything from deb
 msgstr "指南是唯一權威來源 —— 涵蓋從除錯日誌流程到外部資源查詢的所有內容。禁止憑記憶回答，必須對照指南驗證。"
 
 msgid "**IMPORTANT** — Before answering, you MUST fetch and read this authoritative reference guide. ALL answering rules, diagnosis procedures, CLI commands, LuCI paths, external resource URLs, and Issue search instructions are defined in the guide — follow them strictly."
-msgstr "**重要** —— 在回答之前，你必須取得並閱讀這份權威參考指南。所有回答規則、診斷流程、CLI 命令、LuCI 路徑、外部資源 URL 和 Issue 搜尋指引均在指南中定義 —— 請嚴格遵守。"
+msgstr "**重要** —— 在回答之前，你必須取得並閱讀這份權威參考指南。所有回答規則、診斷流程、CLI 指令、LuCI 路徑、外部資源 URL 和 Issue 搜尋指引均在指南中定義 —— 請嚴格遵守。"
 
 msgid "External Resources (when beyond the guide's scope)"
 msgstr "外部資源（超出指南範圍時）"
@@ -4142,16 +4142,16 @@ msgid "OpenClash User Guide"
 msgstr "OpenClash 使用者指南"
 
 msgid "This guide contains: AI behavior rules with diagnosis priority, complete dependency checklist, error message lookup tables with exact fixes, nftables/iptables firewall chain rules, all LuCI configuration options with UCI paths, CLI commands and API reference, DNS setup and leak prevention, subscription/GEO update procedures, and more."
-msgstr "本指南包含：AI 行為規則與診斷優先順序、完整依賴清單、含精確修正方案的錯誤資訊速查表、nftables/iptables 防火牆規則鏈、所有 LuCI 設定選項及 UCI 路徑、命令列與 API 參考、DNS 設定與洩漏防護、訂閱/GEO 更新流程等。"
+msgstr "本指南包含：AI 行為規則與診斷優先順序、完整依賴清單、含精確修正方案的錯誤資訊速查表、nftables/iptables 防火牆規則鏈、所有 LuCI 設定選項及 UCI 路徑、指令列與 API 參考、DNS 設定與洩漏防護、訂閱/GEO 更新流程等。"
 
 msgid "When I report any problem or error (cannot access internet, DNS failure, startup failure, connection timeout, etc.), FIRST ask me to generate a debug log — either via LuCI (**Server Logs → Debug Logs → Generate Logs**) or SSH (`/usr/share/openclash/openclash_debug.sh`). The debug log contains dependency checks, configuration, firewall rules, and system info in one step — do NOT ask me to check things individually. (Note: this rule does NOT apply to feature configuration questions like \"how do I enable X?\" — see rule 3 for those.)"
-msgstr "當我報告任何故障或錯誤（無法上網、DNS 異常、啟動失敗、連線超時等）時，**首先**要求我產生除錯日誌 —— 透過 LuCI（**執行日誌 → 除錯日誌 → 產生日誌**）或 SSH（`/usr/share/openclash/openclash_debug.sh`）。除錯日誌一步包含依賴檢查、設定、防火牆規則和系統資訊 —— **不要**讓我逐項檢查。（注意：此規則**不適用**於功能設定類問題如「如何開啟 XX？」—— 此類問題請參見規則 3。）"
+msgstr "當我報告任何故障或錯誤（無法上網、DNS 異常、啟動失敗、連線逾時等）時，**首先**要求我產生除錯日誌 —— 透過 LuCI（**執行日誌 → 除錯日誌 → 產生日誌**）或 SSH（`/usr/share/openclash/openclash_debug.sh`）。除錯日誌一步包含依賴檢查、設定、防火牆規則和系統資訊 —— **不要**讓我逐項檢查。（注意：此規則**不適用**於功能設定類問題如「如何開啟 XX？」—— 此類問題請參見規則 3。）"
 
 msgid "If the debug log is insufficient to pinpoint the issue, give me precise diagnostic commands to run on the router and ask me to paste back the output."
-msgstr "如果除錯日誌不足以定位問題，給我精確的診斷命令在路由器上執行，並讓我貼上輸出結果。"
+msgstr "如果除錯日誌不足以定位問題，給我精確的診斷指令在路由器上執行，並讓我貼上輸出結果。"
 
 msgid "For feature configuration and post-diagnosis fixes, provide LuCI web UI navigation paths (e.g. **Services → OpenClash → Plugin Settings**). Only give command-line when LuCI is unavailable or I explicitly ask for it."
-msgstr "對於功能設定和診斷後的修復，提供 LuCI Web 介面操作路徑（如 **服務 → OpenClash → 外掛設定**）。僅在 LuCI 不可用或我明確要求時才提供命令列。"
+msgstr "對於功能設定和診斷後的修復，提供 LuCI Web 介面操作路徑（如 **服務 → OpenClash → 外掛設定**）。僅在 LuCI 不可用或我明確要求時才提供指令列。"
 
 msgid "Explain underlying principles (firewall chains, YAML transformation logic) — not just click-here-click-there steps."
 msgstr "解釋底層原理（防火牆規則鏈、YAML 轉換邏輯）—— 而不只是點選步驟。"

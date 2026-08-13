@@ -38,19 +38,21 @@ Release 頁也提供同樣的完整安裝指令，方便直接從發布頁複製
 
 ```sh
 # [OpenClash 正體中文語言包 for ipk]
+rm -f /tmp/openclash_zh_hant_version /tmp/openclash_zh_hant.ipk
 opkg update
 opkg install luci luci-base luci-compat
-curl -L --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
-[ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.ipk$') && curl -L --retry 2 "$download_url" -o /tmp/openclash_zh_hant.ipk || echo "OpenClash 正體中文語言包 latest version get failed"
+curl -fL --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
+[ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.ipk$') && [ -n "$download_url" ] && curl -fL --retry 2 "$download_url" -o /tmp/openclash_zh_hant.ipk || echo "OpenClash 正體中文語言包 latest version get failed"
 [ -f "/tmp/openclash_zh_hant.ipk" ] && opkg install /tmp/openclash_zh_hant.ipk || echo "OpenClash 正體中文語言包 download failed"
 ```
 
 ```sh
 # [OpenClash 正體中文語言包 for apk]
+rm -f /tmp/openclash_zh_hant_version /tmp/openclash_zh_hant.apk
 apk update
 apk add luci luci-base luci-compat
-curl -L --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
-[ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.apk$') && curl -L --retry 2 "$download_url" -o /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 latest version get failed"
+curl -fL --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
+[ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.apk$') && [ -n "$download_url" ] && curl -fL --retry 2 "$download_url" -o /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 latest version get failed"
 [ -f "/tmp/openclash_zh_hant.apk" ] && apk add --force-overwrite --clean-protected --allow-untrusted --no-chown /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 download failed"
 ```
 
@@ -58,8 +60,8 @@ curl -L --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases
 
 APK 為未簽署的本機安裝套件；若使用 OpenWrt 25.12 及更新版本，請保留 `--allow-untrusted`。也可以直接下載以下安裝檔：
 
-* [下載 `luci-i18n-openclash-zh-hant_0.47.156-3_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r3/luci-i18n-openclash-zh-hant_0.47.156-3_all.ipk)
-* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r3.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r3/luci-i18n-openclash-zh-hant-0.47.156-r3.apk)
+* [下載 `luci-i18n-openclash-zh-hant_0.47.156-4_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r4/luci-i18n-openclash-zh-hant_0.47.156-4_all.ipk)
+* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r4.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r4/luci-i18n-openclash-zh-hant-0.47.156-r4.apk)
 
 重新產生封裝時，可使用 OpenWrt SDK 提供的 apk-tools v3：
 

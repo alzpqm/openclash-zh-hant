@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-i18n-openclash-zh-hant
 PKG_VERSION:=0.47.156
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 PKG_MAINTAINER:=OpenClash 正體中文化維護者
 PKG_LICENSE:=MIT
 
@@ -19,6 +19,16 @@ endef
 
 define Package/$(PKG_NAME)/description
 	OpenClash LuCI 正體中文語言包（zh_Hant）。
+endef
+
+define Package/$(PKG_NAME)/postinst
+#!/bin/sh
+[ "$${IPKG_NO_SCRIPT:-0}" = "1" ] && exit 0
+[ -n "$${IPKG_INSTROOT:-}" ] && exit 0
+[ -x /sbin/uci ] || exit 0
+/sbin/uci -q set luci.languages.zh_tw='正體中文' || exit 0
+/sbin/uci -q commit luci
+exit 0
 endef
 
 define Build/Prepare
@@ -38,7 +48,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openclash.zh-tw.lmo $(1)/usr/lib/lua/luci/i18n/openclash.zh-hant.lmo
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openclash.zh-tw.lmo $(1)/usr/lib/lua/luci/i18n/openclash.zh_Hant.lmo
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(INSTALL_DATA) ./files/luci-i18n-openclash-zh-hant $(1)/etc/uci-defaults/
+	$(INSTALL_BIN) ./files/luci-i18n-openclash-zh-hant $(1)/etc/uci-defaults/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))

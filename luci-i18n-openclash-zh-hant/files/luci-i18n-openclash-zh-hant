@@ -1,1 +1,4 @@
-uci set luci.languages.zh_tw='正體中文'; uci commit luci
+#!/bin/sh
+uci -q set luci.languages.zh_tw='正體中文' || exit 0
+uci -q commit luci || exit 0
+exit 0

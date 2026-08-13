@@ -1,14 +1,14 @@
 [
   {
-    "zh": "覆寫模組從 v0.47.081 開始支援 [YAML] 塊來進行配置檔案覆寫，格式使用 yaml， 從而降低程式碼覆寫編輯的難度, 使用方式請參考 default 檔案的示例。",
+    "zh": "覆寫模組從 v0.47.081 開始支援 [YAML] 區塊來覆寫設定檔，格式為 YAML，從而降低程式碼覆寫編輯的難度；使用方式請參考 default 檔案的範例。",
     "en": "Overwrite module now supports YAML blocks for configuration file overwriting, using YAML format, which reduces the difficulty of code overwriting. Please refer to the default file example for usage."
   },
   {
-    "zh": "覆寫模組現已支援遠端訂閱，更加方便外掛的遠端管理及統一配置、一鍵訂閱，歡迎各位分享配置。",
+    "zh": "覆寫模組現已支援遠端訂閱，更方便外掛的遠端管理及統一設定，提供一鍵訂閱功能，歡迎分享設定。",
     "en": "Overwrite module now supports subscription, more convenient remote management and configuration, one-click subscription, welcome to share the configuration."
   },
   {
-    "zh": "Smart 策略組核心現已支援 policy-priority 引數來自定義調整節點權重，請自行替換測試、使用。",
+    "zh": "Smart 策略群組核心現已支援 policy-priority 引數，可自訂調整節點權重，請自行替換測試與使用。",
     "en": "The Smart policy group core now supports the policy-priority parameter to customize node weights. Please replace it for testing and use."
   }
 ]

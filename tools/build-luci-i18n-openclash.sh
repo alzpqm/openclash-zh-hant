@@ -45,8 +45,12 @@ ln -s openclash.zh-tw.lmo \
 	"$WORK_DIR/data/usr/lib/lua/luci/i18n/openclash.zh_Hant.lmo"
 
 cat > "$WORK_DIR/data/etc/uci-defaults/luci-i18n-openclash-zh-hant" <<'EOF'
-uci set luci.languages.zh_tw='正體中文'; uci commit luci
+#!/bin/sh
+uci -q set luci.languages.zh_tw='正體中文' || exit 0
+uci -q commit luci || exit 0
+exit 0
 EOF
+chmod 0755 "$WORK_DIR/data/etc/uci-defaults/luci-i18n-openclash-zh-hant"
 
 (
 	cd "$WORK_DIR/data"
@@ -55,10 +59,16 @@ EOF
 
 cat > "$WORK_DIR/scripts/post-install" <<'EOF'
 #!/bin/sh
-[ "${IPKG_NO_SCRIPT}" = "1" ] && exit 0
-[ -s "${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0
-. "${IPKG_INSTROOT}/lib/functions.sh"
-export root="${IPKG_INSTROOT}"
+[ "${IPKG_NO_SCRIPT:-0}" = "1" ] && exit 0
+[ -n "${IPKG_INSTROOT:-}" ] || {
+	if command -v uci >/dev/null 2>&1; then
+		uci -q set luci.languages.zh_tw='正體中文' || true
+		uci -q commit luci || true
+	fi
+}
+[ -s "${IPKG_INSTROOT:-}/lib/functions.sh" ] || exit 0
+. "${IPKG_INSTROOT:-}/lib/functions.sh"
+export root="${IPKG_INSTROOT:-}"
 export pkgname="luci-i18n-openclash-zh-hant"
 add_group_and_user
 default_postinst
@@ -67,10 +77,16 @@ EOF
 cat > "$WORK_DIR/scripts/post-upgrade" <<'EOF'
 #!/bin/sh
 export PKG_UPGRADE=1
-[ "${IPKG_NO_SCRIPT}" = "1" ] && exit 0
-[ -s "${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0
-. "${IPKG_INSTROOT}/lib/functions.sh"
-export root="${IPKG_INSTROOT}"
+[ "${IPKG_NO_SCRIPT:-0}" = "1" ] && exit 0
+[ -n "${IPKG_INSTROOT:-}" ] || {
+	if command -v uci >/dev/null 2>&1; then
+		uci -q set luci.languages.zh_tw='正體中文' || true
+		uci -q commit luci || true
+	fi
+}
+[ -s "${IPKG_INSTROOT:-}/lib/functions.sh" ] || exit 0
+. "${IPKG_INSTROOT:-}/lib/functions.sh"
+export root="${IPKG_INSTROOT:-}"
 export pkgname="luci-i18n-openclash-zh-hant"
 add_group_and_user
 default_postinst
@@ -78,9 +94,9 @@ EOF
 
 cat > "$WORK_DIR/scripts/pre-deinstall" <<'EOF'
 #!/bin/sh
-[ -s "${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0
-. "${IPKG_INSTROOT}/lib/functions.sh"
-export root="${IPKG_INSTROOT}"
+[ -s "${IPKG_INSTROOT:-}/lib/functions.sh" ] || exit 0
+. "${IPKG_INSTROOT:-}/lib/functions.sh"
+export root="${IPKG_INSTROOT:-}"
 export pkgname="luci-i18n-openclash-zh-hant"
 default_prerm
 EOF
@@ -105,10 +121,22 @@ cp "$WORK_DIR/scripts/post-install" "$WORK_DIR/control/postinst"
 cp "$WORK_DIR/scripts/pre-deinstall" "$WORK_DIR/control/prerm"
 chmod 0755 "$WORK_DIR/control/postinst" "$WORK_DIR/control/prerm"
 
-COPYFILE_DISABLE=1 tar --no-xattrs --owner=root --group=root --numeric-owner \
-	-czf "$WORK_DIR/control.tar.gz" -C "$WORK_DIR/control" .
-COPYFILE_DISABLE=1 tar --no-xattrs --owner=root --group=root --numeric-owner \
-	-czf "$WORK_DIR/data.tar.gz" -C "$WORK_DIR/data" .
+python3 - "$WORK_DIR/control" "$WORK_DIR/control.tar.gz" "$WORK_DIR/data" "$WORK_DIR/data.tar.gz" <<'PY'
+import os
+import sys
+import tarfile
+
+def normalize(info):
+    info.uid = 0
+    info.gid = 0
+    info.uname = "root"
+    info.gname = "root"
+    return info
+
+for source, output in ((sys.argv[1], sys.argv[2]), (sys.argv[3], sys.argv[4])):
+    with tarfile.open(output, "w:gz", format=tarfile.GNU_FORMAT) as archive:
+        archive.add(source, arcname=".", recursive=True, filter=normalize)
+PY
 
 python3 - "$OUTPUT_DIR/$PACKAGE_NAME" \
 	"$WORK_DIR/debian-binary" \
