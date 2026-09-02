@@ -26,7 +26,7 @@ disable-model-invocation: false
 
 ### 正體中文用語規範
 
-本指南固定使用臺灣、香港及澳門均能理解的正體中文，並與語言包採用相同稱呼：IP address 使用「IP 位址」、URL 使用「網址」、domain name 使用「網域名稱」、configuration 使用「設定」、custom 使用「自訂」、client 使用「用戶端」、disable 使用「停用」、enable 使用「啟用」、example 使用「範例」、generate 使用「產生」、local 使用「本機」、timeout 使用「逾時」、package 使用「軟體套件」。
+本指南固定使用中國大陸、臺灣、香港及澳門均能理解的正體中文，並與語言包採用相同稱呼：IP address 使用「IP 位址」、URL 使用「網址」、domain name 使用「網域名稱」、configuration 使用「設定」、custom 使用「自訂」、client 使用「用戶端」、disable 使用「停用」、enable 使用「啟用」、example 使用「範例」、generate 使用「產生」、local 使用「本機」、timeout 使用「逾時」、package 使用「軟體套件」。
 
 > **本文件是 AI 的知識庫，而非給使用者看的說明書。任何 AI 模型（Copilot / Claude / ChatGPT / Gemini / DeepSeek 等）在回答 OpenClash 相關問題時均應遵循以下原則。**
 >

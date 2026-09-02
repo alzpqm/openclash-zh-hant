@@ -10,7 +10,7 @@
 相容 Shadowsocks、ShadowsocksR、Vmess、Trojan、Snell 等通訊協定，依據彈性的規則設定實作策略代理
 </p>
 
-本專案是 OpenClash 的正體中文化版本，使用 OpenWrt LuCI 的 `zh_Hant` 語系，固定稱呼為「正體中文」，適用於臺灣、香港與澳門等使用正體中文介面的環境。
+本專案是 OpenClash 的正體中文化版本，使用 OpenWrt LuCI 的 `zh_Hant` 語系，固定稱呼為「正體中文」，適用於中國大陸、臺灣、香港及澳門等使用正體中文介面的環境。
 
 上游專案：[vernesong/OpenClash](https://github.com/vernesong/OpenClash)。本儲存庫為獨立發佈的正體中文化版本。
 
@@ -56,7 +56,7 @@ curl -fL --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/release
 [ -f "/tmp/openclash_zh_hant.apk" ] && apk add --force-overwrite --clean-protected --allow-untrusted --no-chown /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 download failed"
 ```
 
-安裝後，將 LuCI 語言切換為「正體中文」。OpenWrt 標準語系識別為 `zh_tw`（翻譯檔為 `zh-tw`）；套件同時保留 `zh-hant` 與 `zh_Hant` 相容別名，臺灣、香港及澳門均可使用。
+安裝後，將 LuCI 語言切換為「正體中文」。OpenWrt 標準語系識別為 `zh_tw`（翻譯檔為 `zh-tw`）；套件同時保留 `zh-hant` 與 `zh_Hant` 相容別名，中國大陸、臺灣、香港及澳門均可使用。
 
 APK 為未簽署的本機安裝套件；若使用 OpenWrt 25.12 及更新版本，請保留 `--allow-untrusted`。也可以直接下載以下安裝檔：
 
