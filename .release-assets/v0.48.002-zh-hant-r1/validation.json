@@ -1,0 +1,45 @@
+{
+  "upstream_tag": "v0.48.002",
+  "upstream_sha": "e553e82e01c697aefbe1555261a503f425e00ccd",
+  "sdk_image": "ghcr.io/openwrt/sdk@sha256:e916b7cc555890bdc4725c926e139b888294f0c8f56561b88d8da3a6348616a2",
+  "sdk_version": "OpenWrt 25.12.5 x86-64; GCC 14.3.0; musl 1.2.5",
+  "catalog": {
+    "catalog_messages": 2017,
+    "upstream_messages": 1812,
+    "lmo_index_entries": 2000,
+    "translation_lookups": 2000,
+    "unchanged_text_fallbacks": 17,
+    "placeholder_validation": "passed"
+  },
+  "source_checks": {
+    "lua_files": 25,
+    "ruby_files": 2,
+    "javascript_files": 19,
+    "shell_files": 34,
+    "gettext_format": "passed",
+    "ruby_yaml_fixtures": 3,
+    "ruby_yaml_chinese_and_short_id_round_trip": "passed"
+  },
+  "packages": {
+    "apk_packages": 3,
+    "ipk_packages": 3,
+    "signature_validation": "passed",
+    "missing_key_rejection": "passed",
+    "damaged_package_rejection": "passed",
+    "package_root_ownership": "passed",
+    "language_aliases": [
+      "zh-tw",
+      "zh-hant",
+      "zh_Hant"
+    ],
+    "packaged_main_source_files_verified": 220,
+    "lmo_sha256": "ccf671d5bff5e9f0113d2822e8340e643e243624c6dff469bd448f8f12f63350",
+    "signing": "local development key; not an official OpenWrt release signature"
+  },
+  "installation_script_repeated_runs": 2,
+  "limitations": [
+    "Not tested on a physical OpenWrt router.",
+    "No firmware dependencies or native cores were rebuilt.",
+    "APK signatures use a local development key, not an official release key."
+  ]
+}
