@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-i18n-openclash-zh-hant
-PKG_VERSION:=0.47.156
-PKG_RELEASE:=4
+PKG_VERSION:=0.48.002
+PKG_RELEASE:=1
 PKG_MAINTAINER:=OpenClash 正體中文化維護者
 PKG_LICENSE:=MIT
 

@@ -25,49 +25,81 @@
 ---
 
 
-* OpenClash 主程式 IPK & APK [前往上游下載](https://github.com/vernesong/OpenClash/releases)
+* 含正體中文的 OpenClash 主程式 IPK & APK [前往本儲存庫下載](https://github.com/alzpqm/openclash-zh-hant/releases)
+* 上游 OpenClash 主程式 [前往上游下載](https://github.com/vernesong/OpenClash/releases)
 * 正體中文語言包 IPK & APK [前往本儲存庫下載](https://github.com/alzpqm/openclash-zh-hant/releases)
 
 
 正體中文語言包
 ---
 
-請先安裝 OpenClash 主程式，再依照路由器的套件格式，整段複製並貼上以下其中一組指令。指令會自動從本儲存庫的最新 Release 下載正確語言套件，避免手動輸入版本號或檔名造成安裝失敗。
+目前版本為 **0.48.002-r1**，同步上游穩定版 [`v0.48.002`](https://github.com/vernesong/OpenClash/releases/tag/v0.48.002)（`e553e82e01c697aefbe1555261a503f425e00ccd`）。包含 2,017 則字串，涵蓋上游全部 1,812 則、153 則舊版相容字串，以及上游目錄遺漏的 52 個介面標籤。
 
-Release 頁也提供同樣的完整安裝指令，方便直接從發布頁複製使用。
+請先安裝 OpenClash 主程式，再安裝語言包。本次發布也提供含正體中文的主程式 IPK／APK。所有下載都使用 HTTPS，安裝前必須通過 SHA-256 驗證。
+
+APK 使用本次建置環境的**開發簽章**，不是 OpenWrt 官方或正式發布簽章。以下 APK 指令會先驗證公開金鑰的固定 SHA-256，再將它加入本機信任；只有選擇信任此開發金鑰時才執行。套件簽章驗證失敗會停止安裝。
 
 ```sh
-# [OpenClash 正體中文語言包 for ipk]
-rm -f /tmp/openclash_zh_hant_version /tmp/openclash_zh_hant.ipk
+# OpenClash 正體中文語言包：IPK
+(
+set -eu
+work=$(mktemp -d /tmp/openclash-i18n.XXXXXX)
+trap 'rm -rf "$work"' EXIT
+base=https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.48.002-zh-hant-r1
+name=luci-i18n-openclash-zh-hant_0.48.002-1_all.ipk
+curl -fL --retry 2 "$base/$name" -o "$work/$name"
+curl -fL --retry 2 "$base/$name.sha256" -o "$work/$name.sha256"
+(cd "$work" && sha256sum -c "$name.sha256")
 opkg update
 opkg install luci luci-base luci-compat
-curl -fL --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
-[ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.ipk$') && [ -n "$download_url" ] && curl -fL --retry 2 "$download_url" -o /tmp/openclash_zh_hant.ipk || echo "OpenClash 正體中文語言包 latest version get failed"
-[ -f "/tmp/openclash_zh_hant.ipk" ] && opkg install /tmp/openclash_zh_hant.ipk || echo "OpenClash 正體中文語言包 download failed"
+opkg install "$work/$name"
+)
 ```
 
 ```sh
-# [OpenClash 正體中文語言包 for apk]
-rm -f /tmp/openclash_zh_hant_version /tmp/openclash_zh_hant.apk
+# OpenClash 正體中文語言包：APK（需明確信任本版開發金鑰）
+(
+set -eu
+work=$(mktemp -d /tmp/openclash-i18n.XXXXXX)
+trap 'rm -rf "$work"' EXIT
+base=https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.48.002-zh-hant-r1
+name=luci-i18n-openclash-zh-hant-0.48.002-r1.apk
+key=openclash-zh-hant-development-20261012.pem.pub
+curl -fL --retry 2 "$base/$key" -o "$work/$key"
+printf '3fb967dd68d972b041112af4502ec955a7f6b3d98e151bac35c4d2a04366900a  %s\n' "$key" > "$work/key.sha256"
+(cd "$work" && sha256sum -c key.sha256)
+curl -fL --retry 2 "$base/$name" -o "$work/$name"
+curl -fL --retry 2 "$base/$name.sha256" -o "$work/$name.sha256"
+(cd "$work" && sha256sum -c "$name.sha256")
+mkdir -p /etc/apk/keys
+cp "$work/$key" "/etc/apk/keys/$key"
+apk verify "$work/$name"
 apk update
 apk add luci luci-base luci-compat
-curl -fL --retry 2 https://api.github.com/repos/alzpqm/openclash-zh-hant/releases/latest -o /tmp/openclash_zh_hant_version
-[ -f "/tmp/openclash_zh_hant_version" ] && download_url=$(cat /tmp/openclash_zh_hant_version | jsonfilter -e '@.assets[*].browser_download_url' | grep 'luci-i18n-openclash-zh-hant.*\.apk$') && [ -n "$download_url" ] && curl -fL --retry 2 "$download_url" -o /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 latest version get failed"
-[ -f "/tmp/openclash_zh_hant.apk" ] && apk add --force-overwrite --clean-protected --allow-untrusted --no-chown /tmp/openclash_zh_hant.apk || echo "OpenClash 正體中文語言包 download failed"
+apk add --force-overwrite --clean-protected --no-chown "$work/$name"
+)
 ```
 
-安裝後，將 LuCI 語言切換為「正體中文」。OpenWrt 標準語系識別為 `zh_tw`（翻譯檔為 `zh-tw`）；套件同時保留 `zh-hant` 與 `zh_Hant` 相容別名，中國大陸、臺灣、香港及澳門均可使用。
+安裝後，將 LuCI 語言切換為「正體中文」。套件使用 OpenWrt 標準語系 `zh_tw`（翻譯檔名 `zh-tw`），並保留 `zh-hant` 與 `zh_Hant` 相容別名；中國大陸、臺灣、香港及澳門均可使用。
 
-APK 為未簽署的本機安裝套件；若使用 OpenWrt 25.12 及更新版本，請保留 `--allow-untrusted`。也可以直接下載以下安裝檔：
+* [語言包 IPK](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.48.002-zh-hant-r1/luci-i18n-openclash-zh-hant_0.48.002-1_all.ipk)
+* [語言包 APK](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.48.002-zh-hant-r1/luci-i18n-openclash-zh-hant-0.48.002-r1.apk)
+* [含正體中文的主程式 IPK](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.48.002-zh-hant-r1/luci-app-openclash_0.48.002-r1_all.ipk)
+* [含正體中文的主程式 APK](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.48.002-zh-hant-r1/luci-app-openclash-0.48.002-r1.apk)
 
-* [下載 `luci-i18n-openclash-zh-hant_0.47.156-4_all.ipk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r4/luci-i18n-openclash-zh-hant_0.47.156-4_all.ipk)
-* [下載 `luci-i18n-openclash-zh-hant-0.47.156-r4.apk`](https://github.com/alzpqm/openclash-zh-hant/releases/download/v0.47.156-zh-hant-r4/luci-i18n-openclash-zh-hant-0.47.156-r4.apk)
+主程式 APK 也需要上方開發金鑰。內建 APK 更新流程要求可信簽章，遇到未簽署的上游套件會拒絕安裝；可改用已驗證的本專案發布檔案。
 
-重新產生封裝時，可使用 OpenWrt SDK 提供的 apk-tools v3：
+獨立封裝 APK 時必須提供簽章金鑰；SDK 的 fakeroot 也需要正確的 `STAGING_DIR_HOST`：
 
 ```sh
-APK_BIN=/path/to/openwrt/staging_dir/host/bin/apk tools/build-luci-i18n-openclash.sh
+STAGING_DIR_HOST=/path/to/openwrt/staging_dir/host \
+APK_BIN=/path/to/openwrt/staging_dir/host/bin/apk \
+FAKEROOT_BIN=/path/to/openwrt/staging_dir/host/bin/fakeroot \
+APK_SIGN_KEY=/path/to/development.pem \
+tools/build-luci-i18n-openclash.sh
 ```
+
+[建置與驗證紀錄](docs/BUILD.md) 說明 SDK、驗證範圍及可重建的工具環境。未在實體 OpenWrt 路由器上驗證；建置與封裝檢查不代表路由器執行測試。
 
 
 相依套件
@@ -98,58 +130,13 @@ APK_BIN=/path/to/openwrt/staging_dir/host/bin/apk tools/build-luci-i18n-openclas
 編譯
 ---
 
+本版使用 OpenWrt 25.12.5 x86-64 SDK（GCC 14.3.0／musl 1.2.5），固定官方映像：
 
-從 OpenWrt 的 [SDK](https://archive.openwrt.org/chaos_calmer/15.05.1/ar71xx/generic/OpenWrt-SDK-15.05.1-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2) 編譯
-```bash
-# 解壓下載好的 SDK
-curl -SLk --connect-timeout 30 --retry 2 "https://archive.openwrt.org/chaos_calmer/15.05.1/ar71xx/generic/OpenWrt-SDK-15.05.1-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2" -o "/tmp/SDK.tar.bz2"
-cd \tmp
-tar xjf SDK.tar.bz2
-cd OpenWrt-SDK-15.05.1-*
-
-# Clone 專案
-mkdir package/luci-app-openclash
-cd package/luci-app-openclash
-git init
-git remote add -f origin https://github.com/vernesong/OpenClash.git
-git config core.sparsecheckout true
-echo "luci-app-openclash" >> .git/info/sparse-checkout
-git pull --depth 1 origin master
-git branch --set-upstream-to=origin/master master
-
-# 編譯 po2lmo (如果有po2lmo可跳過)
-pushd luci-app-openclash/tools/po2lmo
-make && sudo make install
-popd
-
-# 編譯最新 CodeMirror 6 (外掛內建，可跳過)
-pushd luci-app-openclash/tools/codemirror
-npm install
-npx esbuild entry.js --bundle --format=iife --global-name=CM6 --minify --target=es2019 --outfile=../../root/www/luci-static/resources/openclash/js/cm6.min.js --legal-comments=none --loader:.css=text
-rm -rf node_modules
-popd
-
-# 開始編譯
-
-# 先回退到SDK主目錄
-cd ../..
-make package/luci-app-openclash/luci-app-openclash/compile V=99
-
-# IPK檔案位置
-./bin/ar71xx/packages/base/luci-app-openclash_*-beta_all.ipk
+```text
+ghcr.io/openwrt/sdk@sha256:e916b7cc555890bdc4725c926e139b888294f0c8f56561b88d8da3a6348616a2
 ```
 
-```bash
-# 同步原始碼
-cd package/luci-app-openclash/luci-app-openclash
-git pull
-
-# 您也可以直接複製 `luci-app-openclash` 資料夾至其他 `OpenWrt` 專案的 `Package` 目錄下隨韌體編譯
-
-make menuconfig
-# 選擇要編譯的包 LuCI -> Applications -> luci-app-openclash
-
-```
+完整步驟見 [docs/BUILD.md](docs/BUILD.md)。可將 `luci-app-openclash` 與 `luci-i18n-openclash-zh-hant` 複製為 SDK 的相鄰套件目錄。建置會編譯正體中文 LMO，並保留上游的前端版本快取替換。原始碼已包含編譯完成的 CodeMirror 資源。
 
 
 許可

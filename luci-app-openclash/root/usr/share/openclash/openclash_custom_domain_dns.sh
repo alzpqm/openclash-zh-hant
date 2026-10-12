@@ -14,9 +14,9 @@ del_lock() {
 
 set_lock
 
-# 獲取預設的 DNSMASQ 配置 ID
+# 獲取預設的 DNSMASQ 設定 ID
 DEFAULT_DNSMASQ_CFGID="$(uci -q show "dhcp.@dnsmasq[0]" | awk 'NR==1 {split($0, conf, /[.=]/); print conf[2]}')"
-# 從 conf-dir 行中提取配置目錄路徑
+# 從 conf-dir 行中提取設定目錄路徑
 if [ -f "/tmp/etc/dnsmasq.conf.$DEFAULT_DNSMASQ_CFGID" ]; then
    DNSMASQ_CONF_DIR="$(awk -F '=' '/^conf-dir=/ {print $2}' "/tmp/etc/dnsmasq.conf.$DEFAULT_DNSMASQ_CFGID")"
 else
@@ -30,8 +30,8 @@ if [ "$(uci_get_config "enable_custom_domain_dns_server")" = "1" ] && [ "$(uci_g
 
    custom_domain_dns_server=$(uci_get_config "custom_domain_dns_server")
    [ -z "$custom_domain_dns_server" ] && {
-	   custom_domain_dns_server="114.114.114.114"
-	}
+      custom_domain_dns_server="114.114.114.114"
+   }
 
    if [ -s "/etc/openclash/custom/openclash_custom_domain_dns.list" ]; then
       mkdir -p ${DNSMASQ_CONF_DIR}

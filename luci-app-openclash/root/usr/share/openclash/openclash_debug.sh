@@ -28,7 +28,7 @@ DEBUG_LOG="/tmp/openclash_debug.log"
 LOGTIME=$(echo $(date "+%Y-%m-%d %H:%M:%S"))
 log_level=$(uci_get_config "log_level")
 enable_custom_dns=$(uci_get_config "enable_custom_dns")
-enable_custom_clash_rules=$(uci_get_config "enable_custom_clash_rules") 
+enable_custom_clash_rules=$(uci_get_config "enable_custom_clash_rules")
 ipv6_enable=$(uci_get_config "ipv6_enable")
 ipv6_dns=$(uci_get_config "ipv6_dns")
 enable_redirect_dns=$(uci_get_config "enable_redirect_dns")
@@ -49,6 +49,11 @@ fi
 core_meta_version=$(/etc/openclash/core/clash_meta -v 2>/dev/null |awk -F ' ' '{print $3}' |head -1 2>/dev/null)
 op_version=$(ipk_v "luci-app-openclash")
 china_ip_route=$(uci_get_config "china_ip_route")
+china_ip_route_domain_source=$(uci_get_config "china_ip_route_domain_source" || echo "mrs")
+case "$china_ip_route_domain_source" in
+   mrs|geosite) ;;
+   *) china_ip_route_domain_source="mrs" ;;
+esac
 common_ports=$(uci_get_config "common_ports")
 router_self_proxy=$(uci_get_config "router_self_proxy")
 core_type=$(uci_get_config "core_type" || echo "Dev")
@@ -89,28 +94,28 @@ fi
 
 ts_cf()
 {
-	if [ "$1" = "0" ] || [ -z "$1" ]; then
-	   echo "停用"
-	else
-	   echo "啟用"
+   if [ "$1" = "0" ] || [ -z "$1" ]; then
+      echo "停用"
+   else
+      echo "啟用"
    fi
 }
 
 ts_re()
 {
-	if [ -z "$1" ]; then
-	   echo "未安裝"
-	else
-	   echo "已安裝 ($1)"
+   if [ -z "$1" ]; then
+      echo "未安裝"
+   else
+      echo "已安裝 ($1)"
   fi
 }
 
 dns_re()
 {
    if [ "$1" = "1" ]; then
-	   echo "Dnsmasq 轉發"
+      echo "Dnsmasq 轉發"
    elif [ "$1" = "2" ]; then
-	   echo "Firewall 轉發"
+      echo "Firewall 轉發"
    else
       echo "停用"
    fi
@@ -132,7 +137,7 @@ cat > "$DEBUG_LOG" <<-EOF
 
 > 生成時間: $LOGTIME
 > 外掛版本: ${op_version:-未知}
-> 隱私提示: 上傳此日誌前請注意檢查、遮蔽公網IP、節點、密碼等相關敏感資訊
+> 隱私提示: 上傳此日誌前請注意檢查、遮蔽公用網路IP、節點、密碼等相關敏感資訊
 
 ## 系統資訊
 
@@ -144,8 +149,9 @@ cat > "$DEBUG_LOG" <<-EOF
 | 核心版本 | $(uname -r 2>/dev/null) |
 | 處理器架構 | $cpu_model |
 | 系統執行時間 | $(uptime 2>/dev/null) |
-| IPV6-DHCP | $(uci -q get dhcp.lan.dhcpv6 || echo "未配置") |
+| IPV6-DHCP | $(uci -q get dhcp.lan.dhcpv6 || echo "未設定") |
 | DNS劫持 | $(dns_re "$enable_redirect_dns") |
+| TFO 黑洞超時（秒） | $(cat /proc/sys/net/ipv4/tcp_fastopen_blackhole_timeout_sec 2>/dev/null || echo "不支援") |
 
 ### 磁碟與記憶體
 
@@ -164,7 +170,7 @@ $(free -m 2>/dev/null)
 $(cat /proc/meminfo 2>/dev/null | grep -E '^(MemTotal|MemAvailable|SwapTotal|SwapFree)')
 \`\`\`
 
-### Dnsmasq 配置
+### Dnsmasq 設定
 
 \`\`\`bash
 # uci show dhcp.@dnsmasq[0]
@@ -232,7 +238,7 @@ if pidof clash >/dev/null; then
 cat >> "$DEBUG_LOG" <<-EOF
 | 執行狀態 | 執行中 |
 | 執行核心 | $core_type |
-| 程序pid | $(pidof clash) |
+| 程式pid | $(pidof clash) |
 | 執行使用者 | $(ps |grep "/etc/openclash/clash" |grep -v grep |awk '{print $2}' 2>/dev/null) |
 EOF
 else
@@ -297,32 +303,33 @@ cat >> "$DEBUG_LOG" <<-EOF
 
 | 設定項 | 值 |
 |--------|----|
-| 當前配置檔案 | $RAW_CONFIG_FILE |
-| 啟動配置檔案 | $CONFIG_FILE |
+| 目前設定檔 | $RAW_CONFIG_FILE |
+| 啟動設定檔 | $CONFIG_FILE |
 | 執行模式 | $en_mode |
 | 預設代理模式 | $proxy_mode |
 | UDP流量轉發 | $(ts_cf "$enable_udp_proxy") |
 | 自定義DNS | $(ts_cf "$enable_custom_dns") |
 | IPV6代理 | $(ts_cf "$ipv6_enable") |
 | IPV6-DNS解析 | $(ts_cf "$ipv6_dns") |
-| 禁用Dnsmasq快取 | $(ts_cf "$disable_masq_cache") |
+| 停用Dnsmasq快取 | $(ts_cf "$disable_masq_cache") |
 | 自定義規則 | $(ts_cf "$enable_custom_clash_rules") |
-| 僅允許內網 | $(ts_cf "$intranet_allowed") |
+| 僅允許內部網路 | $(ts_cf "$intranet_allowed") |
 | 僅代理命中規則流量 | $(ts_cf "$enable_rule_proxy") |
 | 僅允許常用埠流量 | $(ts_cf "$common_ports") |
 | 繞過中國大陸IP | $(ts_cf "$china_ip_route") |
+| 中國大陸網域名稱資料來源 | $china_ip_route_domain_source |
 | 路由本機代理 | $(ts_cf "$router_self_proxy") |
-| TUN堆疊型別 | ${stack_type:-system} |
+| TUN堆疊型別 | ${stack_type:-mips} |
 | 啟動延遲 | ${delay_start:-0}秒 |
 | 日誌大小 | ${log_size:-1024}KB |
 | 旁路由相容 | $(ts_cf "$bypass_gateway_compatible") |
-| 禁用quic-go GSO | $(ts_cf "$disable_quic_go_gso") |
+| 停用quic-go GSO | $(ts_cf "$disable_quic_go_gso") |
 | 小快閃記憶體模式 | $(ts_cf "$small_flash_memory") |
-| 域名嗅探 | $(ts_cf "$enable_meta_sniffer") |
+| 網域名稱嗅探 | $(ts_cf "$enable_meta_sniffer") |
 | DNS代理 | $(ts_cf "$enable_respect_rules") |
 | 繞過伺服器地址 | $(ts_cf "$skip_proxy_address") |
-| 禁用QUIC | $(ts_cf "$disable_udp_quic") |
-| 訪問控制模式 | $([ "$lan_ac_mode" = "1" ] && echo "White" || echo "Black") |
+| 停用QUIC | $(ts_cf "$disable_udp_quic") |
+| 存取控制模式 | $([ "$lan_ac_mode" = "1" ] && echo "White" || echo "Black") |
 | IPv6模式 | $(ipv6_mode_name "$ipv6_mode") |
 | 繞過IPv6區域 | $(ts_cf "$china_ip6_route") |
 
@@ -349,7 +356,7 @@ EOF
 if [ "$enable_custom_clash_rules" -eq 1 ]; then
 cat >> "$DEBUG_LOG" <<-EOF
 
-## 自定義規則 一 （優先匹配）
+## 自定義規則 一 （優先比對）
 
 \`\`\`bash
 # cat /etc/openclash/custom/openclash_custom_rules.list
@@ -359,7 +366,7 @@ echo "" >> "$DEBUG_LOG"
 cat >> "$DEBUG_LOG" <<-EOF
 \`\`\`
 
-## 自定義規則 二 （擴充套件匹配）
+## 自定義規則 二 （擴充套件比對）
 
 \`\`\`bash
 # cat /etc/openclash/custom/openclash_custom_rules_2.list
@@ -373,7 +380,7 @@ fi
 
 cat >> "$DEBUG_LOG" <<-EOF
 
-## 配置檔案
+## 設定檔
 
 \`\`\`yaml
 # ruby_read [config] (filtered: without proxies/proxy-providers)
@@ -625,7 +632,7 @@ fi
 
 cat >> "$DEBUG_LOG" <<-EOF
 
-## 埠占用狀態
+## 埠佔用狀態
 
 \`\`\`bash
 # netstat -nlp | grep clash
@@ -674,7 +681,7 @@ cat >> "$DEBUG_LOG" <<-EOF
 
 ## DNS 解析檔案
 
-### **Dnsmasq 當前預設 resolv 檔案**
+### **Dnsmasq 目前預設 resolv 檔案**
 
 \`\`\`bash
 EOF

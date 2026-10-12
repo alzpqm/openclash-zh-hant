@@ -9,6 +9,7 @@ RELEASE=$(sed -n 's/^PKG_RELEASE:=//p' "$ROOT_DIR/luci-i18n-openclash-zh-hant/Ma
 PACKAGE_NAME="luci-i18n-openclash-zh-hant_${VERSION}-${RELEASE}_all.ipk"
 APK_PACKAGE_NAME="luci-i18n-openclash-zh-hant-${VERSION}-r${RELEASE}.apk"
 APK_BIN=${APK_BIN:-}
+APK_SIGN_KEY=${APK_SIGN_KEY:-}
 FAKEROOT_BIN=${FAKEROOT_BIN:-}
 WORK_DIR=$(mktemp -d "${TMPDIR:-/tmp}/openclash-i18n.XXXXXX")
 
@@ -181,9 +182,14 @@ if [ -z "$FAKEROOT_BIN" ]; then
 fi
 
 if [ -n "$APK_BIN" ] && [ -x "$APK_BIN" ] && [ -n "$FAKEROOT_BIN" ] && [ -x "$FAKEROOT_BIN" ]; then
+	if [ -z "$APK_SIGN_KEY" ] || [ ! -r "$APK_SIGN_KEY" ]; then
+		printf 'APK_SIGN_KEY must name a readable signing key; unsigned APK generation is disabled.\n' >&2
+		exit 1
+	fi
 	cat > "$WORK_DIR/mkpkg.sh" <<EOF
 #!/bin/sh
 exec "$APK_BIN" mkpkg \\
+	--sign-key '$APK_SIGN_KEY' \\
 	--info 'name:luci-i18n-openclash-zh-hant' \\
 	--info 'version:${VERSION}-r${RELEASE}' \\
 	--info 'description:OpenClash LuCI 正體中文語言包（zh_Hant）' \\
@@ -223,4 +229,6 @@ write_checksum "$OUTPUT_DIR/$PACKAGE_NAME"
 [ -f "$OUTPUT_DIR/$APK_PACKAGE_NAME" ] && write_checksum "$OUTPUT_DIR/$APK_PACKAGE_NAME"
 
 printf 'Built %s\n' "$OUTPUT_DIR/$PACKAGE_NAME"
-[ -f "$OUTPUT_DIR/$APK_PACKAGE_NAME" ] && printf 'Built %s\n' "$OUTPUT_DIR/$APK_PACKAGE_NAME"
+if [ -f "$OUTPUT_DIR/$APK_PACKAGE_NAME" ]; then
+	printf 'Built %s\n' "$OUTPUT_DIR/$APK_PACKAGE_NAME"
+fi

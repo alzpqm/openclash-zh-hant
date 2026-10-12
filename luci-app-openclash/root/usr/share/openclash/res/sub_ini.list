@@ -1,6 +1,5 @@
-預設（附帶用於Clash的AdGuard DNS）,default_with_clash_adg.yml,https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/default_with_clash_adg.yml
-無Urltest,no_urltest.ini,https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/no_urltest.ini
 帶Urltest,urltest.ini,https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/urltest.ini
+無Urltest,no_urltest.ini,https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/no_urltest.ini
 ACL4SSR 規則標準版,ACL4SSR.ini,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR.ini
 ACL4SSR 規則 AdblockPlus,ACL4SSR_AdblockPlus.ini,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_AdblockPlus.ini
 ACL4SSR 規則 BackCN,ACL4SSR_BackCN.ini,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_BackCN.ini

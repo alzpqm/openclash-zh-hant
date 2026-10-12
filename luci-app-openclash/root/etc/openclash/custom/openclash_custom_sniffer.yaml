@@ -1,14 +1,14 @@
-# 嗅探域名 可選配置
+# 嗅探網域名稱 可選設定
 sniffer:
   ## 對 redir-host 型別識別的流量進行強制嗅探
   ## 如：Tun、Redir 和 TProxy 並 DNS 為 redir-host 皆屬於
   force-dns-mapping: true
-  ## 對所有未獲取到域名的流量進行強制嗅探
+  ## 對所有未獲取到網域名稱的流量進行強制嗅探
   parse-pure-ip: true
-  # 是否使用嗅探結果作為實際訪問，預設 true
-  # 全域性配置，優先順序低於 sniffer.sniff 實際配置
-  override-destination: true
-  sniff: # TLS 和 QUIC 預設如果不配置 ports 預設嗅探 443
+  # 是否使用嗅探結果作為實際存取，預設 false
+  # 全域性設定，優先順序低於 sniffer.sniff 實際設定
+  override-destination: false
+  sniff: # TLS 和 QUIC 預設如果不設定 ports 預設嗅探 443
     QUIC:
       ports: [ 443 ]
 
@@ -18,8 +18,8 @@ sniffer:
     # 預設嗅探 80
     HTTP:
       ports: [80, 8080-8880]
-      # 是否使用嗅探結果作為實際訪問
-      override-destination: true
+      # 是否使用嗅探結果作為實際存取
+      override-destination: false
   force-domain:
 #  - '+' # Force all domain to use sniffer
   - "+.netflix.com"
