@@ -1,0 +1,55 @@
+name: Upload verified OpenClash release assets
+
+on:
+  push:
+    branches:
+      - release-assets/v0.48.002-zh-hant-r1
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: v0.48.002-zh-hant-r1
+      RELEASE_ID: "410577758"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify and upload the prepared assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = alzpqm/openclash-zh-hant
+          cd ".release-assets/$RELEASE_TAG"
+          sha256sum -c SHA256SUMS
+          gh api "repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID" > /tmp/release-before.json
+          python3 - <<'PY'
+          import json, os
+          release = json.load(open('/tmp/release-before.json'))
+          assert release['draft'] is True
+          assert release['tag_name'] == os.environ['RELEASE_TAG']
+          assert release['id'] == int(os.environ['RELEASE_ID'])
+          assert release['assets'] == [], 'Refusing to overwrite any existing asset'
+          PY
+          gh release upload "$RELEASE_TAG" ./* --repo "$GITHUB_REPOSITORY"
+          gh api "repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID" > /tmp/release-after.json
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          release = json.load(open('/tmp/release-after.json'))
+          local = list(Path('.').iterdir())
+          assets = {asset['name']: asset for asset in release['assets']}
+          assert set(assets) == {path.name for path in local}
+          for path in local:
+              asset = assets[path.name]
+              assert asset['state'] == 'uploaded'
+              assert asset['size'] == path.stat().st_size
+              if asset.get('digest'):
+                  assert asset['digest'] == 'sha256:' + hashlib.sha256(path.read_bytes()).hexdigest()
+          print('Verified uploaded assets:', len(assets))
+          PY
